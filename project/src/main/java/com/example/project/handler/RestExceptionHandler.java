@@ -1,4 +1,4 @@
-package com.example.project.handler;
+package com.example.project.Handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

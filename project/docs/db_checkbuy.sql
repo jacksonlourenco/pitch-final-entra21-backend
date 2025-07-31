@@ -31,10 +31,13 @@ VALUES
 SELECT * FROM lista;
 
 
-SELECT lista.* FROM usuario
+SELECT * FROM usuario
 JOIN lista
 ON
 usuario.id_usuario = lista.id_usuario;
+
+CREATE TABLE produto_referencia
+
 
 
 

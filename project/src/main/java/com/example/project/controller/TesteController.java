@@ -2,8 +2,8 @@ package com.example.project.controller;
 
 import com.example.project.model.*;
 import com.example.project.repository.*;
+import com.example.project.service.Scraping;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ETag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,6 +35,12 @@ public class TesteController {
     @Autowired
     private EstabelecimentoRepository estabelecimentoRepository;
 
+
+    @GetMapping("/scraping")
+    public void scraping(){
+        Scraping scraping = new Scraping();
+        scraping.cooperScraping();
+    }
 
     @GetMapping("/usuario")
     public List<Usuario> usuario(){

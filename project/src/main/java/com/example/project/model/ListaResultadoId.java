@@ -25,4 +25,12 @@ public class ListaResultadoId implements Serializable {
     public int hashCode() {
         return Objects.hash(listaId, produtoReferenciaId);
     }
+
+    public Integer getListaId() {
+        return listaId;
+    }
+
+    public Integer getProdutoReferenciaId() {
+        return produtoReferenciaId;
+    }
 }

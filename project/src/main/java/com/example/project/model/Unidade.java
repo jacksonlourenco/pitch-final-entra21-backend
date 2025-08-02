@@ -10,7 +10,7 @@ public class Unidade {
     private Integer id;
     private String nome;
     private String bairro;
-    private String cidade;
+    private String municipio;
     private String estado;
     private String cep;
     private String latitude;
@@ -21,5 +21,41 @@ public class Unidade {
     private Estabelecimento estabelecimento;
 
     public Unidade() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
     }
 }

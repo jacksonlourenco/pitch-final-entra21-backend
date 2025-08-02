@@ -12,4 +12,12 @@ public class Estabelecimento {
 
     public Estabelecimento() {
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

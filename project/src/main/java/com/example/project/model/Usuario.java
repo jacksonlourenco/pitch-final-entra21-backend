@@ -13,4 +13,16 @@ public class Usuario {
 
     public Usuario() {
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

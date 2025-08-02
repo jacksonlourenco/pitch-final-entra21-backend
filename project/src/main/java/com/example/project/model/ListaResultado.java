@@ -19,8 +19,24 @@ public class ListaResultado {
     private ProdutoReferencia produtoReferencia;
 
 
-    private int quantidade;
+    private Integer quantidade;
 
     public ListaResultado() {
+    }
+
+    public ListaResultadoId getId() {
+        return id;
+    }
+
+    public Lista getLista() {
+        return lista;
+    }
+
+    public ProdutoReferencia getProdutoReferencia() {
+        return produtoReferencia;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
     }
 }

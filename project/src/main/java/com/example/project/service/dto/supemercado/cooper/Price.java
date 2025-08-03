@@ -31,4 +31,13 @@ public class Price {
     public String getShoppingStoreReferenceCode() {
         return shoppingStoreReferenceCode;
     }
+
+    @Override
+    public String toString() {
+        return "Price{" +
+                "criteriaReferenceCode='" + criteriaReferenceCode + '\'' +
+                ", price=" + price +
+                ", shoppingStoreReferenceCode='" + shoppingStoreReferenceCode + '\'' +
+                "} \n";
+    }
 }

@@ -1,12 +1,12 @@
 CREATE TABLE estabelecimento(
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(45),
 
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE unidade(
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(45),
 	bairro VARCHAR(45),
 	municipio VARCHAR(45),
@@ -21,7 +21,7 @@ CREATE TABLE unidade(
 );
 
 CREATE TABLE produto_referencia(
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	url_img VARCHAR(500),
 	descricao VARCHAR(100),
 	marca VARCHAR(45),
@@ -34,8 +34,8 @@ CREATE TABLE produto_referencia(
 );
 
 CREATE TABLE produto_scraping(
-	id INT NOT NULL,
-	nome VARCHAR(45),
+	id INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(255),
 	preco DOUBLE,
 	preco_especial DOUBLE,
 	data_scraping DATETIME,
@@ -49,7 +49,7 @@ CREATE TABLE produto_scraping(
 );
 
 CREATE TABLE usuario(
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	email VARCHAR(45),
 	nome VARCHAR(45),
 
@@ -57,7 +57,7 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE lista(
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(45),
 	data_criacao DATE,
 	usuario_id INT,

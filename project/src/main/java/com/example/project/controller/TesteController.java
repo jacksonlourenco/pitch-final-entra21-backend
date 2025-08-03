@@ -35,10 +35,12 @@ public class TesteController {
     @Autowired
     private EstabelecimentoRepository estabelecimentoRepository;
 
+    @Autowired
+    private Scraping scraping;
+
 
     @GetMapping("/scraping")
     public void scraping(){
-        Scraping scraping = new Scraping();
         scraping.cooperScraping();
     }
 

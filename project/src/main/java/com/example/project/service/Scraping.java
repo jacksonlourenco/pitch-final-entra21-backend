@@ -1,23 +1,32 @@
 package com.example.project.service;
 
+import com.example.project.model.ProdutoScraping;
+import com.example.project.repository.AliasUnidadeRepository;
+import com.example.project.repository.ProdutoScrapingRepository;
 import com.example.project.service.dto.supemercado.cooper.ApiResponse;
-import com.example.project.service.dto.supemercado.cooper.Variant;
-import com.fasterxml.jackson.core.JsonParser;
+import com.example.project.service.dto.supemercado.cooper.Price;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.json.Json;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
+@Service
 public class Scraping {
+
+    @Autowired
+    private AliasUnidadeRepository aliasUnidadeRepository;
+
+    @Autowired
+    private ProdutoScrapingRepository produtoScrapingRepository;
 
     public void cooperScraping() {
         System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
@@ -66,8 +75,41 @@ public class Scraping {
             throw new RuntimeException(e);
         }
 
-        System.out.println(apiResponse.getVariants());
 
+        var unitario = apiResponse.getVariants().get(0);
+        var teste = apiResponse.getVariants().get(0).getPrices().stream()
+                .collect(Collectors.groupingBy(Price::getShoppingStoreReferenceCode));
+
+
+
+        for (Map.Entry<String, List<Price>> entry : teste.entrySet()) {
+            ProdutoScraping produto = new ProdutoScraping();
+            produto.setNome(unitario.getPresentation());
+            produto.setUrlImg(unitario.getUrl());
+            produto.setDataScraping(LocalDateTime.now());
+
+            String loja = entry.getKey();
+            var unidade = aliasUnidadeRepository.findByAlias(loja);
+
+            unidade.ifPresent(aliasUnidade -> System.out.println(aliasUnidade.getUnidade().getNome()));
+
+            List<Price> precos = entry.getValue();
+
+            precos.stream()
+                    .filter(p -> "lista-de-preco-padrao".equalsIgnoreCase(p.getCriteriaReferenceCode()))
+                    .findFirst()
+                    .ifPresent(p -> produto.setPreco(p.getPrice()));
+
+            precos.stream()
+                    .filter(p -> "ListaPrecoCooperado".equalsIgnoreCase(p.getCriteriaReferenceCode()))
+                    .findFirst()
+                    .ifPresent(pr -> produto.setPrecoEspecial(pr.getPrice()));
+
+            if(unidade.isPresent()){
+                produto.setUnidade(unidade.get().getUnidade());
+                produtoScrapingRepository.save(produto);
+            }
+        }
 
     }
 

@@ -1,79 +1,74 @@
 package com.example.project.service;
 
+import com.example.project.service.dto.supemercado.cooper.ApiResponse;
+import com.example.project.service.dto.supemercado.cooper.Variant;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.json.Json;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class Scraping {
 
     public void cooperScraping() {
-        System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
+
+        // Abre a página primeiro
+        driver.get("https://minhacooper.com.br/loja/i.norte-bnu");
+
+        // Executar uma requisição GET via fetch dentro da página
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        Object response = js.executeAsyncScript(
+                "const callback = arguments[arguments.length - 1];" +
+                        "fetch('https://minhacooper.com.br/store/api/v1/product-list/i.norte-bnu?page=1&itemsPerPage=2&category%5BreferenceCode%5D=1&category%5BisShopping%5D=true&showOnlyAvailable=true&order=createdAt-desc&returnFormat=json&sortOrder%5Bfield%5D=createdAt&sortOrder%5Border%5D=desc', {" +
+                        "  method: 'GET'," +
+                        "  headers: {" +
+                        "    'X-Requested-With': 'XMLHttpRequest'," +
+                        "    'Accept': '*/*'" +
+                        "  }" +
+                        "})" +
+                        ".then(response => response.json())" +
+                        ".then(data => callback(data))" +
+                        ".catch(error => callback(error.toString()));"
+        );
+
+
+
+        // Mapeia o JSON para objetos Java
+        ObjectMapper mapper = new ObjectMapper();
+        String json = null;
 
         try {
-            // Abre a página primeiro
-            driver.get("https://minhacooper.com.br/loja/i.norte-bnu/produto/listar/1?order=createdAt-desc");
-
-            // Cria espera explícita depois de abrir a página
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-            // Espera até o elemento da figura estar visível
-            WebElement figura = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("figure.product-variation__figure")));
-
-            // Dentro da figura, pega o link do produto
-            WebElement linkProduto = figura.findElement(By.cssSelector("a.product-variation__image-container"));
-            String href = linkProduto.getAttribute("href");
-
-            // Dentro do link, pega a imagem e seu src
-            WebElement img = linkProduto.findElement(By.tagName("img"));
-            String imgSrc = img.getAttribute("src");
-            if (imgSrc.startsWith("//")) {
-                imgSrc = "https:" + imgSrc;  // Ajusta URL da imagem
-            }
-
-            // Pega o nome do produto
-            WebElement nomeProduto = driver.findElement(By.cssSelector("a.product-variation__name"));
-            String nome = nomeProduto.getText().trim();
-
-            // Pega o preço final
-            WebElement precoFinal = driver.findElement(By.cssSelector("span.product-variation__final-price"));
-            String preco = precoFinal.getText().trim();
-
-            // Pega o preço cooperado (se existir)
-            String precoCooperado;
-            try {
-                WebElement precoCoop = driver.findElement(By.cssSelector("span.product-variation__cooper-price"));
-                precoCooperado = precoCoop.getText().trim();
-            } catch (Exception e) {
-                precoCooperado = "Não informado";
-            }
-
-            // Pega o desconto (se existir)
-            String desconto;
-            try {
-                WebElement descontoElem = driver.findElement(By.cssSelector("div.product-variation__discount"));
-                desconto = descontoElem.getText().trim();
-            } catch (Exception e) {
-                desconto = "Sem desconto";
-            }
-
-            // Imprime os dados
-            System.out.println("Nome: " + nome);
-            System.out.println("Link: " + href);
-            System.out.println("Imagem: " + imgSrc);
-            System.out.println("Preço final: " + preco);
-            System.out.println("Preço cooperado: " + precoCooperado);
-            System.out.println("Desconto: " + desconto);
-
-        } finally {
-            driver.quit();
+            json = mapper.writeValueAsString(response);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
+
+
+        ApiResponse apiResponse = null;
+        try {
+            apiResponse = mapper.readValue(json, ApiResponse.class);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(apiResponse.getVariants());
+
+
     }
 
 }

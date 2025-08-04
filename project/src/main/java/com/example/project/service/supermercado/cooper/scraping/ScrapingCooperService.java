@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,11 @@ public class ScrapingCooperService {
      * @return um objeto contendo os dados da resposta conforme "tipoRetorno" da API.
      */
     private Object obterProdutosCooper(String tipoRetorno, int page, int itemsPerPage, int categoria) {
-        System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
+        String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
+                .toAbsolutePath()
+                .toString();
+
+        System.setProperty("webdriver.gecko.driver", driverPath);
 
 
         FirefoxOptions options = new FirefoxOptions();

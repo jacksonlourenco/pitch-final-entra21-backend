@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pitch.iml" filepath="$PROJECT_DIR$/.idea/pitch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pitch-final-entra21-backend.iml" filepath="$PROJECT_DIR$/.idea/pitch-final-entra21-backend.iml" />
     </modules>
   </component>

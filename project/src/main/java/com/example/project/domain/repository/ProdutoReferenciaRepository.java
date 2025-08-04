@@ -1,7 +1,0 @@
-package com.example.project.domain.repository;
-
-import com.example.project.domain.model.ProdutoReferencia;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface ProdutoReferenciaRepository extends JpaRepository<ProdutoReferencia, Integer> {
-}

@@ -23,12 +23,12 @@ CREATE TABLE unidade(
 CREATE TABLE produto_referencia(
 	id INT NOT NULL AUTO_INCREMENT,
 	url_img VARCHAR(500),
-	descricao VARCHAR(100),
+	descricao VARCHAR(500),
 	marca VARCHAR(45),
 	unidade_medida VARCHAR(45),
 	valor_medida DOUBLE,
 	codigo_barra VARCHAR(70),
-	nome VARCHAR(45),
+	nome VARCHAR(255),
 
 	PRIMARY KEY(id)
 );
@@ -75,3 +75,26 @@ CREATE TABLE lista_resultado(
 	FOREIGN KEY(lista_id) REFERENCES lista(id),
 	FOREIGN KEY(produto_referencia_id) REFERENCES produto_referencia(id)
 );
+
+CREATE TABLE alias_unidade (
+    id INT NOT NULL AUTO_INCREMENT,
+    alias VARCHAR(100),
+    unidade_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (unidade_id) REFERENCES unidade(id)
+);
+
+CREATE TABLE alias_produto_referencia(
+    id INT NOT NULL AUTO_INCREMENT,
+    alias VARCHAR(255),
+    produto_referencia_id INT,
+
+    PRIMARY KEY (id),
+    FOREIGN KEY (produto_referencia_id) REFERENCES produto_referencia(id)
+);
+
+INSERT INTO produto_referencia(nome) VALUES
+("NOT INDEX");
+
+INSERT INTO alias_produto_referencia(alias, produto_referencia_id) VALUES
+("NOT INDEX", 1);

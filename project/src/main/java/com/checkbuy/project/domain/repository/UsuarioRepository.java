@@ -1,0 +1,10 @@
+package com.checkbuy.project.domain.repository;
+
+import com.checkbuy.project.domain.model.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+
+}

@@ -34,6 +34,61 @@ public class ScrapingCooperService {
     @Autowired
     private AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
 
+    private final String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
+            .toAbsolutePath()
+                .toString();
+
+    private final FirefoxOptions options = new FirefoxOptions();
+    private final WebDriver driver;
+
+    public ScrapingCooperService(){
+        System.setProperty("webdriver.gecko.driver", driverPath);
+        options.addArguments("-headless");
+        driver = new FirefoxDriver(options);
+    }
+
+    private Object buscarPorNome(String produtoName, int page) {
+
+        // Abre a página primeiro
+        driver.get("https://minhacooper.com.br/loja/i.norte-bnu");
+
+        // Executar uma requisição GET via fetch dentro da página
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        return js.executeAsyncScript(
+                "const callback = arguments[arguments.length - 1];" +
+                        "fetch('https://minhacooper.com.br/store/api/v1/product-list/i.norte-bnu?page="+page+"&itemsPerPage=100&searchTerm="+produtoName+"&showOnlyAvailable=true&order=&returnFormat=json&useSearchParameters=true', {" +
+                        "  method: 'GET'," +
+                        "  headers: {" +
+                        "    'X-Requested-With': 'XMLHttpRequest'," +
+                        "    'Accept': '*/*'" +
+                        "  }" +
+                        "})" +
+                        ".then(response => response.json())" +
+                        ".then(data => callback(data))" +
+                        ".catch(error => callback(error.toString()));"
+        );
+    }
+
+    public void scrapingPorTermo(String produtoName) {
+        int page = 1;
+        boolean continuar = true;
+
+        while(continuar){
+            var json = buscarPorNome(produtoName, page);
+            var apiResponse = parseJsonCooper(json);
+
+            if(apiResponse.variants().isEmpty()){
+                continuar = false;
+                System.out.println("Log: Scraping Cooper - para termo de busca: " +produtoName+ " Foi Finalizado!!");
+            }else{
+                salvarProdutosCooper(apiResponse);
+                System.out.println("Log: Scraping Cooper - Page: "+page+ " para termo de busca: " +produtoName);
+                page++;
+            }
+        }
+    }
+
     /**
      * Utiliza Selenium com JavaScript para realizar uma requisição assíncrona à API da Cooper
      * e retorna os produtos conforme os parâmetros informados.
@@ -45,18 +100,6 @@ public class ScrapingCooperService {
      * @return um objeto contendo os dados da resposta conforme "tipoRetorno" da API.
      */
     private Object obterProdutosCooper(String tipoRetorno, int page, int itemsPerPage, int categoria) {
-        String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
-                .toAbsolutePath()
-                .toString();
-
-        System.setProperty("webdriver.gecko.driver", driverPath);
-
-
-        FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("-headless");
-
-        WebDriver driver = new FirefoxDriver(options);
-
 
         // Abre a página primeiro
         driver.get("https://minhacooper.com.br/loja/i.norte-bnu");
@@ -178,4 +221,33 @@ public class ScrapingCooperService {
     }
 
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

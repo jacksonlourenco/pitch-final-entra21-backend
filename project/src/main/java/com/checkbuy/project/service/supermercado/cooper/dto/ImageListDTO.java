@@ -2,9 +2,9 @@ package com.checkbuy.project.service.supermercado.cooper.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record Price(
-        String criteriaReferenceCode,
-        double price,
-        String shoppingStoreReferenceCode
+public record ImageListDTO(
+        List<ImageDTO> images
 ){}

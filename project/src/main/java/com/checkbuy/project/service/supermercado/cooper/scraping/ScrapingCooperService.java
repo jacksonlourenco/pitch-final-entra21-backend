@@ -4,9 +4,9 @@ import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
-import com.checkbuy.project.service.supermercado.cooper.dto.ApiResponse;
-import com.checkbuy.project.service.supermercado.cooper.dto.Price;
-import com.checkbuy.project.service.supermercado.cooper.dto.Variant;
+import com.checkbuy.project.service.supermercado.cooper.dto.VariantListDTO;
+import com.checkbuy.project.service.supermercado.cooper.dto.PriceDTO;
+import com.checkbuy.project.service.supermercado.cooper.dto.VariantDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.openqa.selenium.JavascriptExecutor;
@@ -124,27 +124,27 @@ public class ScrapingCooperService {
 
 
     /**
-     * Converte um objeto genérico (como o retornado por JavascriptExecutor) em uma instância de {@link ApiResponse}.
+     * Converte um objeto genérico (como o retornado por JavascriptExecutor) em uma instância de {@link VariantListDTO}.
      * Primeiro serializa o objeto em uma string JSON, depois desserializa essa string para um objeto Java.
      *
      * @param json o objeto genérico (geralmente um {@code Map} ou {@code LinkedHashMap}) retornado pelo Selenium via JavaScript.
-     * @return uma instância de {@link ApiResponse} contendo os dados convertidos.
+     * @return uma instância de {@link VariantListDTO} contendo os dados convertidos.
      * @throws RuntimeException se ocorrer falha durante a conversão do objeto para JSON ou na desserialização.
      */
-    private ApiResponse parseJsonCooper(Object json) {
+    private VariantListDTO parseJsonCooper(Object json) {
         ObjectMapper mapper = new ObjectMapper();
         String jsonString = null;
 
         try {
             jsonString = mapper.writeValueAsString(json);
-            return mapper.readValue(jsonString, ApiResponse.class);
+            return mapper.readValue(jsonString, VariantListDTO.class);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Erro ao converter Json em Classe" + e);
         }
     }
 
     /**
-     * Processa a lista de variantes contida no {@link ApiResponse} e salva os produtos no banco de dados.
+     * Processa a lista de variantes contida no {@link VariantListDTO} e salva os produtos no banco de dados.
      * Para cada variante, agrupa os preços por loja e cria uma instância de {@link ProdutoScraping}
      * com os dados correspondentes, incluindo preços padrão e especiais.
      *
@@ -152,13 +152,13 @@ public class ScrapingCooperService {
      *
      * @param apiResponse objeto contendo as variantes dos produtos obtidos da API Cooper.
      */
-    private void salvarProdutosCooper(ApiResponse apiResponse) {
-        for (Variant variant : apiResponse.variants()) {
+    private void salvarProdutosCooper(VariantListDTO apiResponse) {
+        for (VariantDTO variant : apiResponse.variants()) {
 
             var variantGrouping = variant.prices().stream()
-                    .collect(Collectors.groupingBy(Price::shoppingStoreReferenceCode));
+                    .collect(Collectors.groupingBy(PriceDTO::shoppingStoreReferenceCode));
 
-            for (Map.Entry<String, List<Price>> entry : variantGrouping.entrySet()) {
+            for (Map.Entry<String, List<PriceDTO>> entry : variantGrouping.entrySet()) {
 
 
                 String loja = entry.getKey();
@@ -171,7 +171,7 @@ public class ScrapingCooperService {
                     produto.setUrlImg(variant.product().images().getFirst().urlOriginal());
                     produto.setDataScraping(LocalDateTime.now());
 
-                    List<Price> precos = entry.getValue();
+                    List<PriceDTO> precos = entry.getValue();
 
                     precos.stream()
                             .filter(p -> "lista-de-preco-padrao".equalsIgnoreCase(p.criteriaReferenceCode()))
@@ -210,7 +210,7 @@ public class ScrapingCooperService {
      * Realiza o processo completo de scraping dos produtos da Cooper.
      *
      * O método obtém os dados da API da Cooper no formato JSON, realiza a desserialização
-     * para o objeto {@link ApiResponse} e salva os produtos extraídos no banco de dados.
+     * para o objeto {@link VariantListDTO} e salva os produtos extraídos no banco de dados.
      *
      * Esta é a função principal que orquestra as etapas do scraping.
      */

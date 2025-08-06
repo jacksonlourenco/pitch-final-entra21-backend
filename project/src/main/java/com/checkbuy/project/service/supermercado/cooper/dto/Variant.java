@@ -7,5 +7,6 @@ import java.util.List;
 public record Variant(
         String presentation,
         List<Price> prices,
-        Product product
+        Product product,
+        Properties properties
 ){}

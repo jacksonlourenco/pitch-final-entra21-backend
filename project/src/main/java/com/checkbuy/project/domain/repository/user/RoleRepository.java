@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.checkbuy.project.domain.model.user.Role;
 
 @Repository
-public interface  RoleRepository extends JpaRepository<Role, Long>{
-    
+public interface RoleRepository extends JpaRepository<Role, Long> {
+
 }

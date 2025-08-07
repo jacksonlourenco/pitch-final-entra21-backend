@@ -1,10 +1,11 @@
 package com.checkbuy.project.service.supermercado.cooper.dto;
 
+import com.checkbuy.project.service.supermercado.cooper.dto.variants.VariantDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record PriceDTO(
-        String criteriaReferenceCode,
-        double price,
-        String shoppingStoreReferenceCode
+public record ListVariantsDTO(
+        List<VariantDTO> variants
 ){}

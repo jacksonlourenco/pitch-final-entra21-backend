@@ -1,20 +1,19 @@
 package com.checkbuy.project.service.supermercado.cooper.scraping;
 
 import com.checkbuy.project.domain.model.ProdutoScraping;
+import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
 import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
 import com.checkbuy.project.service.supermercado.cooper.dto.ListVariantsDTO;
-import com.checkbuy.project.service.supermercado.cooper.dto.variants.prices.PriceDTO;
-import com.checkbuy.project.service.supermercado.cooper.dto.variants.VariantDTO;
-import com.checkbuy.project.service.supermercado.cooper.dto.variants.product.properties.PropertiesDTO;
+import com.checkbuy.project.service.supermercado.cooper.dto.PriceDTO;
+import com.checkbuy.project.service.supermercado.cooper.dto.VariantDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Paths;
@@ -26,25 +25,30 @@ import java.util.stream.Collectors;
 @Service
 public class ScrapingCooperService {
 
-    @Autowired
-    private AliasUnidadeRepository aliasUnidadeRepository;
+    private final AliasUnidadeRepository aliasUnidadeRepository;
+    private final ProdutoScrapingRepository produtoScrapingRepository;
+    private final AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
 
-    @Autowired
-    private ProdutoScrapingRepository produtoScrapingRepository;
-
-    @Autowired
-    private AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
-
-    private final String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
-            .toAbsolutePath()
-                .toString();
-
-    private final FirefoxOptions options = new FirefoxOptions();
     private final WebDriver driver;
 
-    public ScrapingCooperService(){
+    public ScrapingCooperService(
+            AliasUnidadeRepository aliasUnidadeRepository,
+            ProdutoScrapingRepository produtoScrapingRepository,
+            AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository){
+
+        this.aliasUnidadeRepository = aliasUnidadeRepository;
+        this.produtoScrapingRepository = produtoScrapingRepository;
+        this.aliasProdutoReferenciaRepository = aliasProdutoReferenciaRepository;
+
+
+        String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
+                .toAbsolutePath()
+                .toString();
         System.setProperty("webdriver.gecko.driver", driverPath);
+
+        FirefoxOptions options = new FirefoxOptions();
         options.addArguments("-headless");
+
         driver = new FirefoxDriver(options);
     }
 
@@ -154,18 +158,8 @@ public class ScrapingCooperService {
      * @param apiResponse objeto contendo as variantes dos produtos obtidos da API Cooper.
      */
     private void salvarProdutosCooper(ListVariantsDTO apiResponse) {
+
         for (VariantDTO variant : apiResponse.variants()) {
-
-            var proporcao = 0;
-
-            for(PropertiesDTO properties: variant.properties()){
-                if(properties.name().equalsIgnoreCase("Proporcionalidade - Quantidade de Comparação")){
-                    proporcao = Integer.parseInt(properties.values().getFirst().value());
-                }else {
-
-                }
-            }
-
 
             var variantGrouping = variant.prices().stream()
                     .collect(Collectors.groupingBy(PriceDTO::shoppingStoreReferenceCode));
@@ -175,7 +169,6 @@ public class ScrapingCooperService {
 
                 String loja = entry.getKey();
                 var unidade = aliasUnidadeRepository.findByAlias(loja);
-
 
                 unidade.ifPresentOrElse(aliasUnidade -> {
                     ProdutoScraping produto = new ProdutoScraping();
@@ -201,6 +194,8 @@ public class ScrapingCooperService {
 
                     produtoReferencia.ifPresentOrElse(p -> {
                         produto.setProdutoReferencia(p.getProdutoReferencia());
+                        aliasProdutoReferenciaRepository.save(new AliasProdutoReferencia(variant.presentation(), aliasUnidade.getUnidade()));c dfdfgrdfgdfdfdfgd
+
                     },() -> {
                         var produtoReferenciaSemVerificacao = aliasProdutoReferenciaRepository.findByAlias("NOT INDEX");
                         produtoReferenciaSemVerificacao.ifPresent(p -> {
@@ -212,11 +207,9 @@ public class ScrapingCooperService {
                 }, () -> {
                     System.out.println("Não foi possivel salvar: " + variant.presentation()+ " - Cooper Unidade: " + loja);
                 });
-
             }
         }
     }
-
 
     /**
      * Realiza o processo completo de scraping dos produtos da Cooper.

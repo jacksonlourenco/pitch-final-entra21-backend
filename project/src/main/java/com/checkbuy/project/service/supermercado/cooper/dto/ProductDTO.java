@@ -5,6 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record ListVariantsDTO(
-        List<VariantDTO> variants
+public record ProductDTO(
+        List<ImageDTO> images
 ){}

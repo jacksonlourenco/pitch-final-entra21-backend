@@ -1,4 +1,4 @@
-package com.checkbuy.project.service.supermercado.cooper.dto.variants.product.images;
+package com.checkbuy.project.service.supermercado.cooper.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

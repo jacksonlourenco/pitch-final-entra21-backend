@@ -14,12 +14,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Service
@@ -34,7 +36,7 @@ public class ScrapingCooperService {
     public ScrapingCooperService(
             AliasUnidadeRepository aliasUnidadeRepository,
             ProdutoScrapingRepository produtoScrapingRepository,
-            AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository){
+            AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository) {
 
         this.aliasUnidadeRepository = aliasUnidadeRepository;
         this.produtoScrapingRepository = produtoScrapingRepository;
@@ -62,7 +64,7 @@ public class ScrapingCooperService {
 
         return js.executeAsyncScript(
                 "const callback = arguments[arguments.length - 1];" +
-                        "fetch('https://minhacooper.com.br/store/api/v1/product-list/i.norte-bnu?page="+page+"&itemsPerPage=100&searchTerm="+produtoName+"&showOnlyAvailable=true&order=&returnFormat=json&useSearchParameters=true', {" +
+                        "fetch('https://minhacooper.com.br/store/api/v1/product-list/i.norte-bnu?page=" + page + "&itemsPerPage=100&searchTerm=" + produtoName + "&showOnlyAvailable=true&order=&returnFormat=json&useSearchParameters=true', {" +
                         "  method: 'GET'," +
                         "  headers: {" +
                         "    'X-Requested-With': 'XMLHttpRequest'," +
@@ -75,23 +77,25 @@ public class ScrapingCooperService {
         );
     }
 
-    public void scrapingPorTermo(String produtoName) {
+    @Async
+    public CompletableFuture<Void> cooperScrapingTermo(String produtoName) {
         int page = 1;
         boolean continuar = true;
 
-        while(continuar){
+        while (continuar) {
             var json = buscarPorNome(produtoName, page);
             var apiResponse = parseJsonCooper(json);
 
-            if(apiResponse.variants().isEmpty()){
+            if (apiResponse.variants().isEmpty()) {
                 continuar = false;
-                System.out.println("Log: Scraping Cooper - para termo de busca: " +produtoName+ " Foi Finalizado!!");
-            }else{
+                System.out.println("Log: Scraping Cooper - para termo de busca: " + produtoName + " Foi Finalizado!!");
+            } else {
                 salvarProdutosCooper(apiResponse);
-                System.out.println("Log: Scraping Cooper - Page: "+page+ " para termo de busca: " +produtoName);
+                System.out.println("Log: Scraping Cooper - Page: " + page + " para termo de busca: " + produtoName);
                 page++;
             }
         }
+        return CompletableFuture.completedFuture(null);
     }
 
     /**
@@ -152,7 +156,7 @@ public class ScrapingCooperService {
      * Processa a lista de variantes contida no {@link ListVariantsDTO} e salva os produtos no banco de dados.
      * Para cada variante, agrupa os preços por loja e cria uma instância de {@link ProdutoScraping}
      * com os dados correspondentes, incluindo preços padrão e especiais.
-     *
+     * <p>
      * Caso a unidade correspondente à loja não seja encontrada, uma mensagem é exibida no console.
      *
      * @param apiResponse objeto contendo as variantes dos produtos obtidos da API Cooper.
@@ -170,53 +174,53 @@ public class ScrapingCooperService {
                 String loja = entry.getKey();
                 var unidade = aliasUnidadeRepository.findByAlias(loja);
 
-                unidade.ifPresentOrElse(aliasUnidade -> {
-                    ProdutoScraping produto = new ProdutoScraping();
-                    produto.setNome(variant.presentation());
-                    produto.setUrlImg(variant.product().images().getFirst().urlOriginal());
-                    produto.setDataScraping(LocalDateTime.now());
+                if (unidade.isEmpty()) {
+                    continue; //SE NÃO ENCONTRAR LOJA NO BANCO - PULA LOOP
+                }
 
-                    List<PriceDTO> precos = entry.getValue();
+                ProdutoScraping produto = new ProdutoScraping();
+                produto.setNome(variant.presentation());
+                produto.setUrlImg(variant.product().images().getFirst().urlOriginal());
+                produto.setDataScraping(LocalDateTime.now());
+                List<PriceDTO> precos = entry.getValue();
 
-                    precos.stream()
-                            .filter(p -> "lista-de-preco-padrao".equalsIgnoreCase(p.criteriaReferenceCode()))
-                            .findFirst()
-                            .ifPresent(p -> produto.setPreco(p.price()));
+                precos.stream()
+                        .filter(p -> "lista-de-preco-padrao".equalsIgnoreCase(p.criteriaReferenceCode()))
+                        .findFirst()
+                        .ifPresent(p -> produto.setPreco(p.price()));
 
-                    precos.stream()
-                            .filter(p -> "ListaPrecoCooperado".equalsIgnoreCase(p.criteriaReferenceCode()))
-                            .findFirst()
-                            .ifPresent(p -> produto.setPrecoEspecial(p.price()));
+                precos.stream()
+                        .filter(p -> "ListaPrecoCooperado".equalsIgnoreCase(p.criteriaReferenceCode()))
+                        .findFirst()
+                        .ifPresent(p -> produto.setPrecoEspecial(p.price()));
 
-                    produto.setUnidade(aliasUnidade.getUnidade());
+                produto.setUnidade(unidade.get().getUnidade());
 
-                    var produtoReferencia = aliasProdutoReferenciaRepository.findByAlias(variant.presentation());
+                var produtoReferencia = aliasProdutoReferenciaRepository.findByAlias(variant.presentation());
 
-                    produtoReferencia.ifPresentOrElse(p -> {
-                        produto.setProdutoReferencia(p.getProdutoReferencia());
-                        aliasProdutoReferenciaRepository.save(new AliasProdutoReferencia(variant.presentation(), aliasUnidade.getUnidade()));c dfdfgrdfgdfdfdfgd
+                if (produtoReferencia.isPresent()) {
+                    produto.setProdutoReferencia(produtoReferencia.get().getProdutoReferencia());
+                } else {
+                    var notIndex = aliasProdutoReferenciaRepository.findByAlias("NOT INDEX");
+                    produto.setProdutoReferencia(notIndex.orElseThrow().getProdutoReferencia());
 
-                    },() -> {
-                        var produtoReferenciaSemVerificacao = aliasProdutoReferenciaRepository.findByAlias("NOT INDEX");
-                        produtoReferenciaSemVerificacao.ifPresent(p -> {
-                            produto.setProdutoReferencia(p.getProdutoReferencia());
-                        });
-                    });
+                    //CADASTRA Alias COM REFERENCIA PARA NOT-INDEX
+                    AliasProdutoReferencia aliasProduto = new AliasProdutoReferencia(produto.getNome(), notIndex.get());
+                    aliasProdutoReferenciaRepository.save(aliasProduto);
+                }
 
-                    produtoScrapingRepository.save(produto);
-                }, () -> {
-                    System.out.println("Não foi possivel salvar: " + variant.presentation()+ " - Cooper Unidade: " + loja);
-                });
+                produtoScrapingRepository.save(produto);
+                System.out.println("Cooper -  Produto Cadastrado! " + produto.getNome() + " -> "+ produto.getUnidade().getNome());
             }
         }
     }
 
     /**
      * Realiza o processo completo de scraping dos produtos da Cooper.
-     *
+     * <p>
      * O método obtém os dados da API da Cooper no formato JSON, realiza a desserialização
      * para o objeto {@link ListVariantsDTO} e salva os produtos extraídos no banco de dados.
-     *
+     * <p>
      * Esta é a função principal que orquestra as etapas do scraping.
      */
     public void cooperScraping(int page, int item, int categoria) {
@@ -224,35 +228,4 @@ public class ScrapingCooperService {
         var apiResponse = parseJsonCooper(json);
         salvarProdutosCooper(apiResponse);
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

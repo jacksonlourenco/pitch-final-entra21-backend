@@ -1,7 +1,6 @@
 package com.checkbuy.project.domain.model.alias;
 
 import com.checkbuy.project.domain.model.ProdutoReferencia;
-import com.checkbuy.project.domain.model.Unidade;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,9 +18,9 @@ public class AliasProdutoReferencia {
     public AliasProdutoReferencia() {
     }
 
-    public AliasProdutoReferencia(String presentation, Unidade unidade) {
-        this.alias = presentation;
-       sdfsdfsdsdfsfd
+    public AliasProdutoReferencia(String nome, AliasProdutoReferencia aliasProdutoReferencia) {
+        this.alias = nome;
+        this.produtoReferencia = aliasProdutoReferencia.getProdutoReferencia();
     }
 
     public Integer getId() {

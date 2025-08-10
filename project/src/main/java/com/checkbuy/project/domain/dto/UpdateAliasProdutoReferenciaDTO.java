@@ -2,10 +2,7 @@ package com.checkbuy.project.domain.dto;
 
 import jakarta.validation.constraints.NotNull;
 
-public record FixProdutoNotIndexDTO(
-
-        @NotNull
-        String estabelecimento,
+public record UpdateAliasProdutoReferenciaDTO(
 
         @NotNull
         String nomeProduto,

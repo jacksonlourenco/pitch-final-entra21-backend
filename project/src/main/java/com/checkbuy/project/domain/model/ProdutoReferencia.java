@@ -46,4 +46,8 @@ public class ProdutoReferencia {
     public String getCodigoBarra() {
         return codigoBarra;
     }
+
+    public String getMarca() {
+        return marca;
+    }
 }

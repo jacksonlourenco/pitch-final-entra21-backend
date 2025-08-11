@@ -18,6 +18,11 @@ public class AliasProdutoReferencia {
     public AliasProdutoReferencia() {
     }
 
+    public AliasProdutoReferencia(String nome, AliasProdutoReferencia aliasProdutoReferencia) {
+        this.alias = nome;
+        this.produtoReferencia = aliasProdutoReferencia.getProdutoReferencia();
+    }
+
     public Integer getId() {
         return id;
     }

@@ -1,56 +1,42 @@
 package com.checkbuy.project.domain.controller;
 
-import com.checkbuy.project.domain.dto.FixProdutoNotIndexDTO;
-import com.checkbuy.project.domain.dto.ProdutoNotIndexDTO;
-import com.checkbuy.project.domain.model.ProdutoReferencia;
-import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
-import com.checkbuy.project.domain.service.ProdutoScrapingService;
+import com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService;
 import com.checkbuy.project.service.supermercado.cooper.scraping.ScrapingCooperService;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/scraping")
 @CrossOrigin
 public class ScrapingController {
 
-    @Autowired
-    private ScrapingCooperService scraping;
+    private final ScrapingCooperService scrapingCooperService;
+    private final ScrapingKompraoService scrapingKompraoService;
+    private final ScrapingBistekService scrapingBistekService;
 
-    @Autowired
-    private ProdutoScrapingService produtoScrapingService;
-
-    @Autowired
-    private ProdutoReferenciaRepository produtoReferenciaRepository;
-
-    @PostMapping("/criar/referencia")
-    private void criarReferencia(@RequestBody ProdutoReferencia produtoReferencia){
-        produtoReferenciaRepository.save(produtoReferencia);
+    public ScrapingController(ScrapingCooperService scrapingCooperService,
+                              ScrapingKompraoService scrapingKompraoService, ScrapingBistekService scrapingBistekService) {
+        this.scrapingCooperService = scrapingCooperService;
+        this.scrapingKompraoService = scrapingKompraoService;
+        this.scrapingBistekService = scrapingBistekService;
     }
 
-    @GetMapping("/cooper/{page}&{item}&{categoria}")
-    public ResponseEntity<Object> scrapingCooper(@PathVariable int page, @PathVariable int item, @PathVariable int categoria){
-        scraping.cooperScraping(page, item, categoria);
-        return ResponseEntity.noContent().build();
+    @GetMapping("/produtos/{termo}")
+    public ResponseEntity<String> buscarTermo(@PathVariable String termo){
+        CompletableFuture<Void> cooper = scrapingCooperService.cooperScrapingTermo(termo);
+        CompletableFuture<Void> komprao = scrapingKompraoService.kochScrapingTermo(termo);
+        CompletableFuture<Void> bistek = scrapingBistekService.biteskScrapingTermo(termo);
+
+        CompletableFuture.allOf(cooper, komprao, bistek).join(); // aguarda as duas finalizarem
+
+        return ResponseEntity.ok("Scraping concluído");
     }
 
-    @GetMapping("/produtos-not-index")
-    public List<ProdutoNotIndexDTO> listarProdutoNotIndex(){
-        return produtoScrapingService.listarProdutoNotIndex();
+    @GetMapping("/komprao/{termo}")
+    public void komprao(@PathVariable String termo){
+        scrapingKompraoService.kochScrapingTermo(termo);
     }
-
-    @PutMapping("/produtos-not-index")
-    public void fixProdutoNotIndex(@Valid @RequestBody FixProdutoNotIndexDTO fixProdutoNotIndexDTO){
-        produtoScrapingService.fixProdutoNotIndex(fixProdutoNotIndexDTO);
-    }
-
-    @GetMapping("produtos-referencia")
-    public List<ProdutoReferencia> listarProdutos(){
-        return produtoReferenciaRepository.findAll();
-    }
-
 }

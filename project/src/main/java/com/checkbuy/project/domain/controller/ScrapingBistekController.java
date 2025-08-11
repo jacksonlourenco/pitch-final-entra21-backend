@@ -18,7 +18,7 @@ public class ScrapingBistekController {
     }
 
     @GetMapping("{produto}")
-    public List<ProdutoKompraoDTO> scrapingItens(@PathVariable String produto){
-        return scrapingBistek.biteskScrapingTermo(produto);
+    public void scrapingItens(@PathVariable String produto){
+        scrapingBistek.biteskScrapingTermo(produto);
     }
 }

@@ -1,5 +1,11 @@
 package com.checkbuy.project.service.supermercado.bistek.scraping;
 
+import com.checkbuy.project.domain.model.ProdutoScraping;
+import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
+import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
+import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
+import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
+import com.checkbuy.project.service.supermercado.dto.ProdutoDTO;
 import com.checkbuy.project.service.supermercado.komprao.dto.ProdutoKompraoDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -19,10 +26,18 @@ import java.util.NoSuchElementException;
 @Service
 public class ScrapingBistek {
 
+    private final AliasUnidadeRepository aliasUnidadeRepository;
+    private final AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
+    private final ProdutoScrapingRepository produtoScrapingRepository;
+
     private final WebDriver driver;
 
 
-    public ScrapingBistek() {
+    public ScrapingBistek(AliasUnidadeRepository aliasUnidadeRepository, AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository, ProdutoScrapingRepository produtoScrapingRepository) {
+        this.aliasUnidadeRepository = aliasUnidadeRepository;
+        this.aliasProdutoReferenciaRepository = aliasProdutoReferenciaRepository;
+        this.produtoScrapingRepository = produtoScrapingRepository;
+
         String driverPath = Paths.get("project", "drivers", "geckodriver.exe")
                 .toAbsolutePath()
                 .toString();
@@ -33,28 +48,25 @@ public class ScrapingBistek {
         driver = new FirefoxDriver();
     }
 
-    public List<ProdutoKompraoDTO> biteskScrapingTermo(String termo) {
+    public void biteskScrapingTermo(String termo) {
         var page = 1;
         var continuar = true;
-        List<ProdutoKompraoDTO> produtos = new ArrayList<>();
-
 
         while (continuar) {
-            var buscarTermo = buscarTermo(termo, page);
-            if (buscarTermo.isEmpty()) {
+            var produtos = buscarTermo(termo, page);
+            if (produtos.isEmpty()) {
                 continuar = false;
                 System.out.println("Busca terminou");
             } else {
-                produtos.addAll(buscarTermo);
+                salvarProdutosBistek(produtos);
                 System.out.println("Varrendo a pagina: " + page);
                 page++;
             }
         }
 
-        return produtos;
     }
 
-    private List<ProdutoKompraoDTO> buscarTermo(String termo, int page) {
+    private List<ProdutoDTO> buscarTermo(String termo, int page) {
         String url = "https://www.bistek.com.br/" + termo + "?page=" + page;
         driver.get(url);
 
@@ -122,7 +134,7 @@ public class ScrapingBistek {
         // --- FIM DA LÓGICA DE ROLAGEM ---
 
         // Lista para armazenar os DTOs dos produtos
-        List<ProdutoKompraoDTO> lista = new ArrayList<>();
+        List<ProdutoDTO> lista = new ArrayList<>();
 
         // 1. Seleciona todos os elementos de item de produto.
         List<WebElement> produtos = driver.findElements(By.cssSelector("#gallery-layout-container .vtex-search-result-3-x-galleryItem"));
@@ -183,11 +195,46 @@ public class ScrapingBistek {
                 break;
             }
 
-            ProdutoKompraoDTO dto = new ProdutoKompraoDTO(nome, urlImg, preco, precoEspecial);
+            ProdutoDTO dto = new ProdutoDTO(nome, urlImg, preco, precoEspecial);
             lista.add(dto);
         }
 
         return lista;
+    }
+
+    private void salvarProdutosBistek(List<ProdutoDTO> produtos) {
+        var loja = "bistek-bnu";
+
+        var unidade = aliasUnidadeRepository.findByAlias(loja);
+        if (unidade.isEmpty()) {
+            throw new NoSuchElementException("Não foi encontrado Loja cadastrada");
+        }
+
+        for (ProdutoDTO item : produtos) {
+            ProdutoScraping produto = new ProdutoScraping();
+            produto.setNome(item.nome());
+            produto.setUrlImg(item.urlImg());
+            produto.setDataScraping(LocalDateTime.now());
+            produto.setPreco(item.preco());
+            produto.setPrecoEspecial(item.precoEspecial());
+            produto.setUnidade(unidade.get().getUnidade());
+
+            var produtoReferencia = aliasProdutoReferenciaRepository.findByAlias(item.nome());
+
+            if (produtoReferencia.isEmpty()) {
+                var notIndex = aliasProdutoReferenciaRepository.findByAlias("NOT INDEX");
+                produto.setProdutoReferencia(notIndex.orElseThrow().getProdutoReferencia());
+
+                //CADASTRA Alias COM REFERENCIA PARA NOT-INDEX
+                AliasProdutoReferencia aliasProduto = new AliasProdutoReferencia(produto.getNome(), notIndex.get());
+                aliasProdutoReferenciaRepository.save(aliasProduto);
+            } else {
+                produto.setProdutoReferencia(produtoReferencia.get().getProdutoReferencia());
+            }
+
+            System.out.println("Bistek -  Produto Cadastrado! " + produto.getNome());
+            produtoScrapingRepository.save(produto);
+        }
     }
 
     // O método auxiliar `extractPriceFromElement` continua o mesmo e funciona para ambas as estruturas.

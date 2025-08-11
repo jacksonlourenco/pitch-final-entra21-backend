@@ -1,4 +1,4 @@
-package com.checkbuy.project.service.supermercado.bistek.scraping;
+package com.checkbuy.project.service.supermercado.bistek;
 
 import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
@@ -6,14 +6,17 @@ import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
 import com.checkbuy.project.service.supermercado.dto.ProdutoDTO;
-import com.checkbuy.project.service.supermercado.komprao.dto.ProdutoKompraoDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Paths;
@@ -22,18 +25,20 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.concurrent.CompletableFuture;
 
 @Service
-public class ScrapingBistek {
+public class ScrapingBistekService {
 
     private final AliasUnidadeRepository aliasUnidadeRepository;
     private final AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
     private final ProdutoScrapingRepository produtoScrapingRepository;
+    private static final Logger logger = LoggerFactory.getLogger(ScrapingBistekService.class);
 
     private final WebDriver driver;
 
 
-    public ScrapingBistek(AliasUnidadeRepository aliasUnidadeRepository, AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository, ProdutoScrapingRepository produtoScrapingRepository) {
+    public ScrapingBistekService(AliasUnidadeRepository aliasUnidadeRepository, AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository, ProdutoScrapingRepository produtoScrapingRepository) {
         this.aliasUnidadeRepository = aliasUnidadeRepository;
         this.aliasProdutoReferenciaRepository = aliasProdutoReferenciaRepository;
         this.produtoScrapingRepository = produtoScrapingRepository;
@@ -43,12 +48,15 @@ public class ScrapingBistek {
                 .toString();
         System.setProperty("webdriver.gecko.driver", driverPath);
 
-        //FirefoxOptions options = new FirefoxOptions();
-        //options.addArguments("-headless");
-        driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("-headless");
+        driver = new FirefoxDriver(options);
+
+        //driver = new FirefoxDriver();
     }
 
-    public void biteskScrapingTermo(String termo) {
+    @Async
+    public CompletableFuture<Void> biteskScrapingTermo(String termo) {
         var page = 1;
         var continuar = true;
 
@@ -64,6 +72,7 @@ public class ScrapingBistek {
             }
         }
 
+        return CompletableFuture.completedFuture(null);
     }
 
     private List<ProdutoDTO> buscarTermo(String termo, int page) {
@@ -232,7 +241,7 @@ public class ScrapingBistek {
                 produto.setProdutoReferencia(produtoReferencia.get().getProdutoReferencia());
             }
 
-            System.out.println("Bistek -  Produto Cadastrado! " + produto.getNome());
+            logger.info("Bistek -  Produto Cadastrado! - {}", produto.getNome());
             produtoScrapingRepository.save(produto);
         }
     }

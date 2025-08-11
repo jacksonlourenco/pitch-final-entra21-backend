@@ -1,12 +1,13 @@
-package com.checkbuy.project.service.supermercado.komprao.scraping;
+package com.checkbuy.project.service.supermercado.komprao;
 
 import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
 import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
-import com.checkbuy.project.service.supermercado.komprao.dto.ProdutoKompraoDTO;
+import com.checkbuy.project.service.supermercado.dto.ProdutoDTO;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -57,42 +58,11 @@ public class ScrapingKompraoService {
         //driver = new FirefoxDriver();
     }
 
-    private List<ProdutoKompraoDTO> buscarTermo(String termo, int page) {
-        List<ProdutoKompraoDTO> lista = new ArrayList<>();
+    private List<ProdutoDTO> buscarTermo(String termo, int page) {
+        List<ProdutoDTO> lista = new ArrayList<>();
         String url = "https://www.superkoch.com.br/catalogsearch/result/index/?p=" + page + "&q=" + termo;
 
         driver.get(url);
-
-        if(page == 1){
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
-            // Espera o link de seleção de cidade ficar clicável
-            WebElement linkSelecionarCidade = wait.until(
-                    ExpectedConditions.elementToBeClickable(By.cssSelector(".store-picker-link"))
-            );
-
-            linkSelecionarCidade.click();
-
-
-            // Espera o select ficar clicável
-            WebElement selectElement = wait.until(ExpectedConditions.elementToBeClickable(By.id("stores")));
-
-            // Cria objeto Select para manipular o combo
-            Select selectCidade = new Select(selectElement);
-
-            // Seleciona a opção pelo texto visível
-            selectCidade.selectByVisibleText("Blumenau");
-
-            driver.get(url);
-        }
-
-        if(Objects.equals(driver.getCurrentUrl(), "https://www.superkoch.com.br/" + termo)){
-            System.out.println("BATEUUU!");
-            driver.get("https://www.superkoch.com.br/"+termo);
-        }
-
-
-
 
         List<WebElement> produtos = driver.findElements(By.cssSelector("ol.products li.product-item"));
 
@@ -120,7 +90,7 @@ public class ScrapingKompraoService {
                 precoEspecial = valueToDouble(specialPriceEls);
             }
 
-            ProdutoKompraoDTO dto = new ProdutoKompraoDTO(nome, urlImg, preco, precoEspecial);
+            ProdutoDTO dto = new ProdutoDTO(nome, urlImg, preco, precoEspecial);
             lista.add(dto);
         }
 
@@ -131,17 +101,17 @@ public class ScrapingKompraoService {
     public CompletableFuture<Void> kochScrapingTermo(String termo) {
         int page = 1;
         boolean continuar = true;
-        ProdutoKompraoDTO produtoKompraoDTO = null;
+        String primeiroProduto = "";
 
         while (continuar) {
 
             var produtos = buscarTermo(termo, page);
 
             if (page == 1) {
-                produtoKompraoDTO = new ProdutoKompraoDTO(produtos.getFirst().nome(), produtos.getFirst().urlImg(), produtos.getFirst().preco(), produtos.getFirst().precoEspecial());
+                primeiroProduto = produtos.getFirst().nome();
             }
 
-            if (page != 1 && produtos.getFirst().nome().equals(produtoKompraoDTO.nome())) {
+            if (page != 1 && primeiroProduto.equals(produtos.getFirst().nome())) {
                 continuar = false;
                 System.out.println("Log: Scraping Koch - para termo de busca: " + termo + " Foi Finalizado!!");
             } else {
@@ -155,9 +125,9 @@ public class ScrapingKompraoService {
         return CompletableFuture.completedFuture(null);
     }
 
-    private List<ProdutoKompraoDTO> buscarPorCategoria(String categoria, int page) {
+    private List<ProdutoDTO> buscarPorCategoria(String categoria, int page) {
 
-        List<ProdutoKompraoDTO> lista = new ArrayList<>();
+        List<ProdutoDTO> lista = new ArrayList<>();
 
         driver.get("https://www.superkoch.com.br/" + categoria + "?p=" + page);
 
@@ -187,14 +157,14 @@ public class ScrapingKompraoService {
                 precoEspecial = valueToDouble(specialPriceEls);
             }
 
-            ProdutoKompraoDTO dto = new ProdutoKompraoDTO(nome, urlImg, preco, precoEspecial);
+            ProdutoDTO dto = new ProdutoDTO(nome, urlImg, preco, precoEspecial);
             lista.add(dto);
         }
 
         return lista;
     }
 
-    private void salvarProdutosKomprao(List<ProdutoKompraoDTO> produtos) {
+    private void salvarProdutosKomprao(List<ProdutoDTO> produtos) {
         var loja = "koch-bnu";
 
         var unidade = aliasUnidadeRepository.findByAlias(loja);
@@ -202,7 +172,7 @@ public class ScrapingKompraoService {
             throw new NoSuchElementException("Não foi encontrado Loja cadastrada");
         }
 
-        for (ProdutoKompraoDTO item : produtos) {
+        for (ProdutoDTO item : produtos) {
             ProdutoScraping produto = new ProdutoScraping();
             produto.setNome(item.nome());
             produto.setUrlImg(item.urlImg());
@@ -238,6 +208,4 @@ public class ScrapingKompraoService {
     private double valueToDouble(List<WebElement> Element) {
         return Double.parseDouble(Element.getFirst().getText().replace("R$", "").replace(",", ".").trim());
     }
-
-
 }

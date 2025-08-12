@@ -19,4 +19,8 @@ public class ProdutoReferenciaService {
     public List<ProdutoReferencia> listarProdutoReferencia(){
         return produtoReferenciaRepository.findAll();
     }
+
+    public void create(ProdutoReferencia dto) {
+        produtoReferenciaRepository.save(dto);
+    }
 }

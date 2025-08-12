@@ -29,4 +29,6 @@ public interface ProdutoScrapingRepository extends JpaRepository<ProdutoScraping
 
 
     List<ProdutoScraping> findAllByProdutoReferencia(ProdutoReferencia produtoReferencia);
+
+    Optional<List<ProdutoScraping>> findAllByNome(String alias);
 }

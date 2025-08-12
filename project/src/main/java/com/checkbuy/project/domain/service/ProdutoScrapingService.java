@@ -1,7 +1,9 @@
 package com.checkbuy.project.domain.service;
 
 import com.checkbuy.project.domain.dto.ProdutoNotIndexDTO;
+import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.model.ProdutoScraping;
+import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
 import jakarta.transaction.Transactional;
@@ -13,11 +15,14 @@ import java.util.NoSuchElementException;
 @Service
 public class ProdutoScrapingService {
 
+    private final AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository;
     private final ProdutoScrapingRepository produtoScrapingRepository;
     private final ProdutoReferenciaRepository produtoReferenciaRepository;
 
-    public ProdutoScrapingService(ProdutoScrapingRepository produtoScrapingRepository,
+    public ProdutoScrapingService(AliasProdutoReferenciaRepository aliasProdutoReferenciaRepository,
+                                  ProdutoScrapingRepository produtoScrapingRepository,
                                   ProdutoReferenciaRepository produtoReferenciaRepository) {
+        this.aliasProdutoReferenciaRepository = aliasProdutoReferenciaRepository;
         this.produtoScrapingRepository = produtoScrapingRepository;
         this.produtoReferenciaRepository = produtoReferenciaRepository;
     }
@@ -61,4 +66,28 @@ public class ProdutoScrapingService {
     }
 
 
+    @Transactional
+    public void alterarReferencia(String aliasScraping, ProdutoReferencia dto) {
+        var alias = aliasProdutoReferenciaRepository.findByAlias(aliasScraping);
+
+        if(alias.isEmpty()){
+            throw new NoSuchElementException("Alias " + aliasScraping + " não encontrado");
+        }
+
+        var produtoReferencia = produtoReferenciaRepository.findById(dto.getId());
+
+        if(produtoReferencia.isEmpty()){
+            throw new NoSuchElementException("ProdutoReferencia " + produtoReferencia + " não encontrado");
+        }
+
+        alias.get().setProdutoReferencia(produtoReferencia.get());
+
+        var produtosScraping = produtoScrapingRepository.findAllByNome(alias.get().getAlias());
+
+        if(produtosScraping.isEmpty()){
+            throw new NoSuchElementException("Lista não retornada!");
+        }
+
+        produtosScraping.get().forEach(p -> p.setProdutoReferencia(produtoReferencia.get()));
+    }
 }

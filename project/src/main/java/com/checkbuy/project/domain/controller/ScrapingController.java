@@ -24,7 +24,7 @@ public class ScrapingController {
         this.scrapingBistekService = scrapingBistekService;
     }
 
-    @GetMapping("/produtos/{termo}")
+    @GetMapping("/pesquisar/{termo}")
     public ResponseEntity<String> buscarTermo(@PathVariable String termo){
         CompletableFuture<Void> cooper = scrapingCooperService.cooperScrapingTermo(termo);
         CompletableFuture<Void> komprao = scrapingKompraoService.kochScrapingTermo(termo);
@@ -33,10 +33,5 @@ public class ScrapingController {
         CompletableFuture.allOf(cooper, komprao, bistek).join(); // aguarda as duas finalizarem
 
         return ResponseEntity.ok("Scraping concluído");
-    }
-
-    @GetMapping("/komprao/{termo}")
-    public void komprao(@PathVariable String termo){
-        scrapingKompraoService.kochScrapingTermo(termo);
     }
 }

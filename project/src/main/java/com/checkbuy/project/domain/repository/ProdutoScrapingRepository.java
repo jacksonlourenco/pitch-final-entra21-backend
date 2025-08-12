@@ -1,11 +1,13 @@
 package com.checkbuy.project.domain.repository;
 
+import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.dto.ProdutoNotIndexDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProdutoScrapingRepository extends JpaRepository<ProdutoScraping, Integer> {
 
@@ -23,5 +25,8 @@ public interface ProdutoScrapingRepository extends JpaRepository<ProdutoScraping
             """)
     List<ProdutoNotIndexDTO> listarProdutoNotIndex();
 
-    List<ProdutoScraping> findByNome(String s);
+    Optional<List<ProdutoScraping>> findByNomeAndProdutoReferenciaAndUnidade_Estabelecimento_Nome(String s, ProdutoReferencia p,String estabelecimento);
+
+
+    List<ProdutoScraping> findAllByProdutoReferencia(ProdutoReferencia produtoReferencia);
 }

@@ -1,5 +1,6 @@
 package com.checkbuy.project.domain.model;
 
+import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +17,17 @@ public class ProdutoReferencia {
     private Double valorMedida;
     private String codigoBarra;
 
-    public ProdutoReferencia() {
+    //JPA - CONSTRUTOR PADRÃO VAZIO
+    public ProdutoReferencia() {}
+
+    public ProdutoReferencia(ProdutoReferenciaDTO dto) {
+        this.nome = dto.nome();
+        this.urlImg = dto.urlImg();
+        this.marca = dto.marca();
+        this.descricao = dto.marca();
+        this.unidadeMedida = dto.unidadeMedida();
+        this.valorMedida = dto.valorMedida();
+        this.codigoBarra = dto.codigoBarra();
     }
 
     public Integer getId() {

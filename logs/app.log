@@ -1,29 +1,29 @@
-2025-08-11 10:04:18 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 36312 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-11 10:04:18 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-11 10:04:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-11 10:04:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-11 10:04:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-11 10:04:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 9 JPA repository interfaces.
-2025-08-11 10:04:20 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-11 10:04:20 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-11 10:04:20 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-11 10:04:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-11 10:04:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1496 ms
-2025-08-11 10:04:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-11 10:04:20 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-11 10:04:21 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@216beac1
-2025-08-11 10:04:21 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-11 10:04:21 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-11 10:04:21 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.031s)
-2025-08-11 10:04:21 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-11 10:04:21 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-11 10:04:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-11 10:04:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-11 10:04:21 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-11 10:04:21 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-11 10:04:21 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-11 10:04:21 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-11 10:04:21 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-13 08:37:07 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 28288 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
+2025-08-13 08:37:07 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-13 08:37:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-13 08:37:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-13 08:37:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 08:37:08 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 9 JPA repository interfaces.
+2025-08-13 08:37:08 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-13 08:37:08 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-13 08:37:08 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-13 08:37:09 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-13 08:37:09 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1883 ms
+2025-08-13 08:37:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-13 08:37:09 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-13 08:37:09 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50311eed
+2025-08-13 08:37:09 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-13 08:37:09 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-13 08:37:09 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.060s)
+2025-08-13 08:37:09 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-13 08:37:09 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-13 08:37:09 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-13 08:37:10 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-13 08:37:10 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-13 08:37:10 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 08:37:10 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-13 08:37:10 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-13 08:37:10 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -31,604 +31,454 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-11 10:04:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-11 10:04:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:04:22 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-11 10:04:27 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-11 10:04:28 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-11 10:04:28 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-11 10:04:28 - c.c.project.ProjectApplication - Started ProjectApplication in 10.071 seconds (process running for 10.518)
-2025-08-11 10:04:41 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-11 10:04:41 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-11 10:04:41 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Açaí Rio Cerro 180g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Tamoa 300g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Guarana Leao 300ml Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Leao 450ml Guarana/Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Barrinha Da Colonia 150g Ban.C/Acai Z.Ac
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 2l Coco/Acai Pet
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Granola Jasmine 250g Crab/Acai S/Gl Veg
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suplemento Carb Up 30g Acai C/Guarana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Banana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Composto Probiotica 30g Carb Up Gua/Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Snack Mae Terra 25g Remix Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Keep Cooler 275ml Acai/Hibisco
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Original
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai De Marchi 400g Sport Banana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai El Maestro 300g Inteiro
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 250ml Coco/Acai
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Rodela
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Hemmer 300g Tolete
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai/Banana
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Morango S/Ac
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai Original
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Banana S/Ac
-2025-08-11 10:06:03 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [c131e891-e040-4996-9478-02593cda7815, clickElement {id=dcee0aa6-aae5-4f3d-b215-25f0679f552c}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 18756, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[[[FirefoxDriver: firefox on windows (c131e891-e040-4996-9478-02593cda7815)] -> id: stores]] -> xpath: .//option[normalize-space(.) = "Blumenau"]]
-Session ID: c131e891-e040-4996-9478-02593cda7815] with root cause
-org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [c131e891-e040-4996-9478-02593cda7815, clickElement {id=dcee0aa6-aae5-4f3d-b215-25f0679f552c}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 18756, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[[[FirefoxDriver: firefox on windows (c131e891-e040-4996-9478-02593cda7815)] -> id: stores]] -> xpath: .//option[normalize-space(.) = "Blumenau"]]
-Session ID: c131e891-e040-4996-9478-02593cda7815
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:419)
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:133)
-	at com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService.buscarTermo(ScrapingKompraoService.java:80)
-	at com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService.kochScrapingTermo(ScrapingKompraoService.java:135)
+2025-08-13 08:37:10 - o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.checkbuy.project.domain.model.ProdutoReferencia (class must be instantiated by Interceptor)
+2025-08-13 08:37:11 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-13 08:37:11 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 08:37:11 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-13 08:37:17 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 08:37:18 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-13 08:37:18 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-13 08:37:18 - c.c.project.ProjectApplication - Started ProjectApplication in 11.627 seconds (process running for 12.614)
+2025-08-13 08:38:39 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-13 08:38:39 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-13 08:38:39 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-13 08:38:39 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void com.checkbuy.project.domain.controller.ProdutoReferenciaController.criar(com.checkbuy.project.domain.dto.ProdutoReferenciaDTO) with 7 errors: [Field error in object 'produtoReferenciaDTO' on field 'urlImg': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.urlImg,NotBlank.urlImg,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.urlImg,urlImg]; arguments []; default message [urlImg]]; default message [não deve estar em branco]] [Field error in object 'produtoReferenciaDTO' on field 'descricao': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.descricao,NotBlank.descricao,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.descricao,descricao]; arguments []; default message [descricao]]; default message [não deve estar em branco]] [Field error in object 'produtoReferenciaDTO' on field 'valorMedida': rejected value [null]; codes [NotNull.produtoReferenciaDTO.valorMedida,NotNull.valorMedida,NotNull.java.lang.Double,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.valorMedida,valorMedida]; arguments []; default message [valorMedida]]; default message [não deve ser nulo]] [Field error in object 'produtoReferenciaDTO' on field 'unidadeMedida': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.unidadeMedida,NotBlank.unidadeMedida,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.unidadeMedida,unidadeMedida]; arguments []; default message [unidadeMedida]]; default message [não deve estar em branco]] [Field error in object 'produtoReferenciaDTO' on field 'nome': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.nome,NotBlank.nome,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.nome,nome]; arguments []; default message [nome]]; default message [não deve estar em branco]] [Field error in object 'produtoReferenciaDTO' on field 'codigoBarra': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.codigoBarra,NotBlank.codigoBarra,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.codigoBarra,codigoBarra]; arguments []; default message [codigoBarra]]; default message [não deve estar em branco]] [Field error in object 'produtoReferenciaDTO' on field 'marca': rejected value [null]; codes [NotBlank.produtoReferenciaDTO.marca,NotBlank.marca,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [produtoReferenciaDTO.marca,marca]; arguments []; default message [marca]]; default message [não deve estar em branco]] ]
+2025-08-13 08:42:49 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-13 08:42:49 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-13 08:42:49 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 08:42:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-13 08:42:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-13 08:50:45 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 21844 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
+2025-08-13 08:50:45 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-13 08:50:45 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-13 08:50:45 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-13 08:50:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 08:50:45 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 9 JPA repository interfaces.
+2025-08-13 08:50:46 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-13 08:50:46 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-13 08:50:46 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-13 08:50:46 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-13 08:50:46 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1340 ms
+2025-08-13 08:50:46 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-13 08:50:46 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-13 08:50:47 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aa868c4
+2025-08-13 08:50:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-13 08:50:47 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-13 08:50:47 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.034s)
+2025-08-13 08:50:47 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-13 08:50:47 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-13 08:50:47 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-13 08:50:47 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-13 08:50:47 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-13 08:50:47 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 08:50:47 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-13 08:50:47 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-13 08:50:47 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-13 08:50:48 - o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.checkbuy.project.domain.model.ProdutoReferencia (class must be instantiated by Interceptor)
+2025-08-13 08:50:48 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-13 08:50:48 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 08:50:48 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-13 08:50:53 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 08:50:54 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-13 08:50:54 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-13 08:50:54 - c.c.project.ProjectApplication - Started ProjectApplication in 9.418 seconds (process running for 9.882)
+2025-08-13 08:51:00 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-13 08:51:00 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-13 08:51:00 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-13 08:57:05 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-13 08:57:05 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-13 08:57:05 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 08:57:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-13 08:57:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-13 08:57:19 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 45200 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
+2025-08-13 08:57:19 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-13 08:57:19 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-13 08:57:19 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-13 08:57:20 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 08:57:20 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
+2025-08-13 08:57:21 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-13 08:57:21 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-13 08:57:21 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-13 08:57:21 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-13 08:57:21 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1346 ms
+2025-08-13 08:57:21 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-13 08:57:21 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-13 08:57:21 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ac159d1
+2025-08-13 08:57:21 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-13 08:57:21 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-13 08:57:21 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.035s)
+2025-08-13 08:57:21 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-13 08:57:21 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-13 08:57:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-13 08:57:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-13 08:57:21 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-13 08:57:22 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 08:57:22 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-13 08:57:22 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-13 08:57:22 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-13 08:57:22 - o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.checkbuy.project.domain.model.ProdutoReferencia (class must be instantiated by Interceptor)
+2025-08-13 08:57:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-13 08:57:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 08:57:23 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-13 08:57:27 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 08:57:28 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-13 08:57:28 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-13 08:57:28 - c.c.project.ProjectApplication - Started ProjectApplication in 8.944 seconds (process running for 9.36)
+2025-08-13 08:57:31 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-13 08:57:31 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-13 08:57:31 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-08-13 09:05:34 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-13 09:05:34 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-13 09:05:34 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 09:05:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-13 09:05:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-13 09:05:45 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 31796 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
+2025-08-13 09:05:45 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-13 09:05:45 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-13 09:05:45 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-13 09:05:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 09:05:46 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 9 JPA repository interfaces.
+2025-08-13 09:05:47 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-13 09:05:47 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-13 09:05:47 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-13 09:05:47 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-13 09:05:47 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1436 ms
+2025-08-13 09:05:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-13 09:05:47 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-13 09:05:47 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@159cbe10
+2025-08-13 09:05:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-13 09:05:47 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-13 09:05:47 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.029s)
+2025-08-13 09:05:47 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-13 09:05:47 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-13 09:05:47 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-13 09:05:47 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-13 09:05:47 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-13 09:05:48 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 09:05:48 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-13 09:05:48 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-13 09:05:48 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-13 09:05:48 - o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.checkbuy.project.domain.model.ProdutoReferencia (class must be instantiated by Interceptor)
+2025-08-13 09:05:49 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-13 09:05:49 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 09:05:49 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-13 09:05:54 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 09:05:54 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-13 09:05:54 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-13 09:05:54 - c.c.project.ProjectApplication - Started ProjectApplication in 9.754 seconds (process running for 10.181)
+2025-08-13 09:06:28 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-13 09:06:28 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-13 09:06:28 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-13 09:06:28 - o.h.e.i.DefaultLoadEventListener - HHH000327: Error performing load command
+org.hibernate.InstantiationException: No default constructor for entity 'com.checkbuy.project.domain.model.ProdutoReferencia'
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:93)
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:4755)
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1489)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.instantiateEntity(EntityInitializerImpl.java:1250)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance(EntityInitializerImpl.java:1243)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance2(EntityInitializerImpl.java:1201)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance1(EntityInitializerImpl.java:1117)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveInstance(EntityInitializerImpl.java:1032)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:587)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:457)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:97)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:235)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:141)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.readUniqueAssert(ListResultsConsumer.java:262)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:198)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:35)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:224)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:74)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3895)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3884)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:206)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:289)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:241)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:110)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:69)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1229)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1217)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:210)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:161)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:150)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:113)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:150)
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:2459)
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:2430)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy135.find(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy135.find(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:335)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at org.springframework.util.concurrent.FutureUtils.lambda$toSupplier$0(FutureUtils.java:74)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy138.findById(Unknown Source)
+	at com.checkbuy.project.domain.service.ProdutoReferenciaService.buscarPorId(ProdutoReferenciaService.java:27)
+	at com.checkbuy.project.domain.controller.ProdutoReferenciaController.buscarPorId(ProdutoReferenciaController.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-08-11 10:07:27 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-11 10:07:27 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-11 10:07:27 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:07:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-11 10:07:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-11 10:13:04 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 22072 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-11 10:13:04 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-11 10:13:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-11 10:13:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-11 10:13:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-11 10:13:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
-2025-08-11 10:13:05 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-11 10:13:06 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-11 10:13:06 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-11 10:13:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-11 10:13:06 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1483 ms
-2025-08-11 10:13:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-11 10:13:06 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-11 10:13:06 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45638d6d
-2025-08-11 10:13:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-11 10:13:06 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-11 10:13:06 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.033s)
-2025-08-11 10:13:06 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-11 10:13:06 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-11 10:13:06 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-11 10:13:07 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-11 10:13:07 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-11 10:13:07 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-11 10:13:07 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-11 10:13:07 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-11 10:13:07 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-11 10:13:08 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-11 10:13:08 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:13:08 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-11 10:13:22 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-11 10:13:22 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-11 10:13:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-11 10:13:22 - c.c.project.ProjectApplication - Started ProjectApplication in 18.598 seconds (process running for 19.068)
-2025-08-11 10:14:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-11 10:14:15 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-11 10:14:15 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Açaí Rio Cerro 180g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Tamoa 300g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Guarana Leao 300ml Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Leao 450ml Guarana/Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Barrinha Da Colonia 150g Ban.C/Acai Z.Ac
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 2l Coco/Acai Pet
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Granola Jasmine 250g Crab/Acai S/Gl Veg
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suplemento Carb Up 30g Acai C/Guarana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Banana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Composto Probiotica 30g Carb Up Gua/Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Snack Mae Terra 25g Remix Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Keep Cooler 275ml Acai/Hibisco
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Original
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai De Marchi 400g Sport Banana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai El Maestro 300g Inteiro
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 250ml Coco/Acai
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Rodela
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Hemmer 300g Tolete
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai/Banana
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Morango S/Ac
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai Original
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Banana S/Ac
-2025-08-11 10:16:19 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-11 10:16:19 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-11 10:16:19 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:16:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-11 10:16:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 08:45:03 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 13908 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 08:45:03 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 08:45:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 08:45:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 08:45:04 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 08:45:04 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 9 JPA repository interfaces.
-2025-08-12 08:45:04 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 08:45:04 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 08:45:04 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 08:45:04 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 08:45:04 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1510 ms
-2025-08-12 08:45:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 08:45:05 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 08:45:05 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cba647c
-2025-08-12 08:45:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 08:45:05 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 08:45:05 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.039s)
-2025-08-12 08:45:05 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 2
-2025-08-12 08:45:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "3 - insert-data-koch"
-2025-08-12 08:45:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "4 - insert-data-bistek"
-2025-08-12 08:45:05 - o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema `checkbuy`, now at version v4 (execution time 00:00.016s)
-2025-08-12 08:45:05 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 08:45:05 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 08:45:05 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 08:45:06 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 08:45:06 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 08:45:06 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 08:45:06 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 08:45:06 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 08:45:06 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 08:45:06 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 08:45:11 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 08:45:12 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 08:45:12 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 08:45:12 - c.c.project.ProjectApplication - Started ProjectApplication in 9.286 seconds (process running for 9.802)
-2025-08-12 08:45:32 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 08:45:32 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 08:45:32 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Açaí Rio Cerro 180g Tolete
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Tamoa 300g Tolete
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Guarana Leao 300ml Acai
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Barrinha Da Colonia 150g Ban.C/Acai Z.Ac
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Leao 450ml Guarana/Acai
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Tolete
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 2l Coco/Acai Pet
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Granola Jasmine 250g Crab/Acai S/Gl Veg
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suplemento Carb Up 30g Acai C/Guarana
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Banana
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Composto Probiotica 30g Carb Up Gua/Acai
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Snack Mae Terra 25g Remix Acai
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Keep Cooler 275ml Acai/Hibisco
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Original
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai De Marchi 400g Sport Banana
-2025-08-12 08:46:27 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai El Maestro 300g Inteiro
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 250ml Coco/Acai
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Rodela
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Hemmer 300g Tolete
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai/Banana
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Morango S/Ac
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai Original
-2025-08-12 08:46:49 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Banana S/Ac
-2025-08-12 08:46:52 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 08:48:02 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 41644 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 08:48:02 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 08:48:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 08:48:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 08:48:03 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 08:48:03 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 9 JPA repository interfaces.
-2025-08-12 08:48:04 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 08:48:04 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 08:48:04 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 08:48:04 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 08:48:04 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1319 ms
-2025-08-12 08:48:04 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 08:48:04 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 08:48:05 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@620d5e9
-2025-08-12 08:48:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 08:48:05 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 08:48:05 - o.f.c.i.s.JdbcTableSchemaHistory - Schema history table `checkbuy`.`flyway_schema_history` does not exist yet
-2025-08-12 08:48:05 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.015s)
-2025-08-12 08:48:05 - o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table `checkbuy`.`flyway_schema_history` ...
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: << Empty Schema >>
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "1 - criando-tabelas-inicias"
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "2 - insert-data-cooper"
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "3 - insert-data-koch"
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "4 - insert-data-bistek"
-2025-08-12 08:48:05 - o.f.core.internal.command.DbMigrate - Successfully applied 4 migrations to schema `checkbuy`, now at version v4 (execution time 00:00.265s)
-2025-08-12 08:48:05 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 08:48:05 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 08:48:05 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 08:48:06 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 08:48:06 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 08:48:06 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 08:48:06 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 08:48:06 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 08:48:06 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 08:48:06 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 08:48:11 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 08:48:12 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 08:48:12 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 08:48:12 - c.c.project.ProjectApplication - Started ProjectApplication in 9.716 seconds (process running for 10.14)
-2025-08-12 08:48:19 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 08:48:19 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 08:48:19 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 210g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 350g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Duo 210g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 550g Sachê
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Extra Cacau Nescau 170g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Nestlé 770g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau Leve 350g Pague 330g Grátis 20g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau Zero Lactose 180ml
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea Chocolate Nescau 180ml
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 60% Cacau 180g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 33% Menos Açúcar 350g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 670g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau 270ml
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Nestlé 540g
-2025-08-12 08:49:40 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau 1L
-2025-08-12 08:49:41 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau Leve 550g Pague 500g Grátis 50g Sachê
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 900g
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 30g Sachê
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 1,02kg Sachê
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau Light 400g
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 180g Branco Lata
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 180g C/Canel.Lata
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau L. Ligh C/3 200ml
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Beb.Lactea Nescau Prontinho 200ml
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 165g Max Cereal
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Beb.Lactea Nescau Pro.200mll Zer. Lactos
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Lactea Nescau 270ml Protein Choc
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 370g
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achoc.Nescau 730g Sache
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nestle 400g Nescau
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau 370g
-2025-08-12 08:50:02 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nestle 400g Nescau Duo
-2025-08-12 08:50:24 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 200g 60% Men.Acuc.
-2025-08-12 08:50:24 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Lactea Nescau 1,8l Prontin.L9p8
-2025-08-12 08:54:12 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 08:54:12 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-12 08:54:12 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 08:54:12 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 08:54:12 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 08:54:14 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 3396 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 08:54:14 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 08:54:14 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 08:54:14 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 08:54:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 08:54:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 9 JPA repository interfaces.
-2025-08-12 08:54:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 08:54:15 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 08:54:15 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 08:54:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 08:54:15 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
-2025-08-12 08:54:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 08:54:15 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 08:54:16 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12d5e923
-2025-08-12 08:54:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 08:54:16 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 08:54:16 - o.f.c.i.s.JdbcTableSchemaHistory - Schema history table `checkbuy`.`flyway_schema_history` does not exist yet
-2025-08-12 08:54:16 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.018s)
-2025-08-12 08:54:16 - o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table `checkbuy`.`flyway_schema_history` ...
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: << Empty Schema >>
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "1 - criando-tabelas-inicias"
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "2 - insert-data-cooper"
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "3 - insert-data-koch"
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "4 - insert-data-bistek"
-2025-08-12 08:54:16 - o.f.core.internal.command.DbMigrate - Successfully applied 4 migrations to schema `checkbuy`, now at version v4 (execution time 00:00.270s)
-2025-08-12 08:54:16 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 08:54:16 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 08:54:16 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 08:54:17 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 08:54:17 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 08:54:17 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 08:54:17 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 08:54:17 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 08:54:17 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 08:54:18 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 08:54:23 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 08:54:23 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 08:54:23 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 08:54:23 - c.c.project.ProjectApplication - Started ProjectApplication in 9.987 seconds (process running for 10.434)
-2025-08-12 08:54:37 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 08:54:37 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 08:54:37 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-12 08:55:20 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 210g
-2025-08-12 08:55:20 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 350g
-2025-08-12 08:55:20 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Duo 210g
-2025-08-12 08:55:20 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 550g Sachê
-2025-08-12 08:55:21 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Extra Cacau Nescau 170g
-2025-08-12 08:55:21 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Nestlé 770g
-2025-08-12 08:55:21 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau Leve 350g Pague 330g Grátis 20g
-2025-08-12 08:55:21 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau Zero Lactose 180ml
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea Chocolate Nescau 180ml
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 60% Cacau 180g
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 33% Menos Açúcar 350g
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 670g
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau 270ml
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau Nestlé 540g
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Láctea De Chocolate Nescau 1L
-2025-08-12 08:55:22 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau Leve 550g Pague 500g Grátis 50g Sachê
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 900g
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 30g Sachê
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 1,02kg Sachê
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau Light 400g
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 180g Branco Lata
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 180g C/Canel.Lata
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau L. Ligh C/3 200ml
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Beb.Lactea Nescau Prontinho 200ml
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Po Nescau 165g Max Cereal
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Beb.Lactea Nescau Pro.200mll Zer. Lactos
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Lactea Nescau 270ml Protein Choc
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Em Pó Nescau 370g
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achoc.Nescau 730g Sache
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nestle 400g Nescau
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Achocolatado Nescau 370g
-2025-08-12 08:55:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nestle 400g Nescau Duo
-2025-08-12 08:56:03 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Cereal Matinal Nescau 200g 60% Men.Acuc.
-2025-08-12 08:56:03 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Lactea Nescau 1,8l Prontin.L9p8
-2025-08-12 09:38:33 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 09:38:33 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-12 09:38:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 09:38:33 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 09:38:33 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 09:38:46 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 12940 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 09:38:46 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 09:38:46 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 09:38:46 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 09:38:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 09:38:47 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
-2025-08-12 09:38:47 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 09:38:47 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 09:38:47 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 09:38:47 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 09:38:47 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1496 ms
-2025-08-12 09:38:48 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 09:38:48 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 09:38:48 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d0901fe
-2025-08-12 09:38:48 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 09:38:48 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 09:38:48 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.032s)
-2025-08-12 09:38:48 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-12 09:38:48 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-12 09:38:48 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 09:38:48 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 09:38:48 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 09:38:49 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 09:38:49 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 09:38:49 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 09:38:49 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 09:38:49 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 09:38:49 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 09:38:50 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 09:38:55 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 09:38:55 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 09:38:55 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 09:38:55 - c.c.project.ProjectApplication - Started ProjectApplication in 9.879 seconds (process running for 10.325)
-2025-08-12 09:40:08 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 09:40:08 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 09:40:08 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-12 09:40:08 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2025-08-12 09:42:24 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Integral De Milho Mucilon 35g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Prestígio Nestlé 60g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Classic Chocolate Nestlé 60g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Água Isabela Sal 350g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Fernandes 200g S/ Glúten Polvilho
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Wafer 140g Chocolate
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Goplana Crunchy 140g Caram/Cer
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Leite Isabela 350g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Cookies 110g Original
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito com Chocolate Chocobiscuit Nestlé Ao Leite 78g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cream Cracker Isabela 350g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Biscolata Mood 115g Chocolate
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Vitalin 30g Chia / Maçã / Canela S/ Glúten
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Recheado Chocolate Passatempo 130g
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Milka 126g Choco Grain
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Schar 115g Agua Sal S/Gluten
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Vitalin 30g Amaranto / Cacau S/ Glúten
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Asolo Dolce 120g Ventagli
-2025-08-12 10:14:53 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Elgorriaga Chocobreak 500g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Milka 184g Xl Chocolate
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Maizena Galo 360g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Polvilho Tradicional Bistek 140g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Maizena Isabela 350g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Wafer 140g Choco / Avelã
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Wafer 140g Tiplo Chocolate
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Parati 370g Leite
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Maria Isabela 350g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Wafer 140g Morango
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Cookies 105g Chocco
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Delice Cacau E Avelã Nesfit 140g
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Bauducco 104g Maxi Choc
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Parati 81g Morango
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Bauducco Cookies 110g Chocolate
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Milka 112g Stix Ao Leite
-2025-08-12 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Polvilho Bistek 140g Qjo Nacho
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Parati 81g Chocolate
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Delice Maçã E Canela Nesfit 140g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Parati 81g Choc/Baunilha
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Parati 81g Brigadeiro
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Amant.Marilan 280g Nata
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Parati 81g Limao
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookies Bauducco Fini Dentaduras Pacote Com 96g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Recheado Chocomix Chocolate Passatempo 130g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Casaredo 250g Rosca Chocolate
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Recheado Morango Passatempo 130g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Recheado Chocomix Morango Passatempo 130g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Cookie Framboesa com Gotas e Cobertura Chocolate Branco Fini Tubes Pinta Língua Bauducco Pacote 96g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Casaredo 250g Rosca Leite
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Wafer Isabela Chocolate 100g
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Amendoim Fernandes 200g S/Gl
-2025-08-12 10:15:39 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Biscoito Polvilho Bistek 140g Qjo Parm
-2025-08-12 10:17:55 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: org.openqa.selenium.NoSuchElementException: Unable to locate element: .vtex-product-price-1-x-currencyInteger
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d7096e0a-0092-4784-b2a5-f7c59568a96f, findChildElement {value=.vtex-product-price-1-x-currencyInteger, id=f38e085e-a7e6-4f9f-9e28-df1f80a2a388, using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 30484, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d7096e0a-0092-4784-b2a5-f7c59568a96f] with root cause
-org.openqa.selenium.NoSuchElementException: Unable to locate element: .vtex-product-price-1-x-currencyInteger
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [d7096e0a-0092-4784-b2a5-f7c59568a96f, findChildElement {value=.vtex-product-price-1-x-currencyInteger, id=f38e085e-a7e6-4f9f-9e28-df1f80a2a388, using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 30484, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d7096e0a-0092-4784-b2a5-f7c59568a96f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:211)
-	at com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService.extractPriceFromElement(ScrapingBistekService.java:252)
-	at com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService.buscarTermo(ScrapingBistekService.java:171)
-	at com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService.biteskScrapingTermo(ScrapingBistekService.java:64)
+2025-08-13 09:06:28 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: No default constructor for entity 'com.checkbuy.project.domain.model.ProdutoReferencia'] with root cause
+org.hibernate.InstantiationException: No default constructor for entity 'com.checkbuy.project.domain.model.ProdutoReferencia'
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:93)
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:4755)
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1489)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.instantiateEntity(EntityInitializerImpl.java:1250)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance(EntityInitializerImpl.java:1243)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance2(EntityInitializerImpl.java:1201)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveEntityInstance1(EntityInitializerImpl.java:1117)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveInstance(EntityInitializerImpl.java:1032)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:587)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:457)
+	at org.hibernate.sql.results.graph.entity.internal.EntityInitializerImpl.resolveKey(EntityInitializerImpl.java:97)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:235)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:141)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.readUniqueAssert(ListResultsConsumer.java:262)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:198)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:35)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:224)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:74)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3895)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3884)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:206)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:289)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:241)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:110)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:69)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1229)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1217)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:210)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:161)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:150)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:113)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:150)
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:2459)
+	at org.hibernate.internal.SessionImpl.find(SessionImpl.java:2430)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy135.find(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy135.find(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:335)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at org.springframework.util.concurrent.FutureUtils.lambda$toSupplier$0(FutureUtils.java:74)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-08-12 10:22:29 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .bistek-avanti-menu-2-x-optionPickup > span:nth-child(2) (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 30484, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d7096e0a-0092-4784-b2a5-f7c59568a96f] with root cause
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .bistek-avanti-menu-2-x-optionPickup > span:nth-child(2) (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 30484, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: d7096e0a-0092-4784-b2a5-f7c59568a96f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService.buscarTermo(ScrapingBistekService.java:88)
-	at com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService.biteskScrapingTermo(ScrapingBistekService.java:64)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy138.findById(Unknown Source)
+	at com.checkbuy.project.domain.service.ProdutoReferenciaService.buscarPorId(ProdutoReferenciaService.java:27)
+	at com.checkbuy.project.domain.controller.ProdutoReferenciaController.buscarPorId(ProdutoReferenciaController.java:38)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at org.springframework.util.concurrent.FutureUtils.lambda$toSupplier$0(FutureUtils.java:74)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-08-12 10:59:28 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 10:59:28 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-12 10:59:28 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 10:59:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 10:59:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 11:23:11 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 34400 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 11:23:11 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 11:23:11 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 11:23:11 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 11:23:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 11:23:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 9 JPA repository interfaces.
-2025-08-12 11:23:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 11:23:13 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 11:23:13 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 11:23:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 11:23:13 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1766 ms
-2025-08-12 11:23:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 11:23:13 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 11:23:14 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c36c4ca
-2025-08-12 11:23:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 11:23:14 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 11:23:14 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.062s)
-2025-08-12 11:23:14 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-12 11:23:14 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-12 11:23:14 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 11:23:14 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 11:23:14 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 11:23:14 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 11:23:14 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 11:23:14 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 11:23:14 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-13 09:07:28 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-13 09:07:28 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-13 09:07:28 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 09:07:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-13 09:07:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-13 09:07:30 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 20084 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
+2025-08-13 09:07:30 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-13 09:07:30 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-13 09:07:30 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-13 09:07:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-13 09:07:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 9 JPA repository interfaces.
+2025-08-13 09:07:32 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-13 09:07:32 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-13 09:07:32 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-13 09:07:32 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-13 09:07:32 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1367 ms
+2025-08-13 09:07:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-13 09:07:32 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-13 09:07:32 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e77c0c8
+2025-08-13 09:07:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-13 09:07:32 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-13 09:07:32 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.029s)
+2025-08-13 09:07:32 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-13 09:07:32 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-13 09:07:32 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-13 09:07:32 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-13 09:07:33 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-13 09:07:33 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-13 09:07:33 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-13 09:07:33 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-13 09:07:33 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -636,196 +486,70 @@ Session ID: d7096e0a-0092-4784-b2a5-f7c59568a96f
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-12 11:23:15 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 11:23:15 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:23:16 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 11:23:21 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 11:23:22 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 11:23:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 11:23:22 - c.c.project.ProjectApplication - Started ProjectApplication in 10.996 seconds (process running for 12.025)
-2025-08-12 11:23:27 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 11:23:27 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 11:23:27 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2025-08-12 11:24:24 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 11:24:24 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-12 11:24:24 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:24:24 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 11:24:24 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 11:24:41 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 10912 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 11:24:41 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 11:24:41 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 11:24:41 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 11:24:41 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 11:24:42 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 9 JPA repository interfaces.
-2025-08-12 11:24:42 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 11:24:42 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 11:24:42 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 11:24:42 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 11:24:42 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1405 ms
-2025-08-12 11:24:42 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 11:24:43 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 11:24:43 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76c662fc
-2025-08-12 11:24:43 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 11:24:43 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 11:24:43 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.030s)
-2025-08-12 11:24:43 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-12 11:24:43 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-12 11:24:43 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 11:24:43 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 11:24:43 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 11:24:43 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 11:24:43 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 11:24:43 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 11:24:43 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 11:24:44 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 11:24:44 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:24:45 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 11:24:50 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 11:24:51 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-12 11:24:51 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-12 11:24:51 - c.c.project.ProjectApplication - Started ProjectApplication in 10.358 seconds (process running for 10.797)
-2025-08-12 11:25:00 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-12 11:25:00 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-12 11:25:00 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-08-12 11:25:56 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-12 11:25:56 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-12 11:25:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:25:56 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 11:25:56 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 11:26:03 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 7896 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 11:26:03 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 11:26:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 11:26:03 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 11:26:04 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 11:26:04 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 9 JPA repository interfaces.
-2025-08-12 11:26:05 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 11:26:05 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-12 11:26:05 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-12 11:26:05 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-12 11:26:05 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1657 ms
-2025-08-12 11:26:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 11:26:05 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-12 11:26:06 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b70e82f
-2025-08-12 11:26:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 11:26:06 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 11:26:06 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.037s)
-2025-08-12 11:26:06 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-12 11:26:06 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-12 11:26:06 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 11:26:06 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 11:26:06 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 11:26:06 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 11:26:06 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 11:26:06 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 11:26:06 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 11:26:07 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 11:26:07 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:26:07 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 11:26:13 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-12 11:26:13 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to introspect Class [org.springdoc.webmvc.api.OpenApiWebMvcResource] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528]
-2025-08-12 11:26:13 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:26:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 11:26:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-12 11:26:13 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-08-12 11:26:13 - o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-08-12 11:26:13 - o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to introspect Class [org.springdoc.webmvc.api.OpenApiWebMvcResource] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.checkbuy.project.ProjectApplication.main(ProjectApplication.java:11)
+2025-08-13 09:07:33 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-13 09:07:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 09:07:34 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-13 09:07:39 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-13 09:07:39 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-13 09:07:39 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-13 09:07:39 - c.c.project.ProjectApplication - Started ProjectApplication in 9.243 seconds (process running for 9.669)
+2025-08-13 09:07:42 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-13 09:07:42 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-13 09:07:42 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-13 09:08:39 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: Produto Referência ID: 50 não foi encontrado!] with root cause
+java.util.NoSuchElementException: Produto Referência ID: 50 não foi encontrado!
+	at com.checkbuy.project.domain.service.ProdutoReferenciaService.buscarPorId(ProdutoReferenciaService.java:30)
+	at com.checkbuy.project.domain.controller.ProdutoReferenciaController.buscarPorId(ProdutoReferenciaController.java:38)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.api.OpenApiWebMvcResource] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
-	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:73)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:280)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 21 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2676)
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
-	... 30 common frames omitted
-Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	... 34 common frames omitted
-2025-08-12 11:27:15 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 31340 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 11:27:15 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 11:27:17 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 17644 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial)
-2025-08-12 11:27:17 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-12 11:27:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-12 11:27:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-12 11:27:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-12 11:27:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 9 JPA repository interfaces.
-2025-08-12 11:27:20 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-12 11:27:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2212 ms
-2025-08-12 11:27:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-12 11:27:20 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d226c1f
-2025-08-12 11:27:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-12 11:27:21 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-12 11:27:21 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.036s)
-2025-08-12 11:27:21 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-12 11:27:21 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-12 11:27:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-12 11:27:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-12 11:27:21 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-12 11:27:21 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-12 11:27:21 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-12 11:27:21 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-12 11:27:21 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-12 11:27:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-12 11:27:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:27:22 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-12 11:27:23 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scrapingController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes\com\checkbuy\project\domain\controller\ScrapingController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'scrapingCooperService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend-oficial\project\target\classes\com\checkbuy\project\service\supermercado\cooper\scraping\ScrapingCooperService.class]: Failed to instantiate [com.checkbuy.project.service.supermercado.cooper.scraping.ScrapingCooperService]: Constructor threw exception
-2025-08-12 11:27:23 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-12 11:27:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-12 11:27:23 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-08-13 09:15:31 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-13 09:15:31 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-13 09:15:31 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-13 09:15:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-13 09:15:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

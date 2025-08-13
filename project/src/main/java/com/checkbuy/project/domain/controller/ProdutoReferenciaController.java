@@ -1,18 +1,18 @@
 package com.checkbuy.project.domain.controller;
 
-import com.checkbuy.project.domain.dto.UpdateAliasProdutoReferenciaDTO;
+import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
-import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
 import com.checkbuy.project.domain.service.ProdutoReferenciaService;
+import com.checkbuy.project.util.UriUtils;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.net.URI;
 
 @RestController
-@RequestMapping("/produtos/referencia")
 @CrossOrigin
+@RequestMapping("/produtos/referencias")
 public class ProdutoReferenciaController {
 
     private final ProdutoReferenciaService produtoReferenciaService;
@@ -21,14 +21,28 @@ public class ProdutoReferenciaController {
         this.produtoReferenciaService = produtoReferenciaService;
     }
 
-    @GetMapping
-    public List<ProdutoReferencia> listarProdutoReferencia(){
-        return produtoReferenciaService.listarProdutoReferencia();
+    @PostMapping
+    public ResponseEntity<ProdutoReferencia> criar(@RequestBody  @Valid ProdutoReferenciaDTO dto){
+
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.criar(dto);
+
+        URI location = UriUtils.buildLocation(produtoReferencia.getId());
+
+        return ResponseEntity.created(location).body(produtoReferencia);
     }
 
-    @PostMapping("/criar")
-    public ResponseEntity<ProdutoReferencia> create(@RequestBody ProdutoReferencia dto){
-        produtoReferenciaService.create(dto);
-        return ResponseEntity.ok().body(dto);
+    @GetMapping("/{id}")
+    public ResponseEntity<ProdutoReferencia> buscarPorId(@PathVariable Integer id){
+
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.buscarPorId(id);
+
+        return ResponseEntity.ok(produtoReferencia);
+    }
+
+    @PutMapping("/{id}")
+    public ProdutoReferencia alterar(@PathVariable Integer id, @RequestBody @Valid ProdutoReferenciaDTO dto){
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.alterar(id, dto);
+
+        return produtoReferencia;
     }
 }

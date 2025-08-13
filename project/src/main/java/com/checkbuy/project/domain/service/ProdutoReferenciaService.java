@@ -1,10 +1,12 @@
 package com.checkbuy.project.domain.service;
 
+import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class ProdutoReferenciaService {
@@ -15,12 +17,37 @@ public class ProdutoReferenciaService {
         this.produtoReferenciaRepository = produtoReferenciaRepository;
     }
 
-
-    public List<ProdutoReferencia> listarProdutoReferencia(){
-        return produtoReferenciaRepository.findAll();
+    public ProdutoReferencia criar(ProdutoReferenciaDTO dto){
+        ProdutoReferencia produtoReferencia = new ProdutoReferencia(dto);
+        return produtoReferenciaRepository.save(produtoReferencia);
     }
 
-    public void create(ProdutoReferencia dto) {
-        produtoReferenciaRepository.save(dto);
+
+    public ProdutoReferencia buscarPorId(Integer id) {
+        Optional<ProdutoReferencia> produtoReferencia = produtoReferenciaRepository.findById(id);
+
+        if(produtoReferencia.isEmpty()){
+            throw new NoSuchElementException("Produto Referência ID: " + id + " não foi encontrado!");
+        }
+
+        return produtoReferencia.get();
+    }
+
+    public ProdutoReferencia alterar(Integer id, ProdutoReferenciaDTO dto) {
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

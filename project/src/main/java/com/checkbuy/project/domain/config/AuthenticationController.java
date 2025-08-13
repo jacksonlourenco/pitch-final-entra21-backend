@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.checkbuy.project.domain.dto.AuthenticationDTO;
+import com.checkbuy.project.domain.dto.LoginResponseDTO;
 import com.checkbuy.project.domain.dto.RegisterDTO;
 import com.checkbuy.project.domain.model.user.User;
 import com.checkbuy.project.domain.repository.user.UserRepository;
@@ -27,12 +28,17 @@ public class AuthenticationController {
     @Autowired
     private UserRepository repository;
 
+    @Autowired
+    private TokenService tokenService;
+
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody @Valid AuthenticationDTO data) {
         var usernamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
         var auth = this.authenticationManager.authenticate(usernamePassword);
 
-        return ResponseEntity.ok().build();
+        var token = tokenService.generateToken((User) auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 
     @PostMapping("/register")

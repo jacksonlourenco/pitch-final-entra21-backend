@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -40,9 +41,29 @@ public class ProdutoReferenciaController {
     }
 
     @PutMapping("/{id}")
-    public ProdutoReferencia alterar(@PathVariable Integer id, @RequestBody @Valid ProdutoReferenciaDTO dto){
+    public ResponseEntity<ProdutoReferencia> alterar(@PathVariable Integer id, @RequestBody @Valid ProdutoReferenciaDTO dto){
         ProdutoReferencia produtoReferencia = produtoReferenciaService.alterar(id, dto);
 
-        return produtoReferencia;
+        return ResponseEntity.ok(produtoReferencia);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> excluir(@PathVariable Integer id){
+        produtoReferenciaService.excluir(id);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    //FALTA IMPLEMENTAR -------------------------------------- RETORNAR PAGEBLE PAGEBLE
+    @GetMapping("/listar")
+    public ResponseEntity<List<ProdutoReferencia>> listar(){
+
+        var lista = produtoReferenciaService.listar();
+
+        return ResponseEntity.ok(lista);
+
+    }
+
+
+
 }

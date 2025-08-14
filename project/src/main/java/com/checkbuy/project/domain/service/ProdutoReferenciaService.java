@@ -6,10 +6,10 @@ import com.checkbuy.project.domain.exception.ProdutoReferenciaNotIndexImutavel;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -19,10 +19,6 @@ public class ProdutoReferenciaService {
 
     public ProdutoReferenciaService(ProdutoReferenciaRepository produtoReferenciaRepository) {
         this.produtoReferenciaRepository = produtoReferenciaRepository;
-    }
-
-    public List<ProdutoReferencia> listar(){
-        return produtoReferenciaRepository.findAll();
     }
 
     public ProdutoReferencia criar(ProdutoReferenciaDTO dto){
@@ -52,6 +48,10 @@ public class ProdutoReferenciaService {
         verificarIntegridadeNotIndex(id);
         buscarPorId(id);
         produtoReferenciaRepository.deleteById(id);
+    }
+
+    public Page<ProdutoReferencia> listar(Pageable pageable){
+        return produtoReferenciaRepository.findAll(pageable);
     }
 
     public void verificarIntegridadeNotIndex(Integer id){

@@ -5,11 +5,12 @@ import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.service.ProdutoReferenciaService;
 import com.checkbuy.project.util.UriUtils;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -54,14 +55,10 @@ public class ProdutoReferenciaController {
         return ResponseEntity.noContent().build();
     }
 
-    //FALTA IMPLEMENTAR -------------------------------------- RETORNAR PAGEBLE PAGEBLE
     @GetMapping("/listar")
-    public ResponseEntity<List<ProdutoReferencia>> listar(){
-
-        var lista = produtoReferenciaService.listar();
-
+    public ResponseEntity<Page<ProdutoReferencia>> listar(Pageable pageable){
+        var lista = produtoReferenciaService.listar(pageable);
         return ResponseEntity.ok(lista);
-
     }
 
 

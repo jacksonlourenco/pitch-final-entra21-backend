@@ -23,6 +23,17 @@ public class DomainExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseError);
     }
 
+    @ExceptionHandler(AliasProdutoReferenciaNaoEncontrado.class)
+    public ResponseEntity<ResponseError> aliasProdutoReferenciaNaoEncontrado(AliasProdutoReferenciaNaoEncontrado ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.NOT_FOUND,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseError);
+    }
+
     @ExceptionHandler(ProdutoReferenciaNotIndexImutavel.class)
     public ResponseEntity<ResponseError> produtoReferenciaNotIndexImutavel(ProdutoReferenciaNotIndexImutavel ex){
 

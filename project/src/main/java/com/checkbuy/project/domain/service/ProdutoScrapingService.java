@@ -3,9 +3,6 @@ package com.checkbuy.project.domain.service;
 import com.checkbuy.project.domain.dto.ProdutoScrapingChangeDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.model.ProdutoScraping;
-import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
-import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
-import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
@@ -34,26 +31,23 @@ public class ProdutoScrapingService {
         return produtoScrapingRepository.findAllByProdutoReferencia(produtoReferencia, pageable);
     }
 
-    public List<ProdutoScraping> obterScrapingPelaReferencia(Integer produtoReferenciaId) {
-        ProdutoReferencia produtoReferencia = produtoReferenciaService.buscarPorId(produtoReferenciaId);
-        return produtoScrapingRepository.findAllByProdutoReferencia(produtoReferencia);
-    }
-
-
     @Transactional
-    public void alterarProdutoReferencia(ProdutoScrapingChangeDTO dto) { /// !!!!!!! FALTA FAZER )))
-
-        AliasProdutoReferencia aliasProdutoReferencia = aliasProdutoReferenciaService.obterProdutoReferenciaPeloAlias(dto.alias());
-        ProdutoReferencia produtoReferenciaAntigo = aliasProdutoReferencia.getProdutoReferencia();
+    public void alterarProdutoReferencia(ProdutoScrapingChangeDTO dto) {
 
         ProdutoReferencia  produtoReferencia = produtoReferenciaService.buscarPorId(dto.produtoReferenciaID());
 
         aliasProdutoReferenciaService.alterarProdutoReferenciaPeloAlias(dto.alias(), dto.produtoReferenciaID());
 
-        List<ProdutoScraping> produtoScrapingList = obterScrapingPelaReferencia(produtoReferenciaAntigo.getId());
+        List<ProdutoScraping> produtoScrapingList = obterScrapingPeloAlias(dto.alias());
 
         produtoScrapingList.forEach(p -> {
             p.setProdutoReferencia(produtoReferencia);
         });
     }
+
+    public List<ProdutoScraping> obterScrapingPeloAlias(String alias) {
+        var listaProdutosScraping = produtoScrapingRepository.findAllByNome(alias);
+        return listaProdutosScraping.get();
+    }
+
 }

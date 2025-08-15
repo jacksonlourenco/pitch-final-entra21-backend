@@ -1,30 +1,29 @@
-2025-08-14 08:35:54 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 46292 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 08:35:54 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 08:35:54 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 08:35:54 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 08:35:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 08:35:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 9 JPA repository interfaces.
-2025-08-14 08:35:56 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 08:35:56 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 08:35:56 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 08:35:56 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 08:35:56 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2487 ms
-2025-08-14 08:35:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 08:35:57 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 08:35:57 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c5f34af
-2025-08-14 08:35:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 08:35:57 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 08:35:57 - o.f.core.internal.command.DbValidate - Successfully validated 5 migrations (execution time 00:00.057s)
-2025-08-14 08:35:57 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 5
-2025-08-14 08:35:57 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` has a version (5) that is newer than the latest available migration (4) !
-2025-08-14 08:35:57 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 08:35:57 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 08:35:57 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 08:35:57 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 08:35:58 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 08:35:58 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 08:35:58 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 08:35:58 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-15 08:10:18 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 7728 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
+2025-08-15 08:10:18 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-15 08:10:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-15 08:10:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-15 08:10:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-15 08:10:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
+2025-08-15 08:10:19 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-15 08:10:19 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-15 08:10:19 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-15 08:10:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-15 08:10:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1647 ms
+2025-08-15 08:10:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-15 08:10:20 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-15 08:10:20 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a4aabc
+2025-08-15 08:10:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-15 08:10:20 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-15 08:10:20 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.066s)
+2025-08-15 08:10:20 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-15 08:10:20 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-15 08:10:20 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-15 08:10:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-15 08:10:21 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-15 08:10:21 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-15 08:10:21 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-15 08:10:21 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-15 08:10:21 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -32,56 +31,101 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-14 08:35:58 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 08:35:58 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 08:35:59 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-14 08:36:04 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 08:36:04 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 08:36:04 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 08:36:04 - c.c.project.ProjectApplication - Started ProjectApplication in 11.357 seconds (process running for 12.78)
-2025-08-14 08:36:08 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 08:36:08 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 08:36:08 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 08:36:08 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2025-08-15 08:10:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-15 08:10:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:10:27 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-15 08:10:28 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-15 08:10:28 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-15 08:10:28 - c.c.project.ProjectApplication - Started ProjectApplication in 10.652 seconds (process running for 11.558)
+2025-08-15 08:11:16 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-15 08:11:16 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-15 08:11:16 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-15 08:11:31 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 9 não foi encontrado!]
+2025-08-15 08:17:38 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-15 08:17:38 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-15 08:17:38 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:17:38 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-15 08:17:38 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-15 08:22:54 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 5512 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
+2025-08-15 08:22:54 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-15 08:22:54 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-15 08:22:54 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-15 08:22:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-15 08:22:55 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 9 JPA repository interfaces.
+2025-08-15 08:22:56 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-15 08:22:56 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-15 08:22:56 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-15 08:22:56 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-15 08:22:56 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1667 ms
+2025-08-15 08:22:56 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-15 08:22:56 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-15 08:22:57 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@714d47a8
+2025-08-15 08:22:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-15 08:22:57 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-15 08:22:57 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.047s)
+2025-08-15 08:22:57 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-15 08:22:57 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-15 08:22:57 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-15 08:22:57 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-15 08:22:57 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-15 08:22:57 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-15 08:22:57 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-15 08:22:57 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-15 08:22:57 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-15 08:22:58 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-15 08:22:58 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:23:02 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-15 08:23:03 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-15 08:23:03 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-15 08:23:03 - c.c.project.ProjectApplication - Started ProjectApplication in 8.954 seconds (process running for 9.82)
+2025-08-15 08:23:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-15 08:23:06 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-15 08:23:06 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-08-15 08:23:07 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 0 não foi encontrado!]
+2025-08-15 08:23:13 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 0 não foi encontrado!]
+2025-08-15 08:23:55 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.AliasProdutoReferenciaNaoEncontrado: Alias do Produto: Açúcar Refinado União 1kg não foi encontrado!]
+2025-08-15 08:25:38 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2025-08-14 08:36:47 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 4 não foi encontrado!]
-2025-08-14 08:36:54 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 4 não foi encontrado!]
-2025-08-14 08:36:58 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 6 não foi encontrado!]
-2025-08-14 08:37:02 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 5 não foi encontrado!]
-2025-08-14 08:58:41 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 08:58:41 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 08:58:41 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 08:58:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 08:58:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 09:18:04 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 57168 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 09:18:04 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 09:18:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 09:18:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 09:18:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 09:18:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 9 JPA repository interfaces.
-2025-08-14 09:18:05 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 09:18:05 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 09:18:05 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 09:18:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 09:18:06 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1445 ms
-2025-08-14 09:18:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 09:18:06 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 09:18:06 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f43da52
-2025-08-14 09:18:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 09:18:06 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 09:18:06 - o.f.core.internal.command.DbValidate - Successfully validated 5 migrations (execution time 00:00.029s)
-2025-08-14 09:18:06 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 5
-2025-08-14 09:18:06 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` has a version (5) that is newer than the latest available migration (4) !
-2025-08-14 09:18:06 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 09:18:06 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 09:18:06 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 09:18:06 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 09:18:07 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 09:18:07 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 09:18:07 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 09:18:07 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2025-08-15 08:26:27 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-15 08:26:27 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-15 08:26:27 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:26:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-15 08:26:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-15 08:30:39 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 19360 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
+2025-08-15 08:30:39 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-15 08:30:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-15 08:30:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-15 08:30:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-15 08:30:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 9 JPA repository interfaces.
+2025-08-15 08:30:40 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-15 08:30:40 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-15 08:30:40 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-15 08:30:40 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-15 08:30:40 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1309 ms
+2025-08-15 08:30:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-15 08:30:41 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-15 08:30:41 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6aea8301
+2025-08-15 08:30:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-15 08:30:41 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-15 08:30:41 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.032s)
+2025-08-15 08:30:41 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-15 08:30:41 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-15 08:30:41 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-15 08:30:41 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-15 08:30:41 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-15 08:30:42 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-15 08:30:42 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-15 08:30:42 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-15 08:30:42 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -89,417 +133,24 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-14 09:18:07 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 09:18:07 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 09:18:08 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-14 09:18:12 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 09:18:13 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 09:18:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 09:18:13 - c.c.project.ProjectApplication - Started ProjectApplication in 9.375 seconds (process running for 9.842)
-2025-08-14 09:24:22 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 09:24:22 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 09:24:22 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 09:24:22 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+2025-08-15 08:30:42 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-15 08:30:42 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:30:47 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-15 08:30:47 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-15 08:30:47 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-15 08:30:47 - c.c.project.ProjectApplication - Started ProjectApplication in 8.554 seconds (process running for 8.963)
+2025-08-15 08:31:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-15 08:31:06 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-15 08:31:06 - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-15 08:31:45 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 69 não foi encontrado!]
+2025-08-15 08:31:57 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 96 não foi encontrado!]
+2025-08-15 08:32:39 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 787 não foi encontrado!]
+2025-08-15 08:32:52 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
-2025-08-14 09:52:14 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 09:52:14 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 09:52:14 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 09:52:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 09:52:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 09:52:16 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 24360 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 09:52:16 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 09:52:16 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 09:52:16 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 09:52:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 09:52:16 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 9 JPA repository interfaces.
-2025-08-14 09:52:17 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 09:52:17 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 09:52:17 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 09:52:17 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 09:52:17 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1376 ms
-2025-08-14 09:52:17 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 09:52:17 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 09:52:18 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94dbd82
-2025-08-14 09:52:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 09:52:18 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 09:52:18 - o.f.c.i.s.JdbcTableSchemaHistory - Schema history table `checkbuy`.`flyway_schema_history` does not exist yet
-2025-08-14 09:52:18 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.019s)
-2025-08-14 09:52:18 - o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table `checkbuy`.`flyway_schema_history` ...
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: << Empty Schema >>
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "1 - criando-tabelas-inicias"
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "2 - insert-data-cooper"
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "3 - insert-data-koch"
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Migrating schema `checkbuy` to version "4 - insert-data-bistek"
-2025-08-14 09:52:18 - o.f.core.internal.command.DbMigrate - Successfully applied 4 migrations to schema `checkbuy`, now at version v4 (execution time 00:00.277s)
-2025-08-14 09:52:18 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 09:52:18 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 09:52:19 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 09:52:19 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 09:52:19 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 09:52:19 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 09:52:19 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 09:52:19 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 09:52:19 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 09:52:20 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-14 09:52:25 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 09:52:25 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 09:52:25 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 09:52:25 - c.c.project.ProjectApplication - Started ProjectApplication in 9.98 seconds (process running for 10.455)
-2025-08-14 09:59:24 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 09:59:24 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 09:59:24 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 09:59:24 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2025-08-14 11:04:05 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:04:05 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:04:05 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:04:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:04:05 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:04:12 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 47364 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:04:12 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:04:12 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:04:12 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:04:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:04:13 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:04:14 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:04:14 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:04:14 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:04:14 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:04:14 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1551 ms
-2025-08-14 11:04:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:04:14 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:04:14 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@714d47a8
-2025-08-14 11:04:14 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:04:14 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:04:14 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.039s)
-2025-08-14 11:04:14 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:04:14 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:04:14 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:04:15 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:04:15 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:04:15 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:04:15 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:04:15 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:04:15 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:04:16 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:04:16 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:04:20 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:04:21 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:04:21 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:04:21 - c.c.project.ProjectApplication - Started ProjectApplication in 9.156 seconds (process running for 10.049)
-2025-08-14 11:04:35 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:04:35 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:04:35 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:04:35 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2025-08-14 11:06:58 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.AliasProdutoReferenciaNaoEncontrado: ]
-2025-08-14 11:07:40 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:07:40 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:07:40 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:07:40 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:07:40 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:07:43 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 70520 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:07:43 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:07:43 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:07:43 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:07:44 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:07:44 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:07:44 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:07:44 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:07:44 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:07:44 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:07:44 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1365 ms
-2025-08-14 11:07:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:07:45 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:07:45 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94dbd82
-2025-08-14 11:07:45 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:07:45 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:07:45 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.036s)
-2025-08-14 11:07:45 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:07:45 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:07:45 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:07:45 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:07:45 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:07:45 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:07:45 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:07:45 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:07:45 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:07:46 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:07:46 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:07:51 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:07:51 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:07:51 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:07:51 - c.c.project.ProjectApplication - Started ProjectApplication in 8.676 seconds (process running for 9.103)
-2025-08-14 11:07:54 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:07:54 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:07:54 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:07:54 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.AliasProdutoReferenciaNaoEncontrado: Alias do Produto:  não foi encontrado!]
-2025-08-14 11:08:04 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.AliasProdutoReferenciaNaoEncontrado: Alias do Produto: dfgdf não foi encontrado!]
-2025-08-14 11:08:32 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.AliasProdutoReferenciaNaoEncontrado: Alias do Produto: Refrigerante Guaraná Antarctica 2L não foi encontrado!]
-2025-08-14 11:15:50 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:15:50 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:15:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:15:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:15:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:15:53 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 69024 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:15:53 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:15:53 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:15:53 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:15:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:15:54 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:15:54 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:15:54 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:15:54 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:15:54 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:15:54 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
-2025-08-14 11:15:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:15:55 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:15:55 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94dbd82
-2025-08-14 11:15:55 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:15:55 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:15:55 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.034s)
-2025-08-14 11:15:55 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:15:55 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:15:55 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:15:55 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:15:55 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:15:55 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:15:55 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:15:55 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:15:55 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:15:56 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:15:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:16:01 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:16:01 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:16:01 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:16:01 - c.c.project.ProjectApplication - Started ProjectApplication in 8.608 seconds (process running for 9.023)
-2025-08-14 11:16:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:16:13 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:16:13 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:17:50 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:17:50 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:17:50 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:17:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:17:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:17:52 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 15988 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:17:52 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:17:52 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:17:52 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:17:53 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:17:53 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:17:54 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:17:54 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:17:54 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:17:54 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:17:54 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1371 ms
-2025-08-14 11:17:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:17:54 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:17:54 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@414a15a9
-2025-08-14 11:17:54 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:17:54 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:17:54 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.034s)
-2025-08-14 11:17:54 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:17:54 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:17:55 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:17:55 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:17:55 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:17:55 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:17:55 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:17:55 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:17:55 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:17:56 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:17:56 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:18:00 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:18:01 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:18:01 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:18:01 - c.c.project.ProjectApplication - Started ProjectApplication in 9.178 seconds (process running for 9.585)
-2025-08-14 11:18:01 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:18:01 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:18:01 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:19:36 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:19:36 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:19:36 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:19:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:19:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:19:39 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 63976 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:19:39 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:19:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:19:39 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:19:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:19:40 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:19:40 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:19:40 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:19:40 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:19:40 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:19:40 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
-2025-08-14 11:19:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:19:41 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:19:41 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94dbd82
-2025-08-14 11:19:41 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:19:41 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:19:41 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.035s)
-2025-08-14 11:19:41 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:19:41 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:19:41 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:19:41 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:19:41 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:19:41 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:19:42 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:19:42 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:19:42 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:19:42 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:19:42 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:19:47 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:19:47 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:19:48 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:19:48 - c.c.project.ProjectApplication - Started ProjectApplication in 8.938 seconds (process running for 9.359)
-2025-08-14 11:19:51 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:19:51 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:19:51 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:26:11 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:26:11 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:26:11 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:26:11 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:26:11 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:26:13 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 33944 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:26:13 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:26:13 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:26:13 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:26:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:26:14 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:26:15 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:26:15 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:26:15 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:26:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:26:15 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1400 ms
-2025-08-14 11:26:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:26:15 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:26:15 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94dbd82
-2025-08-14 11:26:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:26:15 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:26:15 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.034s)
-2025-08-14 11:26:15 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:26:15 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:26:16 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:26:16 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:26:16 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:26:16 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:26:16 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:26:16 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:26:16 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:26:17 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:26:17 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:26:21 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:26:22 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:26:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:26:22 - c.c.project.ProjectApplication - Started ProjectApplication in 9.156 seconds (process running for 9.581)
-2025-08-14 11:26:24 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:26:24 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:26:24 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-14 11:27:02 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:27:02 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:27:02 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:27:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:27:02 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-14 11:27:05 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 65152 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-14 11:27:05 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-14 11:27:05 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-14 11:27:05 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-14 11:27:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-14 11:27:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 9 JPA repository interfaces.
-2025-08-14 11:27:06 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-14 11:27:06 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-14 11:27:06 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-14 11:27:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-14 11:27:06 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
-2025-08-14 11:27:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-14 11:27:06 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-14 11:27:07 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16c0228c
-2025-08-14 11:27:07 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-14 11:27:07 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-14 11:27:07 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.034s)
-2025-08-14 11:27:07 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-14 11:27:07 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-14 11:27:07 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-14 11:27:07 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-14 11:27:07 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-14 11:27:07 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-14 11:27:07 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-14 11:27:07 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-14 11:27:07 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-14 11:27:08 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-14 11:27:08 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:27:13 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-14 11:27:13 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-14 11:27:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-14 11:27:13 - c.c.project.ProjectApplication - Started ProjectApplication in 9.119 seconds (process running for 9.539)
-2025-08-14 11:27:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-14 11:27:20 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-14 11:27:20 - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-08-14 11:27:47 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-14 11:27:47 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-14 11:27:47 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-14 11:27:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-14 11:27:47 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-15 08:37:16 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-15 08:37:16 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-15 08:37:16 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-15 08:37:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-15 08:37:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

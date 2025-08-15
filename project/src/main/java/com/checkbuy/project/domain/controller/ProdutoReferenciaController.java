@@ -61,6 +61,9 @@ public class ProdutoReferenciaController {
         return ResponseEntity.ok(lista);
     }
 
+    @GetMapping("/sugerir/{alias}")
+    public void sugerir(@PathVariable String alias){
 
+    }
 
 }

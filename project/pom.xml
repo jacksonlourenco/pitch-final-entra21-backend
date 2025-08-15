@@ -31,6 +31,13 @@
 	</properties>
 	<dependencies>
 
+		<!-- VERIFICADOR PALAVRAS -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.14.0</version>
+		</dependency>
+
 		<!-- SPRING VALIDATION - BEAN VALIDATOR -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

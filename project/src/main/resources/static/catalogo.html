@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Compras (Simulado)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        .product-card { transition: box-shadow .3s; }
+        .product-card:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); }
+        .product-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .shopping-list-container {
+            position: sticky;
+            top: 20px;
+        }
+        .cart-item-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        .price-comparison-table img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        .price-spoiler { font-size: 0.85em; }
+        .price-spoiler .list-group-item { padding: 0.5rem 0.75rem; }
+    </style>
+</head>
+<body>
+
+<a href="index.html">INDEX</a>
+<a href="catalogo.html">CATALOGO</a>
+<a href="indexacao.html">INDEXATION</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Meu Catálogo de Compras (Simulado)</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="row">
+
+            <div class="col-lg-8">
+                <h2>Produtos</h2>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" id="pesquisa-catalogo-input" class="form-control" placeholder="Buscar por nome do produto...">
+                </div>
+
+                <div id="catalogo-produtos" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                    </div>
+                
+                <nav id="paginacao" class="mt-4 d-flex justify-content-center"></nav>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="shopping-list-container">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-cart3"></i> Minha Lista</span>
+                                <span id="cart-count" class="badge bg-primary rounded-pill">0</span>
+                            </h4>
+                            <hr>
+                            <ul id="lista-compras-items" class="list-group list-group-flush">
+                                <li class="list-group-item text-center text-muted">Sua lista está vazia.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button id="btn-limpar-lista" class="btn btn-sm btn-outline-danger">Limpar Lista</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="price-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="price-modal-label">Comparar Preços</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="price-comparison-body">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const BASE_URL = `http://${window.location.hostname}`;
+
+        const API_REFERENCIAS_URL = `${BASE_URL}:8080/produtos/referencias`;
+        const API_SCRAPING_URL = `${BASE_URL}:8080/produtos/scraping`;
+
+        const catalogoContainer = document.getElementById('catalogo-produtos');
+        const pesquisaInput = document.getElementById('pesquisa-catalogo-input');
+        const paginacaoContainer = document.getElementById('paginacao');
+        const listaComprasContainer = document.getElementById('lista-compras-items');
+        const cartCountBadge = document.getElementById('cart-count');
+        const btnLimparLista = document.getElementById('btn-limpar-lista');
+        const priceModalElement = document.getElementById('price-modal');
+        const priceModal = new bootstrap.Modal(priceModalElement);
+        
+        let debounceTimer;
+        let estado = {
+            paginaAtual: 0,
+            termoPesquisa: '',
+            listaDeCompras: []
+        };
+
+        const carregarProdutosReferencia = async (page = 0, termo = '') => {
+            // ================== INÍCIO DA SIMULAÇÃO ==================
+            // Quando sua API estiver pronta, APAGUE ou COMENTE esta função de simulação
+            const simularRespostaAPI = () => {
+                const dadosSimulados = {
+                    content: [
+                        { id: 3, nome: "Café Melitta Tradicional 500g", urlImg: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSNZABd4SCcV3f6xHi3e_M4m8tmZ67psMMkLBcquFciTs_4fajV9Ky0UAL-hk4ZfDCwupnemS6RAeABJ2o8vA-MpNTHnrm6lYtH-DYrchJpp5JE3JNCEREX2w", marca: "Melitta", melhoresPrecos: [
+                            { preco: 18.99, estabelecimentoNome: "Bistek", dataScraping: "2025-08-16T10:00:00" },
+                            { preco: 19.50, estabelecimentoNome: "Cooper", dataScraping: "2025-08-16T11:20:00" },
+                            { preco: 20.10, estabelecimentoNome: "Koch", dataScraping: "2025-08-15T23:30:00" }
+                        ]},
+                        { id: 4, nome: "Arroz Parbolizado Bontraz 1kg", urlImg: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSE4x_bE1WGLPgU2ev4ct7JVrEq7X7Chfj6ihRIIWfs8oomrknU96nB7QqrsHujEDCoTi5shPQ2htovepjrXXiG3385eRcAZpxw1bKcv8V88O5MZ_ZwlkIa", marca: "Bontraz", melhoresPrecos: [
+                            { preco: 4.85, estabelecimentoNome: "Koch", dataScraping: "2025-08-16T09:15:00" }
+                        ]},
+                        { id: 5, nome: "Sabonete Barra Ypê 85g", urlImg: "https://d8vlg9z1oftyc.cloudfront.net/minhacooper/image/product/0478be8ebc6dc538aac130b6cf8be80620240225175916/original/sabonete-barra-antibacteriano-care-action-ype-envoltorio-85g_7982.jpg", marca: "Ypê", melhoresPrecos: []},
+                        { id: 6, nome: "Cappuccino Solúvel 3 Corações 20g", urlImg: "https://d8vlg9z1oftyc.cloudfront.net/minhacooper/image/product/0c3217ed8df1e37d302fa926454d296e20240223202230/original/cappuccino-soluvel-chocolate-3-coracoes-sache-20g_8135.jpg", marca: "3 Corações", melhoresPrecos: [
+                            { preco: 2.19, estabelecimentoNome: "Cooper", dataScraping: "2025-08-16T11:20:00" },
+                            { preco: 2.49, estabelecimentoNome: "Bistek", dataScraping: "2025-08-16T10:00:00" }
+                        ]},
+                    ],
+                    pageable: { pageNumber: 0, pageSize: 20 }, totalPages: 1, first: true, last: true, number: 0
+                };
+                renderizarCatalogo(dadosSimulados.content);
+                renderizarPaginacao(dadosSimulados);
+            };
+            simularRespostaAPI(); // Chamando a simulação
+            return; // Impede a chamada real à API
+            // ================== FIM DA SIMULAÇÃO ==================
+            
+            // CÓDIGO REAL (será executado quando a simulação for removida)
+            estado.paginaAtual = page;
+            estado.termoPesquisa = termo;
+            let url = `${API_REFERENCIAS_URL}/listar?page=${page}`;
+            if (termo.trim()) {
+                url += `&nome=${encodeURIComponent(termo)}`;
+            }
+            catalogoContainer.innerHTML = '<div class="col-12 text-center mt-5"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                renderizarCatalogo(data.content);
+                renderizarPaginacao(data);
+            } catch (error) {
+                console.error("Erro ao carregar catálogo:", error);
+                catalogoContainer.innerHTML = '<div class="col-12"><div class="alert alert-danger">Falha ao carregar produtos.</div></div>';
+            }
+        };
+
+        const formatarData = (dataString) => {
+            if (!dataString) return '';
+            const data = new Date(dataString);
+            const dia = String(data.getDate()).padStart(2, '0');
+            const mes = String(data.getMonth() + 1).padStart(2, '0');
+            const ano = data.getFullYear();
+            return `${dia}/${mes}/${ano}`;
+        };
+
+        const renderizarCatalogo = (produtos) => {
+            catalogoContainer.innerHTML = '';
+            const produtosFiltrados = produtos.filter(p => p.nome !== 'NOT INDEX');
+            if (produtosFiltrados.length === 0) {
+                catalogoContainer.innerHTML = '<div class="col-12 text-center text-muted mt-4">Nenhum produto encontrado.</div>';
+                return;
+            }
+            produtosFiltrados.forEach(produto => {
+                let spoilerHtml = '<p class="text-muted small mt-2">Nenhum preço encontrado.</p>';
+                if (produto.melhoresPrecos && produto.melhoresPrecos.length > 0) {
+                    spoilerHtml = `
+                        <ul class="list-group list-group-flush price-spoiler mt-2">
+                            ${produto.melhoresPrecos.slice(0, 3).map(p => `
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>R$ ${p.preco.toFixed(2).replace('.',',')}</strong>
+                                        <small class="d-block text-muted">${p.estabelecimentoNome}</small>
+                                    </div>
+                                    <small class="text-muted">${formatarData(p.dataScraping)}</small>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                }
+                const card = document.createElement('div');
+                card.className = 'col';
+                card.innerHTML = `
+                    <div class="card h-100 product-card">
+                        <img src="${produto.urlImg || 'https://via.placeholder.com/200'}" class="card-img-top product-card-img" alt="${produto.nome}">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title">${produto.nome}</h6>
+                            <p class="card-text text-muted small mb-0">${produto.marca || 'Marca não informada'}</p>
+                            ${spoilerHtml}
+                            <div class="mt-auto pt-2">
+                                <button class="btn btn-sm btn-outline-secondary w-100 mb-2 btn-ver-precos" data-id="${produto.id}" data-nome="${produto.nome}">Ver Todos os Preços</button>
+                                <button class="btn btn-sm btn-primary w-100 btn-add-lista" data-id="${produto.id}" data-nome="${produto.nome}" data-img="${produto.urlImg || ''}">Adicionar à Lista</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                catalogoContainer.appendChild(card);
+            });
+        };
+        const renderizarPaginacao=(a)=>{paginacaoContainer.innerHTML="",a.totalPages<=1||(paginacaoContainer.innerHTML=`<ul class="pagination"><li class="page-item ${a.first?"disabled":""}"><a class="page-link" href="#" data-page="${a.number-1}">Anterior</a></li><li class="page-item disabled"><span class="page-link">Página ${a.number+1} de ${a.totalPages}</span></li><li class="page-item ${a.last?"disabled":""}"><a class="page-link" href="#" data-page="${a.number+1}">Próximo</a></li></ul>`)};const renderizarListaDeCompras=()=>{listaComprasContainer.innerHTML="",0===estado.listaDeCompras.length?(listaComprasContainer.innerHTML='<li class="list-group-item text-center text-muted">Sua lista está vazia.</li>',void(cartCountBadge.textContent=0)):(estado.listaDeCompras.forEach(e=>{const t=document.createElement("li");t.className="list-group-item d-flex align-items-center",t.innerHTML=`\n <img src="${e.urlImg||"https://via.placeholder.com/50"}" alt="${e.nome}" class="cart-item-img me-2">\n <div class="flex-grow-1">\n <div class="small">${e.nome}</div>\n <div class="d-flex align-items-center mt-1">\n <button class="btn btn-sm btn-outline-secondary py-0 px-2 btn-change-qty" data-id="${e.id}" data-change="-1">-</button>\n <span class="mx-2">${e.quantidade}</span>\n <button class="btn btn-sm btn-outline-secondary py-0 px-2 btn-change-qty" data-id="${e.id}" data-change="1">+</button>\n </div>\n </div>\n <button class="btn btn-sm btn-outline-danger border-0 btn-remove-item" data-id="${e.id}"><i class="bi bi-trash"></i></button>\n `,listaComprasContainer.appendChild(t)}),cartCountBadge.textContent=estado.listaDeCompras.reduce((e,t)=>e+t.quantidade,0))},adicionarNaLista=(e,t,a)=>{const o=estado.listaDeCompras.find(t=>t.id===e);o?o.quantidade++:estado.listaDeCompras.push({id:e,nome:t,urlImg:a,quantidade:1}),renderizarListaDeCompras()},mudarQuantidade=(e,t)=>{const a=estado.listaDeCompras.find(t=>t.id===e);a&&(a.quantidade+=t,a.quantidade<=0?removerDaLista(e):renderizarListaDeCompras())},removerDaLista=(e)=>{estado.listaDeCompras=estado.listaDeCompras.filter(t=>t.id!==e),renderizarListaDeCompras()},abrirModalPrecos=async(e,t)=>{const a=document.getElementById("price-modal-label"),o=document.getElementById("price-comparison-body");a.textContent=`Comparando Preços: ${t}`,o.innerHTML='<div class="text-center"><div class="spinner-border spinner-border-sm"></div> Carregando...</div>',priceModal.show();try{const t=await fetch(`${API_SCRAPING_URL}/${e}?page=0&size=100`),a=await t.json();renderizarComparacaoPrecos(a.content,o)}catch(e){console.error("Erro ao buscar preços:",e),o.innerHTML='<div class="alert alert-warning">Não foi possível carregar os preços.</div>'}},renderizarComparacaoPrecos=(e,t)=>{0===e.length?t.innerHTML='<div class="alert alert-info">Nenhum preço encontrado para este produto nos supermercados.</div>':(e.sort((e,t)=>e.preco-t.preco),t.innerHTML=`\n <table class="table table-sm table-striped align-middle price-comparison-table">\n <thead>\n <tr>\n <th>Supermercado</th>\n <th>Produto</th>\n <th class="text-end">Preço</th>\n </tr>\n </thead>\n <tbody>\n ${e.map(e=>`\n <tr>\n <td>${e.unidade.estabelecimento.nome}</td>\n <td>\n <div class="d-flex align-items-center">\n <img src="${e.urlImg}" class="me-2" alt="">\n <span class="small">${e.nome}</span>\n </div>\n </td>\n <td class="text-end fw-bold">R$ ${e.preco.toFixed(2).replace("._")}</td>\n </tr>\n `).join("")}\n </tbody>\n </table>\n `)};
+        pesquisaInput.addEventListener('keyup',e=>{clearTimeout(debounceTimer),debounceTimer=setTimeout(()=>{carregarProdutosReferencia(0,e.target.value)},500)}),paginacaoContainer.addEventListener("click",e=>{e.preventDefault(),e.target.tagName==="A"&&!e.target.parentElement.classList.contains("disabled")&&carregarProdutosReferencia(parseInt(e.target.dataset.page,10),estado.termoPesquisa)}),catalogoContainer.addEventListener("click",e=>{const t=e.target;if(t.classList.contains("btn-add-lista")){const e=parseInt(t.dataset.id,10);adicionarNaLista(e,t.dataset.nome,t.dataset.img)}if(t.classList.contains("btn-ver-precos")){const e=parseInt(t.dataset.id,10);abrirModalPrecos(e,t.dataset.nome)}}),listaComprasContainer.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;const a=parseInt(t.dataset.id,10);t.classList.contains("btn-change-qty")&&mudarQuantidade(a,parseInt(t.dataset.change,10)),t.classList.contains("btn-remove-item")&&removerDaLista(a)}),btnLimparLista.addEventListener("click",()=>{confirm("Tem certeza que deseja limpar toda a lista?")&&(estado.listaDeCompras=[],renderizarListaDeCompras())});
+        carregarProdutosReferencia();
+    });
+    </script>
+</body>
+</html>

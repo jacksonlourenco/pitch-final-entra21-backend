@@ -1,24 +1,32 @@
 package com.checkbuy.project.domain.service;
 
 import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
+import com.checkbuy.project.domain.dto.ProdutoReferenciaSimilaridadeDTO;
 import com.checkbuy.project.domain.exception.ProdutoReferenciaNaoEncontrado;
 import com.checkbuy.project.domain.exception.ProdutoReferenciaNotIndexImutavel;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.repository.ProdutoReferenciaRepository;
 import jakarta.transaction.Transactional;
+import org.apache.commons.text.similarity.JaroWinklerSimilarity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProdutoReferenciaService {
 
     private final ProdutoReferenciaRepository produtoReferenciaRepository;
+    private final JaroWinklerSimilarity similarity;
+
 
     public ProdutoReferenciaService(ProdutoReferenciaRepository produtoReferenciaRepository) {
         this.produtoReferenciaRepository = produtoReferenciaRepository;
+        this.similarity = new JaroWinklerSimilarity();
     }
 
     public ProdutoReferencia criar(ProdutoReferenciaDTO dto){
@@ -54,11 +62,29 @@ public class ProdutoReferenciaService {
         return produtoReferenciaRepository.findAll(pageable);
     }
 
+    public List<ProdutoReferencia> listar(){
+        return produtoReferenciaRepository.findAll();
+    }
+
     public void verificarIntegridadeNotIndex(Integer id){
         if(id == 1){
             throw new ProdutoReferenciaNotIndexImutavel(id);
         }
     }
+
+    public List<ProdutoReferenciaSimilaridadeDTO> sugerir(String alias) {
+
+        List<ProdutoReferencia> produtoReferenciaList = listar();
+
+        return produtoReferenciaList.stream()
+                .map(produtoReferencia -> {
+                    Double similaridade = similarity.apply(produtoReferencia.getNome().toUpperCase(), alias.toUpperCase());
+                    return new ProdutoReferenciaSimilaridadeDTO(produtoReferencia, similaridade);
+                })
+                .sorted(Comparator.comparingDouble(ProdutoReferenciaSimilaridadeDTO::similaridade).reversed())
+                .collect(Collectors.toList());
+    }
+
 }
 
 

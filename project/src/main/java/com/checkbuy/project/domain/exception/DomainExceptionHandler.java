@@ -44,4 +44,15 @@ public class DomainExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
     }
+
+    @ExceptionHandler(UnidadeNaoEncontrada.class)
+    public ResponseEntity<ResponseError> UnidadeNaoEncontrada(UnidadeNaoEncontrada ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.NOT_FOUND,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseError);
+    }
 }

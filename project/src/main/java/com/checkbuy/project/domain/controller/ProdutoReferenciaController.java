@@ -1,6 +1,7 @@
 package com.checkbuy.project.domain.controller;
 
 import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
+import com.checkbuy.project.domain.dto.ProdutoReferenciaSimilaridadeDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.service.ProdutoReferenciaService;
 import com.checkbuy.project.util.UriUtils;
@@ -11,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin
@@ -62,8 +65,8 @@ public class ProdutoReferenciaController {
     }
 
     @GetMapping("/sugerir/{alias}")
-    public void sugerir(@PathVariable String alias){
-
+    public List<ProdutoReferenciaSimilaridadeDTO> sugerir(@PathVariable String alias){
+        return produtoReferenciaService.sugerir(alias);
     }
 
 }

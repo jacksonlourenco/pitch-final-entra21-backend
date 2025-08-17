@@ -1,6 +1,7 @@
 package com.checkbuy.project.domain.controller;
 import com.checkbuy.project.domain.dto.ContagemNotIndexPorUnidadeDTO;
 import com.checkbuy.project.domain.dto.ProdutoScrapingChangeDTO;
+import com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO;
 import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.service.ProdutoScrapingService;
 import org.springframework.data.domain.Page;
@@ -37,8 +38,16 @@ public class ProdutoScrapingController {
     }
 
     @GetMapping("/notindex/contagem-por-unidade")
-    public List<ContagemNotIndexPorUnidadeDTO> obterContagemPorUnidadeNotIndex(){
-        return produtoScrapingService.obterContagemPorUnidadeNotIndex();
+    public ResponseEntity<List<ContagemNotIndexPorUnidadeDTO>> obterContagemPorUnidadeNotIndex(){
+        var contagemPorUnidade =  produtoScrapingService.obterContagemPorUnidadeNotIndex();
+        return ResponseEntity.ok().body(contagemPorUnidade);
+    }
+
+
+    @GetMapping("/melhores-ofertas/{produtoReferenciaId}")
+    public ResponseEntity<List<ProdutoScrapingOfertaRecentesDTO>> ofertasMaisRecentes(@PathVariable Integer produtoReferenciaId){
+        var melhoresOfertas = produtoScrapingService.ofertasMaisRecentes(produtoReferenciaId);
+        return ResponseEntity.ok().body(melhoresOfertas);
     }
 
 }

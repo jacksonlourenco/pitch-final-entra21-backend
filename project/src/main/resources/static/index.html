@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,15 @@
             padding-bottom: 2rem;
             background-color: #f8f9fa;
         }
+
         .container {
             max-width: 960px;
         }
+
         .table-actions button {
             margin-right: 5px;
         }
+
         .product-img {
             width: 60px;
             height: 100px;
@@ -25,11 +29,45 @@
         }
     </style>
 </head>
+
 <body>
 
-    <a href="index.html">INDEX</a>
-    <a href="catalogo.html">CATALOGO</a>
-    <a href="indexacao.html">INDEXATION</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bullseye"></i>
+                Meu Sistema
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catálogo & Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guia-de-compras.html">Guia de Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Melhores Ofertas</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="indexacao.html">
+                            <i class="bi bi-sliders"></i> Indexação
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-pencil-square"></i> Gestão
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -50,7 +88,7 @@
                     </tr>
                 </thead>
                 <tbody id="tabelaProdutosBody">
-                    </tbody>
+                </tbody>
             </table>
         </div>
 
@@ -73,12 +111,12 @@
                 <div class="modal-body">
                     <form id="produtoForm">
                         <input type="hidden" id="produtoId">
-                        
+
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome *</label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
-                         <div class="mb-3">
+                        <div class="mb-3">
                             <label for="marca" class="form-label">Marca</label>
                             <input type="text" class="form-control" id="marca">
                         </div>
@@ -102,9 +140,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="urlImg" class="form-label">URL da Imagem</label>
-                            <input type="url" class="form-control" id="urlImg" placeholder="https://exemplo.com/imagem.jpg">
+                            <input type="url" class="form-control" id="urlImg"
+                                placeholder="https://exemplo.com/imagem.jpg">
                         </div>
-                        
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
@@ -120,8 +159,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-        // Detecta automaticamente o IP ou hostname do dispositivo que está servindo o front-end
-const BASE_URL = `http://${window.location.hostname}`;
+            // Detecta automaticamente o IP ou hostname do dispositivo que está servindo o front-end
+            const BASE_URL = `http://${window.location.hostname}`;
 
             const API_BASE_URL = `${BASE_URL}:8080/produtos/referencias`;
 
@@ -130,7 +169,7 @@ const BASE_URL = `http://${window.location.hostname}`;
             const produtoModal = new bootstrap.Modal(produtoModalElement);
             const produtoForm = document.getElementById('produtoForm');
             const produtoModalLabel = document.getElementById('produtoModalLabel');
-            
+
             // Paginação
             const btnAnterior = document.getElementById('btnAnterior');
             const btnProximo = document.getElementById('btnProximo');
@@ -147,18 +186,18 @@ const BASE_URL = `http://${window.location.hostname}`;
                         throw new Error(`Erro na API: ${response.statusText}`);
                     }
                     const data = await response.json();
-                    
+
                     tabelaBody.innerHTML = ''; // Limpa a tabela antes de preencher
-                    
+
                     if (data.empty) {
                         tabelaBody.innerHTML = '<tr><td colspan="6" class="text-center">Nenhum produto encontrado.</td></tr>';
                     } else {
-                         data.content.forEach(produto => {
+                        data.content.forEach(produto => {
                             const tr = document.createElement('tr');
-                            
+
                             // *** ALTERAÇÃO AQUI: Cria o HTML para a imagem ***
-                            const imgHtml = produto.urlImg 
-                                ? `<img src="${produto.urlImg}" alt="${produto.nome}" class="product-img">` 
+                            const imgHtml = produto.urlImg
+                                ? `<img src="${produto.urlImg}" alt="${produto.nome}" class="product-img">`
                                 : `<span>-</span>`;
 
                             tr.innerHTML = `
@@ -179,7 +218,7 @@ const BASE_URL = `http://${window.location.hostname}`;
                     // Atualiza controles de paginação
                     currentPage = data.number;
                     infoPagina.textContent = `Página ${data.number + 1} de ${data.totalPages}`;
-                    
+
                     data.first ? itemAnterior.classList.add('disabled') : itemAnterior.classList.remove('disabled');
                     data.last ? itemProximo.classList.add('disabled') : itemProximo.classList.remove('disabled');
 
@@ -238,7 +277,7 @@ const BASE_URL = `http://${window.location.hostname}`;
                     const id = target.dataset.id;
                     const response = await fetch(`${API_BASE_URL}/${id}`);
                     const produto = await response.json();
-                    
+
                     produtoModalLabel.textContent = 'Editar Produto';
                     document.getElementById('produtoId').value = produto.id;
                     document.getElementById('nome').value = produto.nome;
@@ -256,21 +295,21 @@ const BASE_URL = `http://${window.location.hostname}`;
                     const id = target.dataset.id;
                     if (confirm(`Tem certeza que deseja excluir o produto com ID ${id}?`)) {
                         try {
-                             const response = await fetch(`${API_BASE_URL}/${id}`, {
+                            const response = await fetch(`${API_BASE_URL}/${id}`, {
                                 method: 'DELETE'
                             });
-                             if (!response.ok) {
+                            if (!response.ok) {
                                 throw new Error(`Falha ao excluir. Status: ${response.status}`);
                             }
                             carregarProdutos(currentPage);
-                        } catch(error) {
+                        } catch (error) {
                             console.error('Erro ao excluir:', error);
                             alert('Não foi possível excluir o produto.');
                         }
                     }
                 }
             });
-            
+
             document.getElementById('btnNovoProduto').addEventListener('click', () => {
                 produtoForm.reset();
                 document.getElementById('produtoId').value = '';
@@ -295,4 +334,5 @@ const BASE_URL = `http://${window.location.hostname}`;
     </script>
 
 </body>
+
 </html>

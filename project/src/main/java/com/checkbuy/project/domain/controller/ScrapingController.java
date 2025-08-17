@@ -21,4 +21,26 @@ public class ScrapingController {
 
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/atualizar")
+    public ResponseEntity<Void> atualizar(){
+        scrapingService.scrapingPorTermo("arroz branco");
+        scrapingService.scrapingPorTermo("feijão");
+        scrapingService.scrapingPorTermo("açúcar");
+        scrapingService.scrapingPorTermo("óleo");
+        scrapingService.scrapingPorTermo("farinha");
+        scrapingService.scrapingPorTermo("macarrão");
+        scrapingService.scrapingPorTermo("café");
+        scrapingService.scrapingPorTermo("leite");
+        scrapingService.scrapingPorTermo("sardinha");
+        scrapingService.scrapingPorTermo("biscoitos");
+        scrapingService.scrapingPorTermo("milho");
+        scrapingService.scrapingPorTermo("Sabonete");
+        scrapingService.scrapingPorTermo("Papel higiênico");
+        scrapingService.scrapingPorTermo("Sabão em barra");
+        scrapingService.scrapingPorTermo("Detergente");
+        scrapingService.scrapingPorTermo("Pasta de dente");
+
+        return ResponseEntity.noContent().build();
+    }
 }

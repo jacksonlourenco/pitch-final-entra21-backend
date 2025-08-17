@@ -2,6 +2,7 @@ package com.checkbuy.project.domain.service;
 
 import com.checkbuy.project.domain.dto.ContagemNotIndexPorUnidadeDTO;
 import com.checkbuy.project.domain.dto.ProdutoScrapingChangeDTO;
+import com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import com.checkbuy.project.domain.model.ProdutoScraping;
 import com.checkbuy.project.domain.model.Unidade;
@@ -11,7 +12,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProdutoScrapingService {
@@ -81,5 +84,15 @@ public class ProdutoScrapingService {
 
     public List<ContagemNotIndexPorUnidadeDTO> obterContagemPorUnidadeNotIndex() {
         return produtoScrapingRepository.findContagemNaoIndexadosPorUnidade();
+    }
+
+    public List<ProdutoScrapingOfertaRecentesDTO> ofertasMaisRecentes(Integer produtoReferenciaId) {
+        produtoReferenciaService.buscarPorId(produtoReferenciaId);
+
+        var listaProdutos = produtoScrapingRepository.ofertasMaisRecentes(produtoReferenciaId);
+
+        return listaProdutos.stream()
+                .sorted(Comparator.comparingDouble(ProdutoScrapingOfertaRecentesDTO::precoEspecial))
+                .collect(Collectors.toList());
     }
 }

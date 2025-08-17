@@ -52,7 +52,7 @@ public class ProdutoReferenciaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> excluir(@PathVariable Integer id){
+    public ResponseEntity<Void> excluir(@PathVariable Integer id){
         produtoReferenciaService.excluir(id);
 
         return ResponseEntity.noContent().build();

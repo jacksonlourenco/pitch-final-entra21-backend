@@ -26,6 +26,7 @@ public class ScrapingService {
         CompletableFuture<Void> bistekScraping = bistek.biteskScrapingTermo(termo);
 
         CompletableFuture.allOf(cooperScraping, kompraoScraping, bistekScraping).join();
+        //CompletableFuture.allOf(bistekScraping).join();
     }
 
 }

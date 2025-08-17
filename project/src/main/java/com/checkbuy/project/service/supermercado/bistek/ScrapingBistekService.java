@@ -46,10 +46,10 @@ public class ScrapingBistekService {
         System.setProperty("webdriver.gecko.driver", driverPath);
 
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("-headless");
-        driver = new FirefoxDriver(options);
+        //options.addArguments("-headless");
+        //driver = new FirefoxDriver(options);
 
-        //driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
     }
 
     @Async
@@ -208,8 +208,6 @@ public class ScrapingBistekService {
             lista.add(dto);
         }
 
-        driver.close();
-
         return lista;
     }
 
@@ -248,16 +246,20 @@ public class ScrapingBistekService {
         }
     }
 
-    // O método auxiliar `extractPriceFromElement` continua o mesmo e funciona para ambas as estruturas.
     private double extractPriceFromElement(WebElement priceElement) {
         try {
-            String integerPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyInteger")).getText();
-            String fractionPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyFraction")).getText();
+            String integerPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyInteger")).getText().replaceAll("[^\\d]", "");
+            String fractionPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyFraction")).getText().replaceAll("[^\\d]", "");
+
+            // Se alguma parte estiver vazia, define como "0"
+            if (integerPart.isEmpty()) integerPart = "0";
+            if (fractionPart.isEmpty()) fractionPart = "00"; // dois dígitos para centavos
+
             String fullPriceStr = integerPart + "." + fractionPart;
+
             return Double.parseDouble(fullPriceStr);
-        } catch (NoSuchElementException e) {
-            // Fallback caso a estrutura de preço exista mas esteja vazia ou diferente
-            System.out.println("Erro ao extrair partes do preço. Retornando 0.0. Detalhe: " + e.getMessage());
+        } catch (NoSuchElementException | NumberFormatException e) {
+            logger.warn("Erro ao extrair ou converter preço: {} — retornando 0.0", e.getMessage());
             return 0.0;
         }
     }

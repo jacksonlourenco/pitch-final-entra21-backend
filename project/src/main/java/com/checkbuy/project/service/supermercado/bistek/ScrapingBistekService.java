@@ -6,10 +6,7 @@ import com.checkbuy.project.domain.repository.AliasProdutoReferenciaRepository;
 import com.checkbuy.project.domain.repository.AliasUnidadeRepository;
 import com.checkbuy.project.domain.repository.ProdutoScrapingRepository;
 import com.checkbuy.project.service.supermercado.dto.ProdutoDTO;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,10 +46,10 @@ public class ScrapingBistekService {
         System.setProperty("webdriver.gecko.driver", driverPath);
 
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("-headless");
-        driver = new FirefoxDriver(options);
+        //options.addArguments("-headless");
+        //driver = new FirefoxDriver(options);
 
-        //driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
     }
 
     @Async
@@ -81,32 +78,35 @@ public class ScrapingBistekService {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-        if (page == 1) {
-            var comoDesejaReceber = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-cepTrigger")));
-            comoDesejaReceber.click();
+        try{
+            if (page == 1) {
+                var comoDesejaReceber = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-cepTrigger")));
+                comoDesejaReceber.click();
 
-            var retirarNaLoja = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-optionPickup > span:nth-child(2)")));
-            retirarNaLoja.click();
+                var retirarNaLoja = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-optionPickup > span:nth-child(2)")));
+                retirarNaLoja.click();
 
-            var seletor = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-pickupSelect")));
-            seletor.click();
+                var seletor = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-pickupSelect")));
+                seletor.click();
 
-            var opcaoBlumenau = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.bistek-avanti-menu-2-x-pickupSelectOption:nth-child(4) > button:nth-child(1)")));
-            opcaoBlumenau.click();
+                var opcaoBlumenau = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.bistek-avanti-menu-2-x-pickupSelectOption:nth-child(4) > button:nth-child(1)")));
+                opcaoBlumenau.click();
 
-            var opcaoLoja = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-storeCard")));
-            opcaoLoja.click();
+                var opcaoLoja = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-storeCard")));
+                opcaoLoja.click();
 
-            var confirmar = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-pickupConfirmation")));
-            confirmar.click();
+                var confirmar = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".bistek-avanti-menu-2-x-pickupConfirmation")));
+                confirmar.click();
 
-            try {
-                Thread.sleep(Duration.ofSeconds(15));
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                try {
+                    Thread.sleep(Duration.ofSeconds(15));
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
+        }catch (TimeoutException ex){
+            System.out.println(ex.getMessage());
         }
-
 
         driver.get(url);
 
@@ -246,16 +246,20 @@ public class ScrapingBistekService {
         }
     }
 
-    // O método auxiliar `extractPriceFromElement` continua o mesmo e funciona para ambas as estruturas.
     private double extractPriceFromElement(WebElement priceElement) {
         try {
-            String integerPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyInteger")).getText();
-            String fractionPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyFraction")).getText();
+            String integerPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyInteger")).getText().replaceAll("[^\\d]", "");
+            String fractionPart = priceElement.findElement(By.cssSelector(".vtex-product-price-1-x-currencyFraction")).getText().replaceAll("[^\\d]", "");
+
+            // Se alguma parte estiver vazia, define como "0"
+            if (integerPart.isEmpty()) integerPart = "0";
+            if (fractionPart.isEmpty()) fractionPart = "00"; // dois dígitos para centavos
+
             String fullPriceStr = integerPart + "." + fractionPart;
+
             return Double.parseDouble(fullPriceStr);
-        } catch (NoSuchElementException e) {
-            // Fallback caso a estrutura de preço exista mas esteja vazia ou diferente
-            System.out.println("Erro ao extrair partes do preço. Retornando 0.0. Detalhe: " + e.getMessage());
+        } catch (NoSuchElementException | NumberFormatException e) {
+            logger.warn("Erro ao extrair ou converter preço: {} — retornando 0.0", e.getMessage());
             return 0.0;
         }
     }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Ofertas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f0f2f5; }
+        .search-hero {
+            background-color: #343a40;
+            color: white;
+            padding: 3rem 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .autocomplete-suggestions {
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            z-index: 1000;
+            width: 100%;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .autocomplete-suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .autocomplete-suggestion:hover {
+            background: #f0f2f5;
+        }
+        .offer-card {
+            transition: transform .2s, box-shadow .2s;
+        }
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        }
+        .offer-card-img {
+            height: 200px;
+            object-fit: contain;
+            padding: 1rem;
+            background-color: white;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #198754;
+        }
+        .original-price {
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-bullseye"></i>
+            Meu Sistema
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">Catálogo & Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guia-de-compras.html">Guia de Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ofertas.html">Melhores Ofertas</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a class="nav-link" href="indexacao.html">
+                        <i class="bi bi-sliders"></i> Indexação
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-pencil-square"></i> Gestão
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Central de Ofertas</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+
+        <div class="search-hero text-center mb-4">
+            <h1>Encontre as Melhores Ofertas</h1>
+            <p class="lead">Digite o nome de um produto para ver os melhores preços nos supermercados da região.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="position-relative">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" id="ref-product-search" class="form-control" placeholder="Ex: Arroz, Café, Sabonete..." autocomplete="off">
+                        </div>
+                        <div class="autocomplete-suggestions list-group" id="autocomplete-results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-section" class="d-none">
+            <h3 id="results-title" class="mb-3"></h3>
+            <div id="ofertas-container" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                </div>
+        </div>
+
+        <div id="placeholder-section" class="text-center text-muted mt-5">
+            <h4><i class="bi bi-tags"></i> Suas ofertas aparecerão aqui</h4>
+            <p>Comece buscando por um produto no campo acima.</p>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const BASE_URL = `http://${window.location.hostname}`;
+        const API_REFERENCIAS_URL = `${BASE_URL}:8080/produtos/referencias`;
+        const API_SCRAPING_URL = `${BASE_URL}:8080/produtos/scraping`;
+
+        const searchInput = document.getElementById('ref-product-search');
+        const autocompleteContainer = document.getElementById('autocomplete-results');
+        const resultsSection = document.getElementById('results-section');
+        const resultsTitle = document.getElementById('results-title');
+        const placeholderSection = document.getElementById('placeholder-section');
+        const ofertasContainer = document.getElementById('ofertas-container');
+        
+        let debounceTimer;
+
+        // --- LÓGICA DE BUSCA E AUTOCOMPLETE ---
+
+        searchInput.addEventListener('keyup', (e) => {
+            clearTimeout(debounceTimer);
+            const termo = e.target.value;
+            if (termo.length < 2) {
+                autocompleteContainer.innerHTML = '';
+                autocompleteContainer.classList.add('d-none');
+                return;
+            }
+            debounceTimer = setTimeout(() => {
+                buscarProdutosReferencia(termo);
+            }, 300);
+        });
+
+        const buscarProdutosReferencia = async (termo) => {
+            try {
+                const response = await fetch(`${API_REFERENCIAS_URL}/listar?nome=${encodeURIComponent(termo)}`);
+                const data = await response.json();
+                renderizarAutocomplete(data.content);
+            } catch (error) {
+                console.error("Erro ao buscar referências:", error);
+            }
+        };
+
+        const renderizarAutocomplete = (produtos) => {
+            autocompleteContainer.innerHTML = '';
+            const produtosFiltrados = produtos.filter(p => p.nome !== 'NOT INDEX');
+            if (produtosFiltrados.length === 0) {
+                 autocompleteContainer.classList.add('d-none');
+                return;
+            }
+            
+            produtosFiltrados.forEach(produto => {
+                const item = document.createElement('a');
+                item.className = 'list-group-item list-group-item-action autocomplete-suggestion';
+                item.textContent = produto.nome;
+                item.addEventListener('click', () => {
+                    selecionarProdutoReferencia(produto);
+                });
+                autocompleteContainer.appendChild(item);
+            });
+            autocompleteContainer.classList.remove('d-none');
+        };
+
+        const selecionarProdutoReferencia = (produto) => {
+            searchInput.value = produto.nome;
+            autocompleteContainer.innerHTML = '';
+            autocompleteContainer.classList.add('d-none');
+            carregarMelhoresOfertas(produto.id, produto.nome);
+        };
+
+
+        // --- LÓGICA DE CARREGAMENTO DE OFERTAS ---
+
+        const carregarMelhoresOfertas = async (produtoReferenciaId, produtoReferenciaNome) => {
+            placeholderSection.classList.add('d-none');
+            resultsSection.classList.remove('d-none');
+            resultsTitle.textContent = `Melhores ofertas para "${produtoReferenciaNome}"`;
+            ofertasContainer.innerHTML = '<div class="col-12 text-center mt-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+
+            try {
+                const response = await fetch(`${API_SCRAPING_URL}/melhores-ofertas/${produtoReferenciaId}`);
+                if (!response.ok) {
+                    throw new Error(`Erro na API: ${response.statusText}`);
+                }
+                const ofertas = await response.json();
+                renderizarOfertas(ofertas);
+            } catch (error) {
+                console.error("Erro ao carregar ofertas:", error);
+                ofertasContainer.innerHTML = `<div class="col-12"><div class="alert alert-danger">${error.message}</div></div>`;
+            }
+        };
+
+        const renderizarOfertas = (ofertas) => {
+            ofertasContainer.innerHTML = '';
+            if (ofertas.length === 0) {
+                ofertasContainer.innerHTML = '<div class="col-12 text-center text-muted mt-4">Nenhuma oferta encontrada para este produto.</div>';
+                return;
+            }
+
+            // Ordena pela melhor oferta (menor precoEspecial)
+            ofertas.sort((a, b) => a.precoEspecial - b.precoEspecial);
+
+            ofertas.forEach(oferta => {
+                const card = document.createElement('div');
+                card.className = 'col';
+                
+                let precoHtml = `<span class="price">R$ ${oferta.precoEspecial.toFixed(2).replace('.',',')}</span>`;
+                if (oferta.precoEspecial < oferta.preco) {
+                    precoHtml += ` <span class="original-price">R$ ${oferta.preco.toFixed(2).replace('.',',')}</span>`;
+                }
+
+                card.innerHTML = `
+                    <div class="card h-100 offer-card">
+                        <img src="${oferta.urlImg || 'https://via.placeholder.com/200'}" class="card-img-top offer-card-img" alt="${oferta.nomeProduto}">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-text small text-muted mb-1">${oferta.estabelecimentoNome} - ${oferta.unidadeNome}</p>
+                            <h6 class="card-title small flex-grow-1">${oferta.nomeProduto}</h6>
+                            <div class="mt-2 text-end">
+                                ${precoHtml}
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">Visto em: ${new Date(oferta.dataScraping).toLocaleDateString('pt-BR')}</small>
+                        </div>
+                    </div>
+                `;
+                ofertasContainer.appendChild(card);
+            });
+        };
+    });
+    </script>
+</body>
+</html>

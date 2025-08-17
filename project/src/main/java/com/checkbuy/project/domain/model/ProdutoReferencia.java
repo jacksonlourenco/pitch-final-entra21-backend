@@ -1,5 +1,6 @@
 package com.checkbuy.project.domain.model;
 
+import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +17,55 @@ public class ProdutoReferencia {
     private Double valorMedida;
     private String codigoBarra;
 
-    public ProdutoReferencia() {
+    //JPA - CONSTRUTOR PADRÃO VAZIO
+    public ProdutoReferencia() {}
+
+    public ProdutoReferencia(ProdutoReferenciaDTO dto) {
+        this.nome = dto.nome();
+        this.urlImg = dto.urlImg();
+        this.marca = dto.marca();
+        this.descricao = dto.descricao();
+        this.unidadeMedida = dto.unidadeMedida();
+        this.valorMedida = dto.valorMedida();
+        this.codigoBarra = dto.codigoBarra();
+    }
+
+    public void alterar(ProdutoReferenciaDTO dto){
+        this.nome = dto.nome();
+        this.urlImg = dto.urlImg();
+        this.marca = dto.marca();
+        this.descricao = dto.descricao();
+        this.unidadeMedida = dto.unidadeMedida();
+        this.valorMedida = dto.valorMedida();
+        this.codigoBarra = dto.codigoBarra();
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setUrlImg(String urlImg) {
+        this.urlImg = urlImg;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setUnidadeMedida(String unidadeMedida) {
+        this.unidadeMedida = unidadeMedida;
+    }
+
+    public void setValorMedida(Double valorMedida) {
+        this.valorMedida = valorMedida;
+    }
+
+    public void setCodigoBarra(String codigoBarra) {
+        this.codigoBarra = codigoBarra;
     }
 
     public Integer getId() {

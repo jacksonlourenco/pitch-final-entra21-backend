@@ -1,42 +1,46 @@
 package com.checkbuy.project.domain.controller;
 
-import com.checkbuy.project.service.supermercado.bistek.ScrapingBistekService;
-import com.checkbuy.project.service.supermercado.cooper.scraping.ScrapingCooperService;
-import com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService;
+import com.checkbuy.project.domain.service.ScrapingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.CompletableFuture;
-
 @RestController
-@RequestMapping("/scraping")
 @CrossOrigin
+@RequestMapping("/scraping")
 public class ScrapingController {
 
-    private final ScrapingCooperService scrapingCooperService;
-    private final ScrapingKompraoService scrapingKompraoService;
-    private final ScrapingBistekService scrapingBistekService;
+    private final ScrapingService scrapingService;
 
-    public ScrapingController(ScrapingCooperService scrapingCooperService,
-                              ScrapingKompraoService scrapingKompraoService, ScrapingBistekService scrapingBistekService) {
-        this.scrapingCooperService = scrapingCooperService;
-        this.scrapingKompraoService = scrapingKompraoService;
-        this.scrapingBistekService = scrapingBistekService;
+    public ScrapingController(ScrapingService scrapingService) {
+        this.scrapingService = scrapingService;
     }
 
-    @GetMapping("/produtos/{termo}")
-    public ResponseEntity<String> buscarTermo(@PathVariable String termo){
-        CompletableFuture<Void> cooper = scrapingCooperService.cooperScrapingTermo(termo);
-        CompletableFuture<Void> komprao = scrapingKompraoService.kochScrapingTermo(termo);
-        CompletableFuture<Void> bistek = scrapingBistekService.biteskScrapingTermo(termo);
+    @GetMapping("/{termo}")
+    public ResponseEntity<Void> scrapingPorTermo(@PathVariable String termo){
+        scrapingService.scrapingPorTermo(termo);
 
-        CompletableFuture.allOf(cooper, komprao, bistek).join(); // aguarda as duas finalizarem
-
-        return ResponseEntity.ok("Scraping concluído");
+        return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/komprao/{termo}")
-    public void komprao(@PathVariable String termo){
-        scrapingKompraoService.kochScrapingTermo(termo);
+    @GetMapping("/atualizar")
+    public ResponseEntity<Void> atualizar(){
+        scrapingService.scrapingPorTermo("arroz branco");
+        scrapingService.scrapingPorTermo("feijão");
+        scrapingService.scrapingPorTermo("açúcar");
+        scrapingService.scrapingPorTermo("óleo");
+        scrapingService.scrapingPorTermo("farinha");
+        scrapingService.scrapingPorTermo("macarrão");
+        scrapingService.scrapingPorTermo("café");
+        scrapingService.scrapingPorTermo("leite");
+        scrapingService.scrapingPorTermo("sardinha");
+        scrapingService.scrapingPorTermo("biscoitos");
+        scrapingService.scrapingPorTermo("milho");
+        scrapingService.scrapingPorTermo("Sabonete");
+        scrapingService.scrapingPorTermo("Papel higiênico");
+        scrapingService.scrapingPorTermo("Sabão em barra");
+        scrapingService.scrapingPorTermo("Detergente");
+        scrapingService.scrapingPorTermo("Pasta de dente");
+
+        return ResponseEntity.noContent().build();
     }
 }

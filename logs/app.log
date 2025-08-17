@@ -1,187 +1,25 @@
-2025-08-11 10:04:18 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 36312 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-11 10:04:18 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-11 10:04:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-11 10:04:18 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-11 10:04:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-11 10:04:19 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 9 JPA repository interfaces.
-2025-08-11 10:04:20 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-11 10:04:20 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-11 10:04:20 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-11 10:04:20 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-11 10:04:20 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1496 ms
-2025-08-11 10:04:20 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-11 10:04:20 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-11 10:04:21 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@216beac1
-2025-08-11 10:04:21 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-11 10:04:21 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-11 10:04:21 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.031s)
-2025-08-11 10:04:21 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-11 10:04:21 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-11 10:04:21 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-11 10:04:21 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-11 10:04:21 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-11 10:04:21 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-11 10:04:21 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-11 10:04:21 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-11 10:04:21 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-11 10:04:22 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-11 10:04:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:04:22 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-11 10:04:27 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-11 10:04:28 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-11 10:04:28 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-11 10:04:28 - c.c.project.ProjectApplication - Started ProjectApplication in 10.071 seconds (process running for 10.518)
-2025-08-11 10:04:41 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-11 10:04:41 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-11 10:04:41 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Açaí Rio Cerro 180g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Tamoa 300g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Guarana Leao 300ml Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Leao 450ml Guarana/Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Barrinha Da Colonia 150g Ban.C/Acai Z.Ac
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Tolete
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 2l Coco/Acai Pet
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Granola Jasmine 250g Crab/Acai S/Gl Veg
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suplemento Carb Up 30g Acai C/Guarana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Banana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Composto Probiotica 30g Carb Up Gua/Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Snack Mae Terra 25g Remix Acai
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Keep Cooler 275ml Acai/Hibisco
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Original
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai De Marchi 400g Sport Banana
-2025-08-11 10:05:23 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai El Maestro 300g Inteiro
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 250ml Coco/Acai
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Rodela
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Hemmer 300g Tolete
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai/Banana
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Morango S/Ac
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai Original
-2025-08-11 10:05:43 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Banana S/Ac
-2025-08-11 10:06:03 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
+2025-08-17 07:13:56 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h13m10s563ms842µs400ns).
+2025-08-17 07:14:25 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.concurrent.CompletionException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [c131e891-e040-4996-9478-02593cda7815, clickElement {id=dcee0aa6-aae5-4f3d-b215-25f0679f552c}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 18756, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[[[FirefoxDriver: firefox on windows (c131e891-e040-4996-9478-02593cda7815)] -> id: stores]] -> xpath: .//option[normalize-space(.) = "Blumenau"]]
-Session ID: c131e891-e040-4996-9478-02593cda7815] with root cause
-org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
-Build info: version: '4.31.0', revision: '1ef9f18787*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [c131e891-e040-4996-9478-02593cda7815, clickElement {id=dcee0aa6-aae5-4f3d-b215-25f0679f552c}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 18756, moz:profile: C:\Users\CAIO~1.AMA\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[[[FirefoxDriver: firefox on windows (c131e891-e040-4996-9478-02593cda7815)] -> id: stores]] -> xpath: .//option[normalize-space(.) = "Blumenau"]]
-Session ID: c131e891-e040-4996-9478-02593cda7815
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:419)
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:133)
-	at com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService.buscarTermo(ScrapingKompraoService.java:80)
-	at com.checkbuy.project.service.supermercado.komprao.ScrapingKompraoService.kochScrapingTermo(ScrapingKompraoService.java:135)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:114)
-	at org.springframework.util.concurrent.FutureUtils.lambda$toSupplier$0(FutureUtils.java:74)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+Command: [6a578398-38d3-44e9-bdd7-30d00cad32f6, getElementText [id]]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 25656, moz:profile: C:\Users\caioa\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[[[FirefoxDriver: firefox on windows (6a578398-38d3-44e9-bdd7-30d00cad32f6)] -> css selector: ol.products li.product-item]] -> css selector: .product-item-link]
+Session ID: 6a578398-38d3-44e9-bdd7-30d00cad32f6] with root cause
+java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-08-11 10:07:27 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-11 10:07:27 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-11 10:07:27 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:07:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-11 10:07:27 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-08-11 10:13:04 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 22072 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
-2025-08-11 10:13:04 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
-2025-08-11 10:13:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-11 10:13:04 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-11 10:13:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-11 10:13:05 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 9 JPA repository interfaces.
-2025-08-11 10:13:05 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-08-11 10:13:06 - o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-08-11 10:13:06 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-11 10:13:06 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-08-11 10:13:06 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1483 ms
-2025-08-11 10:13:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-08-11 10:13:06 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-2025-08-11 10:13:06 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45638d6d
-2025-08-11 10:13:06 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-08-11 10:13:06 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
-2025-08-11 10:13:06 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.033s)
-2025-08-11 10:13:06 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
-2025-08-11 10:13:06 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
-2025-08-11 10:13:06 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-11 10:13:07 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-11 10:13:07 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-08-11 10:13:07 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-11 10:13:07 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-11 10:13:07 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-11 10:13:07 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-11 10:13:08 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-11 10:13:08 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:13:08 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-08-11 10:13:22 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-11 10:13:22 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-08-11 10:13:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-08-11 10:13:22 - c.c.project.ProjectApplication - Started ProjectApplication in 18.598 seconds (process running for 19.068)
-2025-08-11 10:14:15 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-11 10:14:15 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-08-11 10:14:15 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Açaí Rio Cerro 180g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Tamoa 300g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Guarana Leao 300ml Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Refresco Leao 450ml Guarana/Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Barrinha Da Colonia 150g Ban.C/Acai Z.Ac
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Tolete
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 2l Coco/Acai Pet
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Granola Jasmine 250g Crab/Acai S/Gl Veg
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suplemento Carb Up 30g Acai C/Guarana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Banana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Composto Probiotica 30g Carb Up Gua/Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Snack Mae Terra 25g Remix Acai
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Bebida Keep Cooler 275ml Acai/Hibisco
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai Frooty 700ml Original
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Acai De Marchi 400g Sport Banana
-2025-08-11 10:14:58 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai El Maestro 300g Inteiro
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Energetico Baly 250ml Coco/Acai
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Marajo 300g Rodela
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Palmito Acai Hemmer 300g Tolete
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai/Banana
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Suco Pronto Amazoo 330ml Acai
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Morango S/Ac
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai Original
-2025-08-11 10:15:17 - c.c.p.s.s.b.ScrapingBistekService - Bistek -  Produto Cadastrado! - Smoothie Amazoo 250ml Acai/Banana S/Ac
-2025-08-11 10:16:19 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-11 10:16:19 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-08-11 10:16:19 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-11 10:16:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-08-11 10:16:19 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Indexação de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #f0f2f5; }
+        .main-container {
+            display: grid;
+            grid-template-columns: 40% 1fr;
+            gap: 1.5rem;
+            height: calc(100vh - 100px);
+        }
+        .scrollable-panel { overflow-y: auto; height: 100%; }
+        .product-list-item { cursor: pointer; transition: background-color 0.2s; }
+        
+        .product-list-item.active {
+            background-color: #dceaff;
+            color: #212529;
+            border-color: #a7caff;
+        }
+        .product-list-item.active .text-muted {
+            color: #495057 !important;
+        }
+
+        .product-img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; }
+        .suggestion-img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+        .similarity-badge { font-size: 0.9em; }
+        #auto-index-log {
+            background-color: #212529; color: #ced4da; font-family: monospace;
+            font-size: 0.8em; height: 200px; overflow-y: auto;
+            border-radius: 5px; padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-bullseye"></i>
+            Meu Sistema
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">Catálogo & Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guia-de-compras.html">Guia de Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ofertas.html">Melhores Ofertas</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a class="nav-link" href="indexacao.html">
+                        <i class="bi bi-sliders"></i> Indexação
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-pencil-square"></i> Gestão
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Módulo de Indexação</a>
+        </div>
+    </nav>
+
+    <main class="container-fluid p-4">
+        <div class="main-container">
+            <div class="d-flex flex-column h-100">
+                
+                <div class="mb-3">
+                    <label for="unidade-select" class="form-label fw-bold">Filtrar por Unidade:</label>
+                    <select class="form-select" id="unidade-select">
+                        <option selected disabled>Carregando...</option>
+                    </select>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" id="pesquisa-nao-indexados-input" class="form-control" placeholder="Selecione um filtro para pesquisar..." disabled>
+                </div>
+
+                <div id="lista-produtos-nao-indexados" class="scrollable-panel list-group">
+                    <div class="list-group-item text-muted">
+                        Selecione um filtro acima para listar os produtos.
+                    </div>
+                </div>
+                <nav id="paginacao" class="mt-3 d-flex justify-content-center">
+                </nav>
+            </div>
+
+            <div id="painel-trabalho" class="scrollable-panel">
+                <div id="placeholder-trabalho" class="text-center text-muted h-100 d-flex align-items-center justify-content-center">
+                    <p class="fs-4"><i class="bi bi-arrow-left-circle-fill me-2"></i> Selecione um produto na lista para começar</p>
+                </div>
+                <div id="conteudo-trabalho" class="d-none">
+                    <div class="card mb-4"><div class="card-body d-flex align-items-center"><img id="selecionado-img" src="" class="suggestion-img me-3" alt="Produto"><div><h5 class="card-title mb-1" id="selecionado-nome"></h5><p class="card-text text-muted mb-1" id="selecionado-mercado"></p><span class="badge bg-success" id="selecionado-preco"></span></div></div></div><ul class="nav nav-tabs" id="myTab" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="semi-auto-tab" data-bs-toggle="tab" data-bs-target="#semi-auto-pane" type="button" role="tab">Semi-automático (Sugestões)</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="manual-tab" data-bs-toggle="tab" data-bs-target="#manual-pane" type="button" role="tab">Manual</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="auto-tab" data-bs-toggle="tab" data-bs-target="#auto-pane" type="button" role="tab">Automático</button></li></ul><div class="tab-content bg-white p-3 border border-top-0" id="myTabContent"><div class="tab-pane fade show active" id="semi-auto-pane" role="tabpanel"><h6>Sugestões de Produtos de Referência</h6><div id="sugestoes-container"></div></div><div class="tab-pane fade" id="manual-pane" role="tabpanel"><h6>Buscar Produto de Referência Manualmente</h6><form id="manual-search-form"><div class="input-group"><input type="text" id="manual-search-input" class="form-control" placeholder="Digite o nome, marca ou código de barras..."><button class="btn btn-outline-secondary" type="submit">Buscar</button></div></form><hr><div id="manual-results-container"></div></div><div class="tab-pane fade" id="auto-pane" role="tabpanel"><h6>Indexação Automática em Massa</h6><p>Esta ação tentará indexar <strong>todos</strong> os itens da página atual que tiverem uma sugestão com similaridade acima do valor definido.</p><div class="row align-items-end"><div class="col-md-4"><label for="similaridade-threshold" class="form-label">Similaridade mínima</label><div class="input-group"><input type="number" class="form-control" id="similaridade-threshold" value="0.95" step="0.01" min="0.1" max="1.0"><span class="input-group-text">%</span></div></div><div class="col-md-8"><button class="btn btn-primary" id="btn-iniciar-auto-index">Iniciar Indexação Automática</button></div></div><h6 class="mt-4">Log de Execução:</h6><div id="auto-index-log"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Detecta automaticamente o IP ou hostname do dispositivo que está servindo o front-end
+        const BASE_URL = `http://${window.location.hostname}`;
+
+        const API_REFERENCIAS_URL = `${BASE_URL}:8080/produtos/referencias`;
+        const API_SCRAPING_URL = `${BASE_URL}:8080/produtos/scraping`;
+
+        const listaProdutosContainer = document.getElementById('lista-produtos-nao-indexados');
+        const paginacaoContainer = document.getElementById('paginacao');
+        const placeholderTrabalho = document.getElementById('placeholder-trabalho');
+        const conteudoTrabalho = document.getElementById('conteudo-trabalho');
+        const pesquisaInput = document.getElementById('pesquisa-nao-indexados-input');
+        const unidadeSelect = document.getElementById('unidade-select');
+        
+        let debounceTimer;
+        
+        let estado = {
+            unidadeSelecionadaId: null, // Será `null` para "Todos"
+            produtosNaoIndexados: [],
+            produtoSelecionado: null,
+            paginaAtual: 0,
+            totalPaginas: 1,
+            termoPesquisa: ''
+        };
+
+        const carregarContagem = async () => {
+            try {
+                const response = await fetch(`${API_SCRAPING_URL}/notindex/contagem-por-unidade`);
+                if (!response.ok) {
+                    throw new Error(`Erro na API: ${response.statusText}`);
+                }
+                const data = await response.json();
+                renderizarDropdownFiltro(data);
+
+            } catch (error) {
+                console.error("Erro ao carregar contagem:", error);
+                unidadeSelect.innerHTML = `<option disabled selected>Erro ao carregar filtros</option>`;
+            }
+        };
+
+        const renderizarDropdownFiltro = (dadosPlanos) => {
+            unidadeSelect.innerHTML = '<option selected disabled value="">Selecione um filtro</option>';
+
+            // SOMA O TOTAL GERAL PARA A OPÇÃO "TODOS"
+            const totalGeral = dadosPlanos.reduce((sum, item) => sum + item.contagem, 0);
+
+            // ADICIONA A OPÇÃO "TODOS"
+            const allOption = document.createElement('option');
+            allOption.value = "all"; // Um valor especial para identificar "Todos"
+            allOption.textContent = `Todos os Estabelecimentos (${totalGeral} itens)`;
+            unidadeSelect.appendChild(allOption);
+
+            // Adiciona um separador visual
+            const separator = document.createElement('option');
+            separator.disabled = true;
+            separator.textContent = '─────────────────';
+            unidadeSelect.appendChild(separator);
+
+            const agrupado = dadosPlanos.reduce((acc, item) => {
+                if (!acc[item.estabelecimentoNome]) {
+                    acc[item.estabelecimentoNome] = [];
+                }
+                acc[item.estabelecimentoNome].push(item);
+                return acc;
+            }, {});
+
+            for (const nomeEstabelecimento in agrupado) {
+                const optgroup = document.createElement('optgroup');
+                optgroup.label = nomeEstabelecimento;
+                
+                agrupado[nomeEstabelecimento].forEach(unidade => {
+                    const option = document.createElement('option');
+                    option.value = unidade.unidadeId;
+                    option.textContent = `${unidade.unidadeNome} (${unidade.contagem} itens)`;
+                    optgroup.appendChild(option);
+                });
+                unidadeSelect.appendChild(optgroup);
+            }
+        };
+
+        const carregarProdutosNaoIndexados = async (page = 0, termo = '') => {
+            // A função agora é chamada mesmo que unidadeSelecionadaId seja nulo (para o caso "Todos")
+            if (estado.unidadeSelecionadaId === null && unidadeSelect.value === "") return;
+
+            estado.paginaAtual = page;
+            estado.termoPesquisa = termo;
+            
+            let url = `${API_SCRAPING_URL}/1?page=${page}`;
+
+            // Adiciona o parâmetro unidade_id APENAS se um valor específico (não "all") for selecionado
+            if (estado.unidadeSelecionadaId) {
+                url += `&unidade_id=${estado.unidadeSelecionadaId}`;
+            }
+
+            if (termo.trim()) {
+                url += `&nome=${encodeURIComponent(termo)}`;
+            }
+
+            listaProdutosContainer.innerHTML = '<div class="spinner-border mx-auto mt-5" role="status"><span class="visually-hidden">Loading...</span></div>';
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Erro na API ao buscar produtos: ${response.statusText}`);
+                }
+                const data = await response.json();
+                
+                estado.produtosNaoIndexados = data.content;
+                estado.totalPaginas = data.totalPages;
+
+                renderizarListaProdutos();
+                renderizarPaginacao(data);
+            } catch (error) {
+                console.error("Erro ao carregar produtos:", error);
+                listaProdutosContainer.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+            }
+        };
+
+        const indexarProduto=async(a,e)=>{try{const t=await fetch(API_SCRAPING_URL,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({alias:a,produtoReferenciaID:e})});if(!t.ok)throw new Error(`Erro na API: ${t.statusText}`);carregarProdutosNaoIndexados(estado.paginaAtual,estado.termoPesquisa),placeholderTrabalho.classList.remove("d-none"),conteudoTrabalho.classList.add("d-none"),estado.produtoSelecionado=null,carregarContagem()}catch(a){console.error("Erro ao indexar produto:",a),alert("Falha ao indexar o produto.")}},renderizarListaProdutos=()=>{listaProdutosContainer.innerHTML="",0===estado.produtosNaoIndexados.length?listaProdutosContainer.innerHTML='<div class="list-group-item">Nenhum produto encontrado.</div>':estado.produtosNaoIndexados.forEach(a=>{const e=document.createElement("div");e.className="list-group-item list-group-item-action product-list-item d-flex align-items-center",e.dataset.id=a.id,e.innerHTML=`\n                    <img src="${a.urlImg}" class="product-img me-3" alt="${a.nome}">\n                    <div>\n                        <div class="fw-bold">${a.nome}</div>\n                        <small class="text-muted">${a.unidade.estabelecimento.nome} - ${a.unidade.nome}</small>\n                    </div>\n                    <span class="ms-auto badge bg-primary rounded-pill">R$ ${a.preco.toFixed(2).replace('.',',')}</span>\n                `,listaProdutosContainer.appendChild(e)})},renderizarPaginacao=a=>{paginacaoContainer.innerHTML="",a.totalPages<=1||(paginacaoContainer.innerHTML=`<ul class="pagination"><li class="page-item ${a.first?"disabled":""}"><a class="page-link" href="#" data-page="${a.number-1}">Anterior</a></li><li class="page-item disabled"><span class="page-link">Página ${a.number+1} de ${a.totalPages}</span></li><li class="page-item ${a.last?"disabled":""}"><a class="page-link" href="#" data-page="${a.number+1}">Próximo</a></li></ul>`)},renderizarSugestoes=(a=[],e)=>{const t=document.getElementById(e);if(t.innerHTML="",0===a.length)return void(t.innerHTML='<p class="text-muted">Nenhuma sugestão encontrada.</p>');a.forEach(a=>{let e="secondary";(a.similaridade*100).toFixed(1)>80?e="success":(a.similaridade*100).toFixed(1)>60&&(e="warning text-dark");const n=document.createElement("div");n.className="card mb-2",n.innerHTML=`<div class="card-body d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="${a.urlImg||"https://via.placeholder.com/80"}" class="suggestion-img me-3" alt="${a.nome}"><div><h6 class="mb-0">${a.nome}</h6><p class="text-muted mb-1"><small>Marca: ${a.marca||"N/D"}</small></p><span class="badge bg-${e} similarity-badge">${(100*a.similaridade).toFixed(1)}% similar</span></div></div><button class="btn btn-sm btn-outline-primary btn-selecionar" data-ref-id="${a.id}">Selecionar</button></div>`,t.appendChild(n)})};
+
+        unidadeSelect.addEventListener('change', (e) => {
+            const selectedValue = e.target.value;
+            if (selectedValue) {
+                // Se o valor for "all", o ID no estado fica nulo. Caso contrário, guarda o ID.
+                estado.unidadeSelecionadaId = (selectedValue === 'all') ? null : selectedValue;
+                
+                pesquisaInput.disabled = false;
+                pesquisaInput.placeholder = "Pesquisar por nome do produto...";
+                pesquisaInput.value = '';
+                estado.termoPesquisa = '';
+                carregarProdutosNaoIndexados();
+            }
+        });
+
+        pesquisaInput.addEventListener('keyup', (e) => {
+            clearTimeout(debounceTimer);
+            const termo = e.target.value;
+            debounceTimer = setTimeout(() => {
+                carregarProdutosNaoIndexados(0, termo);
+            }, 500);
+        });
+
+        listaProdutosContainer.addEventListener('click', (e) => {
+            const item = e.target.closest('.product-list-item');
+            if (!item) return;
+
+            document.querySelectorAll('.product-list-item.active').forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+
+            const produtoId = parseInt(item.dataset.id, 10);
+            estado.produtoSelecionado = estado.produtosNaoIndexados.find(p => p.id === produtoId);
+            
+            if (estado.produtoSelecionado) {
+                document.getElementById('selecionado-img').src = estado.produtoSelecionado.urlImg || 'https://via.placeholder.com/80';
+                document.getElementById('selecionado-nome').textContent = estado.produtoSelecionado.nome || 'Nome não disponível';
+                document.getElementById('selecionado-mercado').textContent = `${estado.produtoSelecionado.unidade?.estabelecimento?.nome || 'N/D'} - ${estado.produtoSelecionado.unidade?.nome || 'N/D'}`;
+                document.getElementById('selecionado-preco').textContent = `R$ ${(estado.produtoSelecionado.preco || 0).toFixed(2).replace('.',',')}`;
+                
+                placeholderTrabalho.classList.add('d-none');
+                conteudoTrabalho.classList.remove('d-none');
+                
+                const sugestoesContainer = document.getElementById('sugestoes-container');
+                sugestoesContainer.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>';
+                fetch(`${API_REFERENCIAS_URL}/sugerir/${encodeURIComponent(estado.produtoSelecionado.nome)}`)
+                    .then(res => res.json())
+                    .then(sugestoes => renderizarSugestoes(sugestoes, 'sugestoes-container'))
+                    .catch(err => {
+                        console.error("Erro ao buscar sugestões:", err);
+                        sugestoesContainer.innerHTML = '<p class="text-danger">Erro ao buscar sugestões.</p>';
+                    });
+            }
+        });
+        
+        paginacaoContainer.addEventListener('click',e=>{e.preventDefault(),e.target.tagName==="A"&&!e.target.parentElement.classList.contains("disabled")&&carregarProdutosNaoIndexados(parseInt(e.target.dataset.page,10),estado.termoPesquisa)});document.getElementById("manual-search-form").addEventListener("submit",async e=>{e.preventDefault();const t=document.getElementById("manual-search-input").value;if(t.length<3)return alert("Digite pelo menos 3 caracteres para buscar.");const a=`${API_REFERENCIAS_URL}/listar?nome=${encodeURIComponent(t)}`;try{const e=await fetch(a),t=await e.json(),n=t.content.map(a=>({...a,similaridade:1}));renderizarSugestoes(n,"manual-results-container")}catch(e){console.error("Erro na busca manual:",e),document.getElementById("manual-results-container").innerHTML='<p class="text-danger">Erro ao realizar a busca.</p>'}}),document.getElementById("myTabContent").addEventListener("click",e=>{if(e.target.classList.contains("btn-selecionar")){const t=e.target.dataset.refId;estado.produtoSelecionado&&t&&indexarProduto(estado.produtoSelecionado.nome,parseInt(t,10))}}),document.getElementById("btn-iniciar-auto-index").addEventListener("click",async()=>{const e=parseFloat(document.getElementById("similaridade-threshold").value),t=document.getElementById("auto-index-log");t.innerHTML="";const a=(e,a="white")=>{t.innerHTML+=`<div><span class="text-muted">${(new Date).toLocaleTimeString()}:</span> ${e}</div>`,t.scrollTop=t.scrollHeight};a(`Iniciando indexação automática com similaridade > ${100*e}%...`);let n=0;for(const o of[...estado.produtosNaoIndexados])try{const e=await fetch(`${API_REFERENCIAS_URL}/sugerir/${encodeURIComponent(o.nome)}`),t=await e.json();t&&t.length>0&&t[0].similaridade>=e?(a(`<span class="text-success">[SUCESSO]</span> "${o.nome}" <strong>&rarr;</strong> "${t[0].nome}" (${(100*t[0].similaridade).toFixed(1)}%). Indexando...`),await fetch(API_SCRAPING_URL,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({alias:o.nome,produtoReferenciaID:t[0].id})}),n++):a(`<span class="text-warning">[IGNORADO]</span> "${o.nome}". ${t&&t.length>0?`Similaridade máxima: ${(100*t[0].similaridade).toFixed(1)}%`:"Sem sugestões"}.`)}catch(e){a(`<span class="text-danger">[ERRO]</span> Ao processar "${o.nome}": ${e.message}`)}a(`<strong>Indexação automática concluída. ${n} produto(s) processado(s). Atualizando lista...</strong>`),setTimeout(()=>{carregarProdutosNaoIndexados(estado.paginaAtual,estado.termoPesquisa),carregarContagem()},2e3)});
+
+        carregarContagem();
+    });
+    </script>
+</body>
+</html>

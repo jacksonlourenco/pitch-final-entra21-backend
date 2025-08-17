@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface AliasProdutoReferenciaRepository extends JpaRepository<AliasProdutoReferencia, Integer> {
 
-    Optional<AliasProdutoReferencia> findByAlias(String presentation);
+    Optional<AliasProdutoReferencia> findByAlias(String alias);
 
     List<AliasProdutoReferencia> findByProdutoReferencia(ProdutoReferencia notIndex);
 }

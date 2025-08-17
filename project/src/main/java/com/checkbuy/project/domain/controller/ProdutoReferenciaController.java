@@ -1,18 +1,23 @@
 package com.checkbuy.project.domain.controller;
 
-import com.checkbuy.project.domain.dto.UpdateAliasProdutoReferenciaDTO;
+import com.checkbuy.project.domain.dto.ProdutoReferenciaDTO;
+import com.checkbuy.project.domain.dto.ProdutoReferenciaSimilaridadeDTO;
 import com.checkbuy.project.domain.model.ProdutoReferencia;
-import com.checkbuy.project.domain.model.alias.AliasProdutoReferencia;
 import com.checkbuy.project.domain.service.ProdutoReferenciaService;
+import com.checkbuy.project.util.UriUtils;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping("/alias-produtos-referencias")
 @CrossOrigin
+@RequestMapping("/produtos/referencias")
 public class ProdutoReferenciaController {
 
     private final ProdutoReferenciaService produtoReferenciaService;
@@ -21,27 +26,47 @@ public class ProdutoReferenciaController {
         this.produtoReferenciaService = produtoReferenciaService;
     }
 
-    @PostMapping("/criar")
-    private ResponseEntity<ProdutoReferencia> create(@RequestBody ProdutoReferencia dto){
-        produtoReferenciaService.create(dto);
-        return ResponseEntity.ok().body(dto);
+    @PostMapping
+    public ResponseEntity<ProdutoReferencia> criar(@RequestBody  @Valid ProdutoReferenciaDTO dto){
+
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.criar(dto);
+
+        URI location = UriUtils.buildLocation(produtoReferencia.getId());
+
+        return ResponseEntity.created(location).body(produtoReferencia);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProdutoReferencia> buscarPorId(@PathVariable Integer id){
+
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.buscarPorId(id);
+
+        return ResponseEntity.ok(produtoReferencia);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProdutoReferencia> alterar(@PathVariable Integer id, @RequestBody @Valid ProdutoReferenciaDTO dto){
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.alterar(id, dto);
+
+        return ResponseEntity.ok(produtoReferencia);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Integer id){
+        produtoReferenciaService.excluir(id);
+
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/listar")
-    public List<ProdutoReferencia> listarProdutos(){
-        return produtoReferenciaService.listarProdutos();
+    public ResponseEntity<Page<ProdutoReferencia>> listar(Pageable pageable){
+        var lista = produtoReferenciaService.listar(pageable);
+        return ResponseEntity.ok(lista);
     }
 
-    @GetMapping("/listar-notindex")
-    public List<AliasProdutoReferencia> listarNotIndex(){
-        return produtoReferenciaService.listarNotIndex();
+    @GetMapping("/sugerir/{alias}")
+    public List<ProdutoReferenciaSimilaridadeDTO> sugerir(@PathVariable String alias){
+        return produtoReferenciaService.sugerir(alias);
     }
-
-    @PutMapping("/atualizar")
-    public ResponseEntity<UpdateAliasProdutoReferenciaDTO> fixProdutoNotIndex(@Valid @RequestBody UpdateAliasProdutoReferenciaDTO dto){
-        produtoReferenciaService.alterar(dto);
-        return ResponseEntity.ok().body(dto);
-    }
-
 
 }

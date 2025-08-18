@@ -1,17 +1,24 @@
 package com.checkbuy.project.domain.model;
 
 import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Objects;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Embeddable
 public class ListaResultadoId implements Serializable {
     private Integer listaId;
     private Integer produtoReferenciaId;
-
-    public ListaResultadoId() {
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -26,11 +33,4 @@ public class ListaResultadoId implements Serializable {
         return Objects.hash(listaId, produtoReferenciaId);
     }
 
-    public Integer getListaId() {
-        return listaId;
-    }
-
-    public Integer getProdutoReferenciaId() {
-        return produtoReferenciaId;
-    }
 }

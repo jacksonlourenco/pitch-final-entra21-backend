@@ -1,8 +1,17 @@
 package com.checkbuy.project.domain.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "lista")
@@ -16,23 +25,4 @@ public class Lista {
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
-
-    public Lista() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
 }

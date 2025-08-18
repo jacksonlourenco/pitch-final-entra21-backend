@@ -1,6 +1,15 @@
 package com.checkbuy.project.domain.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "unidade")
@@ -20,42 +29,4 @@ public class Unidade {
     @JoinColumn(name = "estabelecimento_id", nullable = false)
     private Estabelecimento estabelecimento;
 
-    public Unidade() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public String getMunicipio() {
-        return municipio;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public String getCep() {
-        return cep;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public Estabelecimento getEstabelecimento() {
-        return estabelecimento;
-    }
 }

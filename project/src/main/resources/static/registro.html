@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - CheckBuy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        h2 { text-align: center; margin-bottom: 1.5rem; }
+        input { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 100%; padding: 0.8rem; background: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #218838; }
+        .link { text-align: center; margin-top: 1rem; }
+        .link a { color: #007BFF; text-decoration: none; }
+        .link a:hover { text-decoration: underline; }
+        .error { color: red; margin-bottom: 1rem; text-align: center; }
+        .success { color: green; margin-bottom: 1rem; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <div id="error" class="error"></div>
+        <div id="success" class="success"></div>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <div class="link">
+            <a href="login.html">Já tem conta? Faça login</a>
+        </div>
+    </div>
+
+    <script>
+        async function cadastrar() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const errorDiv = document.getElementById('error');
+            const successDiv = document.getElementById('success');
+
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+
+            try {
+                const response = await fetch('http://localhost:8080/cadastro', { // endpoint de cadastro
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nome, email, senha })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao cadastrar usuário');
+                }
+
+                successDiv.textContent = 'Cadastro realizado com sucesso!';
+                setTimeout(() => window.location.href = 'login.html', 2000);
+
+            } catch (err) {
+                errorDiv.textContent = err.message;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 public class DomainExceptionHandler {
 
     @ExceptionHandler(ProdutoReferenciaNaoEncontrado.class)
-    public ResponseEntity<ResponseError> ProdutoReferenciaNaoEncontrado(ProdutoReferenciaNaoEncontrado ex){
-
+    public ResponseEntity<ResponseError> produtoReferenciaNaoEncontrado(ProdutoReferenciaNaoEncontrado ex){
 
         ResponseError responseError =  new ResponseError(
                 ex.getMessage(),
@@ -46,7 +45,7 @@ public class DomainExceptionHandler {
     }
 
     @ExceptionHandler(UnidadeNaoEncontrada.class)
-    public ResponseEntity<ResponseError> UnidadeNaoEncontrada(UnidadeNaoEncontrada ex){
+    public ResponseEntity<ResponseError> unidadeNaoEncontrada(UnidadeNaoEncontrada ex){
 
         ResponseError responseError =  new ResponseError(
                 ex.getMessage(),
@@ -54,5 +53,16 @@ public class DomainExceptionHandler {
                 LocalDateTime.now()
         );
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseError);
+    }
+
+    @ExceptionHandler(EmailJaCadastrado.class)
+    public ResponseEntity<ResponseError> emailJaCadastrado(EmailJaCadastrado ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
     }
 }

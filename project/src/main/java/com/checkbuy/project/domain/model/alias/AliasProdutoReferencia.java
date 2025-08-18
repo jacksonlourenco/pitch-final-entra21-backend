@@ -2,6 +2,15 @@ package com.checkbuy.project.domain.model.alias;
 
 import com.checkbuy.project.domain.model.ProdutoReferencia;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "alias_produto_referencia")
@@ -14,36 +23,4 @@ public class AliasProdutoReferencia {
     @ManyToOne
     @JoinColumn(name = "produto_referencia_id", nullable = false)
     private ProdutoReferencia produtoReferencia;
-
-    public AliasProdutoReferencia() {
-    }
-
-    public AliasProdutoReferencia(String nome, AliasProdutoReferencia aliasProdutoReferencia) {
-        this.alias = nome;
-        this.produtoReferencia = aliasProdutoReferencia.getProdutoReferencia();
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
-    public ProdutoReferencia getProdutoReferencia() {
-        return produtoReferencia;
-    }
-
-    public void setProdutoReferencia(ProdutoReferencia produtoReferencia) {
-        this.produtoReferencia = produtoReferencia;
-    }
 }

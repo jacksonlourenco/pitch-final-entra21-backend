@@ -1,6 +1,15 @@
 package com.checkbuy.project.domain.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "lista_resultado")
@@ -18,25 +27,6 @@ public class ListaResultado {
     @JoinColumn(name = "produto_referencia_id")
     private ProdutoReferencia produtoReferencia;
 
-
     private Integer quantidade;
 
-    public ListaResultado() {
-    }
-
-    public ListaResultadoId getId() {
-        return id;
-    }
-
-    public Lista getLista() {
-        return lista;
-    }
-
-    public ProdutoReferencia getProdutoReferencia() {
-        return produtoReferencia;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
 }

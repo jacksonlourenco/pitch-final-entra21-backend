@@ -235,7 +235,7 @@ public class ScrapingBistekService {
                 produto.setProdutoReferencia(notIndex.orElseThrow().getProdutoReferencia());
 
                 //CADASTRA Alias COM REFERENCIA PARA NOT-INDEX
-                AliasProdutoReferencia aliasProduto = new AliasProdutoReferencia(produto.getNome(), notIndex.get());
+                AliasProdutoReferencia aliasProduto = new AliasProdutoReferencia(null ,produto.getNome(), notIndex.get().getProdutoReferencia());
                 aliasProdutoReferenciaRepository.save(aliasProduto);
             } else {
                 produto.setProdutoReferencia(produtoReferencia.get().getProdutoReferencia());

@@ -52,6 +52,7 @@ CREATE TABLE usuario(
 	id INT NOT NULL AUTO_INCREMENT,
 	email VARCHAR(45),
 	nome VARCHAR(45),
+	senha VARCHAR(500),
 
 	PRIMARY KEY(id)
 );

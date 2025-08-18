@@ -65,4 +65,48 @@ public class DomainExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
     }
+
+    @ExceptionHandler(ListaNaoEncontada.class)
+    public ResponseEntity<ResponseError> listaNaoEncontada(ListaNaoEncontada ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.NOT_FOUND,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseError);
+    }
+
+    @ExceptionHandler(ProibidoInserirProdutoNotIndexEmLista.class)
+    public ResponseEntity<ResponseError> proibidoInserirProdutoNotIndexEmLista(ProibidoInserirProdutoNotIndexEmLista ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
+    }
+
+    @ExceptionHandler(ProdutoJaCadastroEmLista.class)
+    public ResponseEntity<ResponseError> produtoJaCadastroEmLista(ProdutoJaCadastroEmLista ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
+    }
+
+    @ExceptionHandler(ProibidoInserirQuantidadeZeroEmLista.class)
+    public ResponseEntity<ResponseError> proibidoInserirQuantidadeZeroEmLista(ProibidoInserirQuantidadeZeroEmLista ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
+    }
 }

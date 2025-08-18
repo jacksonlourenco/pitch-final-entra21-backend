@@ -1,15 +1,16 @@
 package com.checkbuy.project.domain.controller;
 
-import com.checkbuy.project.domain.model.Lista;
+import com.checkbuy.project.domain.dto.ListaCriarDTO;
+import com.checkbuy.project.domain.dto.ListaDTO;
+import com.checkbuy.project.domain.dto.ListaResultadoDTO;
 import com.checkbuy.project.domain.model.Usuario;
 import com.checkbuy.project.domain.service.ListaService;
-import org.springframework.http.HttpStatus;
+import com.checkbuy.project.util.UriUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -22,15 +23,24 @@ public class ListaController {
         this.listaService = listaService;
     }
 
+    @GetMapping("/{listaId}")
+    public ResponseEntity<List<ListaResultadoDTO>> obterLista(@PathVariable Integer listaId, @AuthenticationPrincipal Usuario usuario){
+        var itensLista = listaService.obterLista(listaId, usuario);
+
+        return ResponseEntity.ok().body(itensLista);
+    }
 
     @PostMapping
-    public ResponseEntity<Lista> criarLista(@RequestBody String nome, @AuthenticationPrincipal Usuario usuario) {
-        Lista lista = listaService.criarLista(nome, usuario);
-        return ResponseEntity.status(HttpStatus.CREATED).body(lista);
+    public ResponseEntity<ListaDTO> criarLista(@RequestBody ListaCriarDTO dto, @AuthenticationPrincipal Usuario usuario) {
+
+        ListaDTO lista = listaService.criarLista(dto, usuario);
+
+        URI location = UriUtils.buildLocation(usuario.getId());
+        return ResponseEntity.created(location).body(lista);
     }
 
     @GetMapping
-    public ResponseEntity<List<Lista>> minhasListas(@AuthenticationPrincipal Usuario usuario) {
+    public ResponseEntity<List<ListaDTO>> minhasListas(@AuthenticationPrincipal Usuario usuario) {
         return ResponseEntity.ok(listaService.listarMinhasListas(usuario));
     }
 
@@ -39,5 +49,37 @@ public class ListaController {
         listaService.deletarLista(id, usuario);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/inserir/{listaId}")
+    public ResponseEntity<Void> inserirProdutoReferencia(
+            @PathVariable Integer listaId,
+            @RequestParam Integer produtoReferenciaId,
+            @RequestParam Integer quantidade,
+            @AuthenticationPrincipal Usuario usuario) {
+
+        listaService.inserirProduto(listaId, produtoReferenciaId, quantidade, usuario);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/excluir/{listaId}/{produtoReferenciaId}")
+    public ResponseEntity<Void> excluirProdutosReferencia(@PathVariable Integer listaId, @PathVariable Integer produtoReferenciaId, @AuthenticationPrincipal Usuario usuario){
+        listaService.excluirProduto(listaId, produtoReferenciaId, usuario);
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/alterar/{listaId}")
+    public ResponseEntity<Void> alterarProdutoReferencia(
+            @PathVariable Integer listaId,
+            @RequestParam Integer produtoReferenciaId,
+            @RequestParam Integer quantidade,
+            @AuthenticationPrincipal Usuario usuario) {
+
+        listaService.alterarProduto(listaId, produtoReferenciaId, quantidade, usuario);
+
+        return ResponseEntity.noContent().build();
+    }
+
 
 }

@@ -46,10 +46,10 @@ public class ScrapingBistekService {
         System.setProperty("webdriver.gecko.driver", driverPath);
 
         FirefoxOptions options = new FirefoxOptions();
-        //options.addArguments("-headless");
-        //driver = new FirefoxDriver(options);
+        options.addArguments("-headless");
+        driver = new FirefoxDriver(options);
 
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
     }
 
     @Async

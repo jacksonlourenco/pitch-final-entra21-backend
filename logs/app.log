@@ -200,8 +200,8 @@
 2025-08-18 00:25:04 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/9
 2025-08-18 00:25:04 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -313,8 +313,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:25:25 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/1
 2025-08-18 00:25:25 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -426,8 +426,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:25:49 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/99
 2025-08-18 00:25:49 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -539,8 +539,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:25:57 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/99
 2025-08-18 00:25:57 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -654,8 +654,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:26:30 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/9
 2025-08-18 00:26:30 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -769,8 +769,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:27:03 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/3
 2025-08-18 00:27:03 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -882,8 +882,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:27:06 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/2
 2025-08-18 00:27:06 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -995,8 +995,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 00:27:09 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/1
 2025-08-18 00:27:09 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:38)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:44)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:38)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -1663,8 +1663,8 @@ java.lang.RuntimeException: Token JWT inválido ou expirado!
 2025-08-18 08:26:23 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/7
 2025-08-18 08:26:23 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:39)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:40)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:39)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:40)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -1828,8 +1828,8 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista não encontrada!
 2025-08-18 08:29:25 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/7
 2025-08-18 08:29:25 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista ID: 7 (inexistente) ou (não pertence) a Usuario ID: 1] with root cause
 com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista ID: 7 (inexistente) ou (não pertence) a Usuario ID: 1
-	at com.checkbuy.project.domain.service.ListaService.deletarLista(ListaService.java:39)
-	at com.checkbuy.project.domain.controller.ListaController.deletarLista(ListaController.java:40)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:39)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:40)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -2105,7 +2105,7 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista ID: 7 (inexistent
 2025-08-18 08:55:01 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-08-18 08:55:01 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-08-18 08:55:01 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name autenticacaoService
-2025-08-18 08:55:01 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+2025-08-18 08:55:01 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 2025-08-18 08:55:01 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-18 08:55:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-08-18 08:55:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -2114,7 +2114,7 @@ com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista ID: 7 (inexistent
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-08-18 08:55:01 - o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -2140,7 +2140,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -2156,7 +2156,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -2172,7 +2172,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 37 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
@@ -2185,7 +2185,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 50 common frames omitted
-Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
@@ -2201,14 +2201,14 @@ Caused by: org.springframework.data.repository.query.QueryCreationException: Cou
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
 	... 60 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findAllById(java.lang.Integer); Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:260)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
 	... 72 common frames omitted
-Caused by: org.hibernate.query.SemanticException: Cannot compare left expression of type 'com.checkbuy.project.domain.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
+Caused by: org.hibernate.query.SemanticException: Cannot compare left expression of type 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId' with right expression of type 'java.lang.Integer'
 	at org.hibernate.query.sqm.internal.TypecheckUtil.assertComparable(TypecheckUtil.java:406)
 	at org.hibernate.query.sqm.tree.predicate.SqmComparisonPredicate.<init>(SqmComparisonPredicate.java:46)
 	at org.hibernate.query.sqm.tree.predicate.SqmComparisonPredicate.<init>(SqmComparisonPredicate.java:32)
@@ -2568,8 +2568,8 @@ java.lang.RuntimeException: Token JWT inválido ou expirado!
 2025-08-18 09:59:05 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/7?produtoReferenciaId=1&quantidade=3
 2025-08-18 09:59:05 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Produto Not Index, Não pode ser inserido em lista.] with root cause
 java.lang.IllegalArgumentException: Produto Not Index, Não pode ser inserido em lista.
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:78)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:78)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -2768,7 +2768,7 @@ java.lang.IllegalArgumentException: Produto Not Index, Não pode ser inserido em
 2025-08-18 10:08:39 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.domain.exception.ListaNaoEncontada: Lista ID: 1 (inexistente) ou (não pertence) a Usuario ID: 1]
 2025-08-18 10:08:53 - o.s.security.web.FilterChainProxy - Securing POST /listas/inserir/8?produtoReferenciaId=2&quantidade=3
 2025-08-18 10:08:53 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=2&quantidade=3
-2025-08-18 10:08:53 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Could not set value of type [java.lang.Integer]: 'com.checkbuy.project.domain.model.ListaResultadoId.listaId' (setter)] with root cause
+2025-08-18 10:08:53 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Could not set value of type [java.lang.Integer]: 'com.checkbuy.project.domain.listaresultado.model.ListaResultadoId.listaId' (setter)] with root cause
 java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "o" is null
 	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.ensureObj(MethodHandleFieldAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.MethodHandleObjectFieldAccessorImpl.set(MethodHandleObjectFieldAccessorImpl.java:101)
@@ -2818,8 +2818,8 @@ java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "o" is
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
 	at jdk.proxy4/jdk.proxy4.$Proxy150.save(Unknown Source)
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:87)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:87)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3063,8 +3063,8 @@ java.lang.RuntimeException: Token JWT inválido ou expirado!
 2025-08-18 10:19:45 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=2&quantidade=3
 2025-08-18 10:19:45 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja existente na Lista ID: 2] with root cause
 com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja existente na Lista ID: 2
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:87)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:87)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3228,8 +3228,8 @@ com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja
 2025-08-18 10:26:17 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=2&quantidade=3
 2025-08-18 10:26:18 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja existente na Lista ID: 8] with root cause
 com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja existente na Lista ID: 8
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:92)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:92)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3343,8 +3343,8 @@ com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja
 2025-08-18 10:26:42 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=3&quantidade=-2
 2025-08-18 10:26:42 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Produto ID: 3 não pode ter quantidade menor que zero:] with root cause
 com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Produto ID: 3 não pode ter quantidade menor que zero:
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:85)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:85)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3456,8 +3456,8 @@ com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Prod
 2025-08-18 10:27:01 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=3&quantidade=0
 2025-08-18 10:27:01 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Produto ID: 3 não pode ter quantidade menor que zero:] with root cause
 com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Produto ID: 3 não pode ter quantidade menor que zero:
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:85)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:85)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3571,8 +3571,8 @@ com.checkbuy.project.domain.exception.ProibidoInserirQuantidadeZeroEmLista: Prod
 2025-08-18 10:27:23 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/8?produtoReferenciaId=3&quantidade=8
 2025-08-18 10:27:23 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 3 ja existente na Lista ID: 8] with root cause
 com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 3 ja existente na Lista ID: 8
-	at com.checkbuy.project.domain.service.ListaService.inserirProduto(ListaService.java:92)
-	at com.checkbuy.project.domain.controller.ListaController.inserirProdutoReferencia(ListaController.java:60)
+	at com.checkbuy.project.domain.lista.service.ListaService.inserirProduto(ListaService.java:92)
+	at com.checkbuy.project.web.controller.lista.ListaController.inserirProdutoReferencia(ListaController.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -3982,7 +3982,7 @@ com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 3 ja
 2025-08-18 11:05:33 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-08-18 11:05:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-08-18 11:05:33 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name autenticacaoService
-2025-08-18 11:05:33 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+2025-08-18 11:05:33 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 2025-08-18 11:05:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-18 11:05:33 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-08-18 11:05:33 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -3991,7 +3991,7 @@ com.checkbuy.project.domain.exception.ProdutoJaCadastroEmLista: Produto ID: 3 ja
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-08-18 11:05:33 - o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaController' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\controller\ListaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -4017,7 +4017,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -4033,7 +4033,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'listaResultadoService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\service\ListaResultadoService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -4049,7 +4049,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 37 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'listaResultadoRepository' defined in com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
@@ -4062,7 +4062,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 50 common frames omitted
-Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Reason: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
@@ -4078,14 +4078,14 @@ Caused by: org.springframework.data.repository.query.QueryCreationException: Cou
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
 	... 60 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId(); Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:260)
 	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
 	... 72 common frames omitted
-Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.checkbuy.project.domain.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
+Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.checkbuy.project.domain.listaresultado.repository.ListaResultadoRepository.findById_ListaId() expects at least 1 arguments but only found 0; This leaves an operator of type SIMPLE_PROPERTY for property id.listaId unbound
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.throwExceptionOnArgumentMismatch(PartTreeJpaQuery.java:163)
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.validate(PartTreeJpaQuery.java:149)
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:102)
@@ -4487,8 +4487,8 @@ java.lang.RuntimeException: Token JWT inválido ou expirado!
 2025-08-18 11:15:41 - o.s.security.web.FilterChainProxy - Secured PUT /listas/alterar/9?produtoReferenciaId=3&quantidade=5
 2025-08-18 11:15:41 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException] with root cause
 java.lang.RuntimeException: null
-	at com.checkbuy.project.domain.service.ListaService.alterarProduto(ListaService.java:141)
-	at com.checkbuy.project.domain.controller.ListaController.alterarProdutoReferencia(ListaController.java:79)
+	at com.checkbuy.project.domain.lista.service.ListaService.alterarProduto(ListaService.java:141)
+	at com.checkbuy.project.web.controller.lista.ListaController.alterarProdutoReferencia(ListaController.java:79)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -4606,8 +4606,8 @@ java.lang.RuntimeException: null
 2025-08-18 11:16:20 - o.s.security.web.FilterChainProxy - Secured PUT /listas/alterar/9?produtoReferenciaId=3&quantidade=5
 2025-08-18 11:16:20 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException] with root cause
 java.lang.RuntimeException: null
-	at com.checkbuy.project.domain.service.ListaService.alterarProduto(ListaService.java:141)
-	at com.checkbuy.project.domain.controller.ListaController.alterarProdutoReferencia(ListaController.java:79)
+	at com.checkbuy.project.domain.lista.service.ListaService.alterarProduto(ListaService.java:141)
+	at com.checkbuy.project.web.controller.lista.ListaController.alterarProdutoReferencia(ListaController.java:79)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -4719,8 +4719,8 @@ java.lang.RuntimeException: null
 2025-08-18 11:16:46 - o.s.security.web.FilterChainProxy - Secured PUT /listas/alterar/9?produtoReferenciaId=4&quantidade=5
 2025-08-18 11:16:46 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException] with root cause
 java.lang.RuntimeException: null
-	at com.checkbuy.project.domain.service.ListaService.alterarProduto(ListaService.java:141)
-	at com.checkbuy.project.domain.controller.ListaController.alterarProdutoReferencia(ListaController.java:79)
+	at com.checkbuy.project.domain.lista.service.ListaService.alterarProduto(ListaService.java:141)
+	at com.checkbuy.project.web.controller.lista.ListaController.alterarProdutoReferencia(ListaController.java:79)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -4844,8 +4844,8 @@ java.lang.RuntimeException: null
 2025-08-18 11:17:18 - o.s.security.web.FilterChainProxy - Secured PUT /listas/alterar/9?produtoReferenciaId=4&quantidade=2
 2025-08-18 11:17:18 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException] with root cause
 java.lang.RuntimeException: null
-	at com.checkbuy.project.domain.service.ListaService.alterarProduto(ListaService.java:141)
-	at com.checkbuy.project.domain.controller.ListaController.alterarProdutoReferencia(ListaController.java:79)
+	at com.checkbuy.project.domain.lista.service.ListaService.alterarProduto(ListaService.java:141)
+	at com.checkbuy.project.web.controller.lista.ListaController.alterarProdutoReferencia(ListaController.java:79)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -5024,3 +5024,692 @@ java.lang.RuntimeException: null
 2025-08-18 11:22:07 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-18 11:22:07 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-08-18 11:22:07 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-19 08:59:07 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 63740 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
+2025-08-19 08:59:07 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-19 08:59:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-19 08:59:07 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-19 08:59:09 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19 08:59:09 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 9 JPA repository interfaces.
+2025-08-19 08:59:09 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-19 08:59:09 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-19 08:59:09 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-19 08:59:09 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-19 08:59:09 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2062 ms
+2025-08-19 08:59:10 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-19 08:59:10 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-19 08:59:10 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b812e75
+2025-08-19 08:59:10 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-19 08:59:10 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-19 08:59:10 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.052s)
+2025-08-19 08:59:10 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-19 08:59:10 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-19 08:59:10 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19 08:59:10 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-19 08:59:10 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-19 08:59:11 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19 08:59:11 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19 08:59:11 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-19 08:59:11 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-19 08:59:12 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19 08:59:12 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19 08:59:12 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-19 08:59:13 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produtoScrapingService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\produtoscraping\service\ProdutoScrapingService.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'produtoScrapingRepository' defined in com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer); Reason: Validation failed for query for method public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer)
+2025-08-19 08:59:13 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19 08:59:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-19 08:59:13 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-19 08:59:13 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-19 08:59:13 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-19 08:59:13 - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produtoScrapingService' defined in file [C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes\com\checkbuy\project\domain\produtoscraping\service\ProdutoScrapingService.class]: Unsatisfied dependency expressed through constructor parameter 3: Error creating bean with name 'produtoScrapingRepository' defined in com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer); Reason: Validation failed for query for method public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.checkbuy.project.ProjectApplication.main(ProjectApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'produtoScrapingRepository' defined in com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer); Reason: Validation failed for query for method public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1683)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer); Reason: Validation failed for query for method public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer)
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:350)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:356)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository.ofertasMaisRecentes(java.lang.Integer)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:97)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:67)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:49)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:174)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 46 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.query.SemanticException: Could not resolve class 'com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO' named for instantiation [SELECT new com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO(
+    ps.id,
+    ps.nome,
+    ps.preco,
+    ps.precoEspecial,
+    ps.dataScraping,
+    u.id,
+    u.nome,
+    e.nome
+)
+FROM ProdutoScraping ps
+JOIN ps.unidade u
+JOIN u.estabelecimento e
+WHERE ps.produtoReferencia.id = :produtoReferenciaId
+AND ps.dataScraping = (
+    SELECT MAX(ps2.dataScraping)
+    FROM ProdutoScraping ps2
+    WHERE ps2.unidade.id = u.id
+    AND ps2.produtoReferencia.id = :produtoReferenciaId
+)
+ORDER BY e.nome, u.nome
+]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:143)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:167)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:173)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:886)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:796)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy140.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:91)
+	... 52 common frames omitted
+Caused by: org.hibernate.query.SemanticException: Could not resolve class 'com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO' named for instantiation [SELECT new com.checkbuy.project.domain.dto.ProdutoScrapingOfertaRecentesDTO(
+    ps.id,
+    ps.nome,
+    ps.preco,
+    ps.precoEspecial,
+    ps.dataScraping,
+    u.id,
+    u.nome,
+    e.nome
+)
+FROM ProdutoScraping ps
+JOIN ps.unidade u
+JOIN u.estabelecimento e
+WHERE ps.produtoReferencia.id = :produtoReferenciaId
+AND ps.dataScraping = (
+    SELECT MAX(ps2.dataScraping)
+    FROM ProdutoScraping ps2
+    WHERE ps2.unidade.id = u.id
+    AND ps2.produtoReferencia.id = :produtoReferenciaId
+)
+ORDER BY e.nome, u.nome
+]
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitInstantiation(SemanticQueryBuilder.java:1477)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitInstantiation(SemanticQueryBuilder.java:277)
+	at org.hibernate.grammars.hql.HqlParser$InstantiationContext.accept(HqlParser.java:4034)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectableNode(SemanticQueryBuilder.java:1458)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelection(SemanticQueryBuilder.java:1412)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectClause(SemanticQueryBuilder.java:1405)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:1254)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:1040)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:277)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:2134)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:1025)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:277)
+	at org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:2005)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:492)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:451)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:324)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:71)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:145)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:132)
+	at org.hibernate.query.spi.QueryEngine.interpretHql(QueryEngine.java:54)
+	at org.hibernate.internal.AbstractSharedSessionContract.interpretHql(AbstractSharedSessionContract.java:832)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:878)
+	... 59 common frames omitted
+2025-08-19 09:25:48 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.7 with PID 23688 (C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend\project\target\classes started by caio.amaro in C:\Users\caio.amaro\Desktop\pitch-final-entra21-backend)
+2025-08-19 09:25:48 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-19 09:25:48 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-19 09:25:48 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-19 09:25:48 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19 09:25:49 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 9 JPA repository interfaces.
+2025-08-19 09:25:49 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-19 09:25:49 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-19 09:25:49 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-19 09:25:49 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-19 09:25:49 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1553 ms
+2025-08-19 09:25:49 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-19 09:25:50 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-08-19 09:25:50 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bf0bbdf
+2025-08-19 09:25:50 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-19 09:25:50 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-08-19 09:25:50 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.026s)
+2025-08-19 09:25:50 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-08-19 09:25:50 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-08-19 09:25:50 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19 09:25:50 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-19 09:25:50 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-19 09:25:50 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19 09:25:50 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19 09:25:50 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-19 09:25:50 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-19 09:25:51 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19 09:25:51 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19 09:25:51 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-19 09:25:56 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name autenticacaoService
+2025-08-19 09:25:57 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-19 09:25:57 - o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-08-19 09:25:57 - o.s.s.c.a.w.c.AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry - One of the patterns in [/v3/api-docs/**, swagger-ui.html, swagger-ui/**] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-08-19 09:25:57 - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, SecurityFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-08-19 09:25:57 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-08-19 09:25:57 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-19 09:25:57 - c.c.project.ProjectApplication - Started ProjectApplication in 9.998 seconds (process running for 10.435)
+2025-08-19 09:26:19 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-19 09:26:19 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-19 09:26:19 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-19 09:26:19 - o.s.security.web.FilterChainProxy - Securing POST /login
+2025-08-19 09:26:19 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:26:19 - o.s.security.web.FilterChainProxy - Secured POST /login
+2025-08-19 09:26:20 - o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-08-19 09:28:54 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/1
+2025-08-19 09:28:54 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/1
+2025-08-19 09:28:54 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-08-19 09:29:35 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/5?page=0
+2025-08-19 09:29:35 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/5?page=0
+2025-08-19 09:29:35 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 5 não foi encontrado!]
+2025-08-19 09:29:44 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/1?page=0
+2025-08-19 09:29:44 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/1?page=0
+2025-08-19 09:30:03 - o.s.security.web.FilterChainProxy - Securing PUT /produtos/scraping
+2025-08-19 09:30:03 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:30:03 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:30:03 - o.s.security.web.FilterChainProxy - Securing PUT /error
+2025-08-19 09:30:03 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:30:03 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:30:09 - o.s.security.web.FilterChainProxy - Securing PUT /produtos/scraping
+2025-08-19 09:30:09 - o.s.security.web.FilterChainProxy - Secured PUT /produtos/scraping
+2025-08-19 09:30:09 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.AliasProdutoReferenciaNaoEncontrado: Alias do Produto: Refrigerante Guaraná Antarctica 33 não foi encontrado!]
+2025-08-19 09:32:38 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/notindex/contagem-por-unidade
+2025-08-19 09:32:38 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/notindex/contagem-por-unidade
+2025-08-19 09:33:16 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/5
+2025-08-19 09:33:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:33:16 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:33:16 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-08-19 09:33:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:33:16 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:33:24 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/5
+2025-08-19 09:33:24 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/5
+2025-08-19 09:33:24 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 5 não foi encontrado!]
+2025-08-19 09:33:28 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/1
+2025-08-19 09:33:28 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/1
+2025-08-19 09:33:41 - o.s.security.web.FilterChainProxy - Securing POST /produtos/referencias
+2025-08-19 09:33:41 - o.s.security.web.FilterChainProxy - Secured POST /produtos/referencias
+2025-08-19 09:33:52 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/2
+2025-08-19 09:33:52 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:33:52 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:33:52 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-08-19 09:33:52 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:33:52 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:33:59 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/1
+2025-08-19 09:33:59 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/1
+2025-08-19 09:34:30 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/1
+2025-08-19 09:34:30 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/1
+2025-08-19 09:34:44 - o.s.security.web.FilterChainProxy - Securing PUT /produtos/referencias/6
+2025-08-19 09:34:44 - o.s.security.web.FilterChainProxy - Secured PUT /produtos/referencias/6
+2025-08-19 09:34:44 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 6 não foi encontrado!]
+2025-08-19 09:34:50 - o.s.security.web.FilterChainProxy - Securing PUT /produtos/referencias/1
+2025-08-19 09:34:50 - o.s.security.web.FilterChainProxy - Secured PUT /produtos/referencias/1
+2025-08-19 09:34:50 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNotIndexImutavel: Produto Referência ID: 1 não é póssivel fazer alteração. (USO DO SISTEMA)]
+2025-08-19 09:34:55 - o.s.security.web.FilterChainProxy - Securing PUT /produtos/referencias/2
+2025-08-19 09:34:55 - o.s.security.web.FilterChainProxy - Secured PUT /produtos/referencias/2
+2025-08-19 09:35:01 - o.s.security.web.FilterChainProxy - Securing DELETE /produtos/referencias/6
+2025-08-19 09:35:01 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:01 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:01 - o.s.security.web.FilterChainProxy - Securing DELETE /error
+2025-08-19 09:35:01 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:01 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:12 - o.s.security.web.FilterChainProxy - Securing DELETE /produtos/referencias/6
+2025-08-19 09:35:12 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:12 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:12 - o.s.security.web.FilterChainProxy - Securing DELETE /error
+2025-08-19 09:35:12 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:12 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:22 - o.s.security.web.FilterChainProxy - Securing DELETE /produtos/referencias/6
+2025-08-19 09:35:22 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:22 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:22 - o.s.security.web.FilterChainProxy - Securing DELETE /error
+2025-08-19 09:35:22 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:35:22 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:35:28 - o.s.security.web.FilterChainProxy - Securing DELETE /produtos/referencias/6
+2025-08-19 09:35:28 - o.s.security.web.FilterChainProxy - Secured DELETE /produtos/referencias/6
+2025-08-19 09:35:28 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNaoEncontrado: Produto Referência ID: 6 não foi encontrado!]
+2025-08-19 09:35:38 - o.s.security.web.FilterChainProxy - Securing DELETE /produtos/referencias/1
+2025-08-19 09:35:38 - o.s.security.web.FilterChainProxy - Secured DELETE /produtos/referencias/1
+2025-08-19 09:35:38 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoReferenciaNotIndexImutavel: Produto Referência ID: 1 não é póssivel fazer alteração. (USO DO SISTEMA)]
+2025-08-19 09:35:56 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/listar?page=0&size=10
+2025-08-19 09:35:56 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/listar?page=0&size=10
+2025-08-19 09:36:35 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/listar?page=0&size=10
+2025-08-19 09:36:35 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/listar?page=0&size=10
+2025-08-19 09:36:50 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/sugerir/alias
+2025-08-19 09:36:50 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:36:50 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:36:50 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-08-19 09:36:50 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:36:50 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:36:56 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/sugerir/alias
+2025-08-19 09:36:56 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/sugerir/alias
+2025-08-19 09:37:15 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/sugerir/Douglas
+2025-08-19 09:37:15 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/sugerir/Douglas
+2025-08-19 09:38:46 - o.s.security.web.FilterChainProxy - Securing POST /listas
+2025-08-19 09:38:46 - o.s.security.web.FilterChainProxy - Secured POST /listas
+2025-08-19 09:38:48 - o.s.security.web.FilterChainProxy - Securing POST /listas
+2025-08-19 09:38:48 - o.s.security.web.FilterChainProxy - Secured POST /listas
+2025-08-19 09:38:49 - o.s.security.web.FilterChainProxy - Securing POST /listas
+2025-08-19 09:38:49 - o.s.security.web.FilterChainProxy - Secured POST /listas
+2025-08-19 09:38:49 - o.s.security.web.FilterChainProxy - Securing POST /listas
+2025-08-19 09:38:49 - o.s.security.web.FilterChainProxy - Secured POST /listas
+2025-08-19 09:38:53 - o.s.security.web.FilterChainProxy - Securing GET /listas
+2025-08-19 09:38:53 - o.s.security.web.FilterChainProxy - Secured GET /listas
+2025-08-19 09:38:59 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/8
+2025-08-19 09:38:59 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/8
+2025-08-19 09:38:59 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ListaNaoEncontada: Lista ID: 8 (inexistente) ou (não pertence) a Usuario ID: 1]
+2025-08-19 09:39:07 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/9
+2025-08-19 09:39:07 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/9
+2025-08-19 09:39:07 - o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2025-08-19 09:39:07 - o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))
+2025-08-19 09:39:07 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))] [delete from lista where id=?]; SQL [delete from lista where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:280)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy150.delete(Unknown Source)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:62)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.checkbuy.project.infra.security.SecurityFilter.doFilterInternal(SecurityFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-08-19 09:39:07 - o.s.security.web.FilterChainProxy - Securing DELETE /error
+2025-08-19 09:39:07 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:39:07 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:39:14 - o.s.security.web.FilterChainProxy - Securing GET /listas
+2025-08-19 09:39:14 - o.s.security.web.FilterChainProxy - Secured GET /listas
+2025-08-19 09:39:23 - o.s.security.web.FilterChainProxy - Securing GET /listas
+2025-08-19 09:39:23 - o.s.security.web.FilterChainProxy - Secured GET /listas
+2025-08-19 09:39:24 - o.s.security.web.FilterChainProxy - Securing GET /listas
+2025-08-19 09:39:24 - o.s.security.web.FilterChainProxy - Secured GET /listas
+2025-08-19 09:39:28 - o.s.security.web.FilterChainProxy - Securing POST /login
+2025-08-19 09:39:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:39:28 - o.s.security.web.FilterChainProxy - Secured POST /login
+2025-08-19 09:39:28 - o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-08-19 09:39:36 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/9
+2025-08-19 09:39:36 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/9
+2025-08-19 09:39:36 - o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2025-08-19 09:39:36 - o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))
+2025-08-19 09:39:36 - o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))] [delete from lista where id=?]; SQL [delete from lista where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`checkbuy`.`lista_resultado`, CONSTRAINT `lista_resultado_ibfk_1` FOREIGN KEY (`lista_id`) REFERENCES `lista` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:280)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy150.delete(Unknown Source)
+	at com.checkbuy.project.domain.lista.service.ListaService.deletarLista(ListaService.java:62)
+	at com.checkbuy.project.web.controller.lista.ListaController.deletarLista(ListaController.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.checkbuy.project.infra.security.SecurityFilter.doFilterInternal(SecurityFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-08-19 09:39:36 - o.s.security.web.FilterChainProxy - Securing DELETE /error
+2025-08-19 09:39:36 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-19 09:39:36 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-08-19 09:40:04 - o.s.security.web.FilterChainProxy - Securing GET /listas/9
+2025-08-19 09:40:04 - o.s.security.web.FilterChainProxy - Secured GET /listas/9
+2025-08-19 09:40:12 - o.s.security.web.FilterChainProxy - Securing POST /listas/inserir/9?produtoReferenciaId=2&quantidade=5
+2025-08-19 09:40:12 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/9?produtoReferenciaId=2&quantidade=5
+2025-08-19 09:40:12 - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.checkbuy.project.exception.ProdutoJaCadastroEmLista: Produto ID: 2 ja existente na Lista ID: 9]
+2025-08-19 09:40:16 - o.s.security.web.FilterChainProxy - Securing POST /listas/inserir/9?produtoReferenciaId=3&quantidade=5
+2025-08-19 09:40:16 - o.s.security.web.FilterChainProxy - Secured POST /listas/inserir/9?produtoReferenciaId=3&quantidade=5
+2025-08-19 09:40:20 - o.s.security.web.FilterChainProxy - Securing GET /listas/9
+2025-08-19 09:40:20 - o.s.security.web.FilterChainProxy - Secured GET /listas/9
+2025-08-19 09:40:24 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/excluir/9/2
+2025-08-19 09:40:24 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/excluir/9/2
+2025-08-19 09:40:28 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/excluir/9/3
+2025-08-19 09:40:28 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/excluir/9/3
+2025-08-19 09:40:31 - o.s.security.web.FilterChainProxy - Securing GET /listas/9
+2025-08-19 09:40:31 - o.s.security.web.FilterChainProxy - Secured GET /listas/9
+2025-08-19 09:40:34 - o.s.security.web.FilterChainProxy - Securing DELETE /listas/9
+2025-08-19 09:40:34 - o.s.security.web.FilterChainProxy - Secured DELETE /listas/9
+2025-08-19 09:41:51 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-19 09:41:51 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-19 09:41:51 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19 09:41:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-19 09:41:51 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

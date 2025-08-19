@@ -1,7 +1,6 @@
 package com.checkbuy.project.infra.security;
 
-import com.checkbuy.project.domain.model.Usuario;
-import com.checkbuy.project.domain.repository.UsuarioRepository;
+import com.checkbuy.project.domain.usuario.repository.UsuarioRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

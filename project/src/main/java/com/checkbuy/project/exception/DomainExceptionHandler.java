@@ -109,4 +109,39 @@ public class DomainExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
     }
+
+    @ExceptionHandler(CredenciaisInvalidas.class)
+    public ResponseEntity<ResponseError> credenciaisInvalidas(CredenciaisInvalidas ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.UNAUTHORIZED,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseError);
+    }
+
+    @ExceptionHandler(ErroGeracaoToken.class)
+    public ResponseEntity<ResponseError> erroGeracaoToken(ErroGeracaoToken ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseError);
+    }
+
+    @ExceptionHandler(TokenInvalidoOuExperiado.class)
+    public ResponseEntity<ResponseError> tokenInvalidoOuExperiado(TokenInvalidoOuExperiado ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.UNAUTHORIZED,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseError);
+    }
+
+
 }

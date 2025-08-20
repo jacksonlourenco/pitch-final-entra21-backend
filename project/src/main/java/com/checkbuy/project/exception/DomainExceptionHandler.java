@@ -143,5 +143,16 @@ public class DomainExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseError);
     }
 
+    @ExceptionHandler(ProdutoReferenciaNaoEncontradoEmLista.class)
+    public ResponseEntity<ResponseError> produtoReferenciaNaoEncontradoEmLista(ProdutoReferenciaNaoEncontradoEmLista ex){
+
+        ResponseError responseError =  new ResponseError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseError);
+    }
+
 
 }

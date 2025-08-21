@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/project/src/main/resources/static/pitch-final-entra21-frontend/pitch-final-entra21-front" vcs="Git" />
   </component>
 </project>

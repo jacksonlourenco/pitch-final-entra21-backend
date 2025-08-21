@@ -15,7 +15,6 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/produtos/referencias")
 public class ProdutoReferenciaController {
 

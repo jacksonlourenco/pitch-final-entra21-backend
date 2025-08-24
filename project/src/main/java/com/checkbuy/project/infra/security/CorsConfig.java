@@ -16,7 +16,9 @@ public class CorsConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://127.0.0.1:5501","http://localhost:5501","http://"+getLocalIp()+":5501"));
+        config.setAllowedOrigins(
+                List.of("http://127.0.0.1:5502","http://localhost:5502","http://"+getLocalIp()+":5502",
+                        "http://127.0.0.1:5501","http://localhost:5501","http://"+getLocalIp()+":5501"));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);

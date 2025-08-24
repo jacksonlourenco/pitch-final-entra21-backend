@@ -2,12 +2,14 @@ package com.checkbuy.project.domain.aliasprodutoreferencia.service;
 
 import com.checkbuy.project.domain.aliasprodutoreferencia.model.AliasProdutoReferencia;
 import com.checkbuy.project.domain.aliasprodutoreferencia.repository.AliasProdutoReferenciaRepository;
+import com.checkbuy.project.domain.produtoscraping.model.ProdutoScraping;
 import com.checkbuy.project.exception.AliasProdutoReferenciaNaoEncontrado;
 import com.checkbuy.project.domain.produtoreferencia.model.ProdutoReferencia;
 import com.checkbuy.project.domain.produtoreferencia.service.ProdutoReferenciaService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -37,5 +39,11 @@ public class AliasProdutoReferenciaService {
         ProdutoReferencia produtoReferencia = produtoReferenciaService.buscarPorId(produtoReferenciaId);
         AliasProdutoReferencia aliasProdutoReferencia = obterProdutoReferenciaPeloAlias(alias);
         aliasProdutoReferencia.setProdutoReferencia(produtoReferencia);
+    }
+
+    public List<AliasProdutoReferencia> findAllByProdutoReferencia() {
+        Integer notIndex = 1;
+        ProdutoReferencia produtoReferencia = produtoReferenciaService.buscarPorId(1);
+        return aliasProdutoReferenciaRepository.findAllByProdutoReferencia(produtoReferencia);
     }
 }

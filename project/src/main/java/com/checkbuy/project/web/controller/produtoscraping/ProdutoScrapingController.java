@@ -1,6 +1,7 @@
 package com.checkbuy.project.web.controller.produtoscraping;
 import com.checkbuy.project.domain.produtoscraping.model.ProdutoScraping;
 import com.checkbuy.project.domain.produtoscraping.service.ProdutoScrapingService;
+import com.checkbuy.project.web.dto.produtoreferencia.ProdutoScrapingSimilaridadeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ContagemNotIndexPorUnidadeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ProdutoScrapingChangeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ProdutoScrapingOfertaRecentesDTO;
@@ -47,6 +48,11 @@ public class ProdutoScrapingController {
     public ResponseEntity<List<ProdutoScrapingOfertaRecentesDTO>> ofertasMaisRecentes(@PathVariable Integer produtoReferenciaId){
         var melhoresOfertas = produtoScrapingService.ofertasMaisRecentes(produtoReferenciaId);
         return ResponseEntity.ok().body(melhoresOfertas);
+    }
+
+    @GetMapping("/sugerir/{referenciaId}")
+    public List<ProdutoScrapingSimilaridadeDTO> sugerirScraping(@PathVariable Integer referenciaId) {
+        return produtoScrapingService.sugerirScraping(referenciaId);
     }
 
 }

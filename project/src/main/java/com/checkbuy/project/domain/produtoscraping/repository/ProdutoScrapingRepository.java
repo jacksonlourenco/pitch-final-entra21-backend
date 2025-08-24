@@ -33,10 +33,7 @@ public interface ProdutoScrapingRepository extends JpaRepository<ProdutoScraping
     Page<ProdutoScraping> findAllByProdutoReferencia(ProdutoReferencia produtoReferencia, Pageable pageable);
     Page<ProdutoScraping> findAllByProdutoReferenciaAndNomeContainingIgnoreCase(ProdutoReferencia produtoReferencia, String nome, Pageable pageable);
 
-    List<ProdutoScraping> findAllByProdutoReferencia(ProdutoReferencia produtoReferencia);
-
     Optional<List<ProdutoScraping>> findAllByNome(String alias);
-
 
     Page<ProdutoScraping> findAllByProdutoReferenciaAndUnidade(ProdutoReferencia produtoReferencia, Unidade unidade, Pageable pageable);
 
@@ -66,4 +63,5 @@ public interface ProdutoScrapingRepository extends JpaRepository<ProdutoScraping
     ORDER BY e.nome, u.nome
     """)
     List<ProdutoScrapingOfertaRecentesDTO> ofertasMaisRecentes(Integer produtoReferenciaId);
+
 }

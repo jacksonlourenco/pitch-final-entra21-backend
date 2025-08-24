@@ -32,4 +32,8 @@ public class UsuarioService {
         usuarioRepository.save(usuario);
         return new UsuarioDTO(usuario);
     }
+
+    public UsuarioDTO infoUsuario(Usuario usuario) {
+        return new UsuarioDTO(usuario);
+    }
 }

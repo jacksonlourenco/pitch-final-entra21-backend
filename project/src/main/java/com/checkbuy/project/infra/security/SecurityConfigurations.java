@@ -36,10 +36,12 @@ public class SecurityConfigurations {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/login", "/cadastro", "/error").permitAll()
+                        .requestMatchers("/produtos/**").permitAll()
+                        .requestMatchers("/scraping/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-                .cors(cors -> cors.configurationSource(corsConfigurationSource)); // <-- ativa CORS corretamente
+                .cors(cors -> cors.configurationSource(corsConfigurationSource));
 
         return http.build();
     }

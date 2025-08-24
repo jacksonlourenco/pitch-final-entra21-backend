@@ -13,5 +13,5 @@ public interface AliasProdutoReferenciaRepository extends JpaRepository<AliasPro
 
     Optional<AliasProdutoReferencia> findByAlias(String alias);
 
-    List<AliasProdutoReferencia> findByProdutoReferencia(ProdutoReferencia notIndex);
+    List<AliasProdutoReferencia> findAllByProdutoReferencia(ProdutoReferencia referencia);
 }

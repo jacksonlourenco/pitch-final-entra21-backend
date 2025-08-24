@@ -1,5 +1,6 @@
 package com.checkbuy.project.domain.produtoscraping.service;
 
+import com.checkbuy.project.domain.aliasprodutoreferencia.model.AliasProdutoReferencia;
 import com.checkbuy.project.domain.aliasprodutoreferencia.service.AliasProdutoReferenciaService;
 import com.checkbuy.project.domain.produtoreferencia.service.ProdutoReferenciaService;
 import com.checkbuy.project.domain.produtoreferencia.model.ProdutoReferencia;
@@ -7,10 +8,12 @@ import com.checkbuy.project.domain.produtoscraping.model.ProdutoScraping;
 import com.checkbuy.project.domain.produtoscraping.repository.ProdutoScrapingRepository;
 import com.checkbuy.project.domain.unidade.service.UnidadeService;
 import com.checkbuy.project.domain.unidade.model.Unidade;
+import com.checkbuy.project.web.dto.produtoreferencia.ProdutoScrapingSimilaridadeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ContagemNotIndexPorUnidadeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ProdutoScrapingChangeDTO;
 import com.checkbuy.project.web.dto.produtoscraping.ProdutoScrapingOfertaRecentesDTO;
 import jakarta.transaction.Transactional;
+import org.apache.commons.text.similarity.JaroWinklerSimilarity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -84,7 +87,6 @@ public class ProdutoScrapingService {
         return listaProdutosScraping.get();
     }
 
-
     public List<ContagemNotIndexPorUnidadeDTO> obterContagemPorUnidadeNotIndex() {
         return produtoScrapingRepository.findContagemNaoIndexadosPorUnidade();
     }
@@ -96,6 +98,38 @@ public class ProdutoScrapingService {
 
         return listaProdutos.stream()
                 .sorted(Comparator.comparingDouble(ProdutoScrapingOfertaRecentesDTO::precoEspecial))
+                .collect(Collectors.toList());
+    }
+
+    public List<ProdutoScrapingSimilaridadeDTO> sugerirScraping(Integer referenciaId) {
+        JaroWinklerSimilarity jwSimilarity = new JaroWinklerSimilarity();
+
+        ProdutoReferencia referencia = produtoReferenciaService.buscarPorId(referenciaId);
+        String nomeReferencia = referencia.getNome();
+        List<AliasProdutoReferencia> naoIndexados = aliasProdutoReferenciaService.findAllByProdutoReferencia();
+
+        return naoIndexados.stream()
+                .map(scraping -> {
+
+                    var produtoScraping = produtoScrapingRepository.findAllByNome(scraping.getAlias());
+
+                    if(!produtoScraping.get().isEmpty()){
+                        var first = produtoScraping.get().getFirst();
+                        double similaridade = jwSimilarity.apply(nomeReferencia.toLowerCase(), scraping.getAlias().toLowerCase());
+                        return new ProdutoScrapingSimilaridadeDTO(first, similaridade);
+                    }
+
+                    return new ProdutoScrapingSimilaridadeDTO();
+
+                })
+                .filter(dto -> dto.id() != -1)
+                // Filtra para manter apenas os que têm uma similaridade mínima (ex: > 50%)
+                .filter(dto -> dto.similaridade() > 0.5)
+                // Ordena a lista pela maior similaridade
+                .sorted(Comparator.comparing(ProdutoScrapingSimilaridadeDTO::similaridade).reversed())
+                // Limita a um número razoável de sugestões (ex: 10)
+                .limit(50)
+                // Coleta o resultado em uma lista
                 .collect(Collectors.toList());
     }
 }

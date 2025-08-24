@@ -1,11 +1,13 @@
 package com.checkbuy.project.domain.produtoreferencia.service;
 
+import com.checkbuy.project.domain.produtoscraping.model.ProdutoScraping;
 import com.checkbuy.project.web.dto.produtoreferencia.ProdutoReferenciaDTO;
 import com.checkbuy.project.web.dto.produtoreferencia.ProdutoReferenciaSimilaridadeDTO;
 import com.checkbuy.project.domain.produtoreferencia.model.ProdutoReferencia;
 import com.checkbuy.project.domain.produtoreferencia.repository.ProdutoReferenciaRepository;
 import com.checkbuy.project.exception.ProdutoReferenciaNaoEncontrado;
 import com.checkbuy.project.exception.ProdutoReferenciaNotIndexImutavel;
+import com.checkbuy.project.web.dto.produtoreferencia.ProdutoScrapingSimilaridadeDTO;
 import jakarta.transaction.Transactional;
 import org.apache.commons.text.similarity.JaroWinklerSimilarity;
 import org.springframework.data.domain.Page;

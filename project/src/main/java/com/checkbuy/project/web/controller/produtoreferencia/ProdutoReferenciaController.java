@@ -5,6 +5,7 @@ import com.checkbuy.project.domain.produtoreferencia.service.ProdutoReferenciaSe
 import com.checkbuy.project.infra.util.UriUtils;
 import com.checkbuy.project.web.dto.produtoreferencia.ProdutoReferenciaDTO;
 import com.checkbuy.project.web.dto.produtoreferencia.ProdutoReferenciaSimilaridadeDTO;
+import com.checkbuy.project.web.dto.produtoreferencia.ProdutoScrapingSimilaridadeDTO;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -66,5 +67,4 @@ public class ProdutoReferenciaController {
     public List<ProdutoReferenciaSimilaridadeDTO> sugerir(@PathVariable String alias){
         return produtoReferenciaService.sugerir(alias);
     }
-
 }

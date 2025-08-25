@@ -38,6 +38,10 @@ public class SecurityConfigurations {
                         .requestMatchers("/login", "/cadastro", "/error").permitAll()
                         .requestMatchers("/produtos/**").permitAll()
                         .requestMatchers("/scraping/**").permitAll()
+                        .requestMatchers(
+                                "/admin/**",
+                                "/src/**"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)

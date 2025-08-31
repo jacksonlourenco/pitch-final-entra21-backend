@@ -39,8 +39,9 @@ public class SecurityConfigurations {
                         .requestMatchers("/produtos/**").permitAll()
                         .requestMatchers("/scraping/**").permitAll()
                         .requestMatchers(
-                                "/admin/**",
-                                "/src/**"
+                                "/admincheckbuy.html",
+                                "/scrapingcheckbuy.html",
+                                "/front/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

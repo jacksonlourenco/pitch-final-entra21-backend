@@ -123,12 +123,12 @@ public class ProdutoScrapingService {
 
                 })
                 .filter(dto -> dto.id() != -1)
-                // Filtra para manter apenas os que têm uma similaridade mínima (ex: > 50%)
-                .filter(dto -> dto.similaridade() > 0.5)
+                // Filtra para manter apenas os que têm uma similaridade mínima (ex: > 50%) - 0.5
+                .filter(dto -> dto.similaridade() > 0.2)
                 // Ordena a lista pela maior similaridade
                 .sorted(Comparator.comparing(ProdutoScrapingSimilaridadeDTO::similaridade).reversed())
-                // Limita a um número razoável de sugestões (ex: 10)
-                .limit(50)
+                // Limita a um número razoável de sugestões (ex: 10) //50
+                .limit(100)
                 // Coleta o resultado em uma lista
                 .collect(Collectors.toList());
     }

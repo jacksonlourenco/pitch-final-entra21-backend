@@ -1,0 +1,142 @@
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* --- Estilos dos Cards (sem alterações) --- */
+.market-card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.market-card.clickable {
+    cursor: pointer;
+}
+
+.market-card.clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.market-card.highlight {
+    border: 2px solid #198754;
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+}
+
+.market-card h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.market-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.missing-items-alert {
+    font-size: 0.8rem;
+    color: #dc3545;
+    margin-top: 10px;
+    font-weight: 500;
+    cursor: help;
+}
+
+.missing-items-alert .bi {
+    margin-right: 5px;
+}
+
+#detailsContainer {
+    display: none;
+}
+
+/* --- Estilos do Modal e Tabela --- */
+#comparisonModal .modal-dialog {
+    max-width: 90%;
+}
+
+.comparison-table-wrapper,
+.comparison-details-container {
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.comparison-details-container {
+    border-left: 1px solid #dee2e6;
+}
+
+.comparison-table .table-active td,
+.comparison-table .table-active th {
+    background-color: #e9ecef !important;
+}
+
+/* Media Query para telas menores que 992px (tablets e celulares) */
+@media (max-width: 991.98px) {
+    .comparison-details-container {
+        display: none;
+        /* Esconde o painel de detalhes da direita */
+    }
+
+    .comparison-table-wrapper {
+        border-right: none;
+        /* Remove a borda no mobile */
+    }
+}
+
+/* Estilos para os detalhes (sem alterações) */
+.product-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.product-detail-item:last-child {
+    border-bottom: none;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info .bi {
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+}
+
+.item-encontrado .bi-check-circle-fill {
+    color: #198754;
+}
+
+.item-faltante .bi-x-circle-fill {
+    color: #dc3545;
+}
+
+.item-faltante .product-name {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.product-pricing {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.details-section-title {
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}

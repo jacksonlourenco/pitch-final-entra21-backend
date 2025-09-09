@@ -1,0 +1,153 @@
+.green-border {
+    border: 1px solid #c7f1c7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.store-price h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.store-price h5 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.price-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.best-price-badge {
+    background-color: #d8f0d8;
+    color: #1a6f3b;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.similar-product-card .card-img-top {
+    height: 150px;
+    object-fit: contain;
+}
+
+.similar-product-card .btn-custom-danger {
+    background-color: #e66666;
+    border-color: #e66666;
+    color: white;
+}
+
+.placeholder-box {
+    background-color: #d8f0d8;
+    height: 150px;
+}
+
+.hidden-prices {
+    display: none;
+}
+
+.strikethrough-price {
+    text-decoration: line-through;
+    color: #e66666;
+}
+
+.price-text.text-success {
+    color: #198754 !important;
+}
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.list-card,
+.create-list-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.list-card:hover,
+.create-list-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer-compare {
+    background-color: #1a6f3b;
+    color: white;
+}
+
+.modal-header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list-item-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.list-item-card .card-img-top {
+    height: 120px;
+}
+
+.list-item-card .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #dc3545;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.list-item-card .delete-btn:hover {
+    opacity: 1;
+}
+
+.card-image-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.card-image-container .card-img-top {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}

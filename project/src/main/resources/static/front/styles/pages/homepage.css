@@ -1,0 +1,125 @@
+.global-header {
+    z-index: 1000;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+section {
+    scroll-margin-top: 90px;
+    /* ajuste conforme a altura combinada dos headers */
+}
+
+.hero-bg-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+}
+
+.hero-video-bg {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.5);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #198754 !important;
+    color: white !important;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 300px;
+}
+
+.card-body i {
+    color: black;
+    transition: color 0.3s;
+}
+
+.card-body i:hover {
+    transform: translateY(-4px);
+    color: #145c32;
+}
+
+/* === ESTILOS GERAIS DOS CARDS === */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* === SEÇÃO FUNCIONALIDADES === */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(42, 140, 74, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === SEÇÃO SOBRE NÓS (EQUIPE) === */
+.team-card {
+    position: relative;
+    margin-top: 110px;
+    padding-top: 110px;
+}
+
+.team-avatar {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    /* Adiciona transição suave */
+}
+
+.social-icons a {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #28a745;
+}
+
+/* === AJUSTE DE RESPONSIVIDADE PARA A EQUIPE === */
+/* Media Query para tablets e celulares (telas menores que 992px) */
+@media (max-width: 991px) {
+    .team-avatar {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .team-card {
+        margin-top: 75px;
+        padding-top: 75px;
+    }
+}

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBuy - Painel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 40% 1fr;
+            gap: 1.5rem;
+            height: calc(100vh - 100px);
+        }
+
+        .scrollable-panel {
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .product-list-item {
+            transition: background-color 0.2s;
+            position: relative;
+        }
+
+        .product-list-item .item-content {
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .product-list-item.active {
+            background-color: #dceaff;
+            color: #212529;
+            border-color: #a7caff;
+        }
+
+        .product-list-item.active .text-muted {
+            color: #495057 !important;
+        }
+
+        .product-img,
+        .suggestion-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .suggestion-img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .similarity-badge {
+            font-size: 0.9em;
+        }
+
+        .btn-group {
+            white-space: nowrap;
+        }
+
+        .item-actions {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            display: none;
+            gap: 0.5rem;
+        }
+
+        .product-list-item:hover .item-actions {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bullseye"></i>
+                CheckBuy - Admin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="admincheckbuy.html">
+                            <i class="bi bi-sliders"></i> Indexação
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="scrapingcheckbuy.html">
+                            <i class="bi bi-robot"></i> Scraping
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid p-4">
+        <div class="main-container">
+            <div class="d-flex flex-column h-100">
+                <h5 class="mb-3">Selecione um Produto de Referência</h5>
+                <button id="btn-novo-produto" class="btn btn-success mb-3">
+                    <i class="bi bi-plus-circle"></i> Novo Produto
+                </button>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" id="pesquisa-referencia-input" class="form-control"
+                        placeholder="Pesquisar por nome...">
+                </div>
+                <div id="lista-referencias" class="scrollable-panel list-group">
+                    <div class="list-group-item text-muted">
+                        Carregando produtos de referência...
+                    </div>
+                </div>
+            </div>
+
+            <div id="painel-trabalho-reverso" class="scrollable-panel">
+                <div id="placeholder-reverso"
+                    class="text-center text-muted h-100 d-flex align-items-center justify-content-center">
+                    <p class="fs-4"><i class="bi bi-arrow-left-circle-fill me-2"></i> Selecione um produto de referência
+                        para encontrar correspondências.</p>
+                </div>
+                <div id="conteudo-reverso" class="d-none">
+                    <div class="card mb-4">
+                        <div class="card-body d-flex align-items-center">
+                            <img id="referencia-selecionada-img" src="" class="suggestion-img me-3"
+                                alt="Produto de Referência">
+                            <div>
+                                <h5 class="card-title mb-1" id="referencia-selecionada-nome"></h5>
+                                <p class="card-text text-muted mb-1" id="referencia-selecionada-ean"></p>
+                                <span class="badge bg-primary" id="referencia-selecionada-marca"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6>Sugestões de Produtos Scrapeados (Não Indexados)</h6>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" id="pesquisa-sugestoes-input" class="form-control"
+                            placeholder="Pesquisar sugestões por nome...">
+                    </div>
+                    <div id="sugestoes-scraping-container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="produtoModal" tabindex="-1" aria-labelledby="produtoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="produtoModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="produto-form">
+                    <div class="modal-body">
+                        <input type="hidden" id="produto-id">
+                        <div class="mb-3">
+                            <label for="produto-nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="produto-nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="produto-urlImg" class="form-label">URL da Imagem</label>
+                            <input type="text" class="form-control" id="produto-urlImg" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="produto-marca" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="produto-marca" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="produto-ean" class="form-label">EAN</label>
+                            <input type="text" class="form-control" id="produto-ean" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="produto-descricao" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="produto-descricao"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="produto-unidadeMedida" class="form-label">Unidade de Medida</label>
+                                <input type="text" class="form-control" id="produto-unidadeMedida">
+                            </div>
+                            <div class="col">
+                                <label for="produto-valorMedida" class="form-label">Valor de Medida</label>
+                                <input type="number" class="form-control" id="produto-valorMedida" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btn-salvar-produto">Salvar Produto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const BASE_URL = `http://${window.location.hostname}`;
+            const API_REFERENCIAS_URL = `${BASE_URL}:8080/produtos/referencias`;
+            const API_SCRAPING_URL = `${BASE_URL}:8080/produtos/scraping`;
+
+            const listaReferenciasContainer = document.getElementById('lista-referencias');
+            const placeholderReverso = document.getElementById('placeholder-reverso');
+            const conteudoReverso = document.getElementById('conteudo-reverso');
+            const pesquisaReferenciaInput = document.getElementById('pesquisa-referencia-input');
+            const pesquisaSugestoesInput = document.getElementById('pesquisa-sugestoes-input');
+
+            const produtoModal = new bootstrap.Modal(document.getElementById('produtoModal'));
+            const produtoForm = document.getElementById('produto-form');
+            const produtoModalLabel = document.getElementById('produtoModalLabel');
+
+            let debounceTimer;
+
+            let estadoReverso = {
+                referencias: [],
+                referenciaSelecionada: null,
+                paginaAtual: 0,
+                totalPaginas: 1,
+                termoPesquisa: '',
+                sugestoes: [],
+                referenciasCompletas: []
+            };
+
+            // FUNÇÃO ATUALIZADA: Adiciona a lógica de ordenação
+            const carregarReferencias = async () => {
+                listaReferenciasContainer.innerHTML = '<div class="spinner-border mx-auto mt-5" role="status"><span class="visually-hidden">Loading...</span></div>';
+
+                try {
+                    const response = await fetch(`${API_REFERENCIAS_URL}/listar?page=0&size=1000`);
+                    if (!response.ok) {
+                        throw new Error(`Erro na API ao buscar referências: ${response.statusText}`);
+                    }
+                    const data = await response.json();
+
+                    // NOVO: Etapa de ordenação
+                    const listaOrdenada = data.content.sort((a, b) => a.nome.localeCompare(b.nome));
+
+                    estadoReverso.referenciasCompletas = listaOrdenada;
+                    renderizarListaReferencias(estadoReverso.referenciasCompletas);
+
+                    if (estadoReverso.referenciaSelecionada) {
+                        const itemAtivo = document.querySelector(`.product-list-item[data-id='${estadoReverso.referenciaSelecionada.id}']`);
+                        if (itemAtivo) itemAtivo.classList.add('active');
+                    }
+
+                } catch (error) {
+                    console.error("Erro ao carregar referências:", error);
+                    listaReferenciasContainer.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
+                }
+            };
+
+            const renderizarListaReferencias = (lista) => {
+                listaReferenciasContainer.innerHTML = '';
+                if (lista.length === 0) {
+                    listaReferenciasContainer.innerHTML = '<div class="list-group-item">Nenhum produto de referência encontrado.</div>';
+                    return;
+                }
+                lista.forEach(ref => {
+                    const item = document.createElement('div');
+                    item.className = 'list-group-item list-group-item-action product-list-item d-flex align-items-center justify-content-between';
+                    item.dataset.id = ref.id;
+                    item.innerHTML = `
+                    <div class="d-flex align-items-center item-content">
+                        <img src="${ref.urlImg || 'https://via.placeholder.com/60'}" class="product-img me-3" alt="${ref.nome}">
+                        <div>
+                            <div class="fw-bold">${ref.nome}</div>
+                            <small class="text-muted">Marca: ${ref.marca || 'N/D'}</small>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-sm btn-outline-info btn-editar" data-id="${ref.id}">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger btn-excluir" data-id="${ref.id}">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                `;
+                    listaReferenciasContainer.appendChild(item);
+                });
+            };
+
+            const renderizarSugestoesScraping = (sugestoes) => {
+                const container = document.getElementById('sugestoes-scraping-container');
+                container.innerHTML = '';
+                if (sugestoes.length === 0) {
+                    container.innerHTML = '<p class="text-muted">Nenhuma sugestão de produto scrapeado encontrada.</p>';
+                    return;
+                }
+                sugestoes.forEach(sug => {
+                    let badgeClass = 'secondary';
+                    if ((sug.similaridade * 100).toFixed(1) > 80) {
+                        badgeClass = 'success';
+                    } else if ((sug.similaridade * 100).toFixed(1) > 60) {
+                        badgeClass = 'warning text-dark';
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = 'card mb-2';
+                    card.innerHTML = `
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="${sug.urlImg || 'https://via.placeholder.com/80'}" class="suggestion-img me-3" alt="${sug.nome}">
+                            <div>
+                                <h6 class="mb-0">${sug.nome}</h6>
+                                <p class="text-muted mb-1"><small>Mercado: ${sug.estabelecimento}</small></p>
+                                <span class="badge bg-${badgeClass} similarity-badge">${(100 * sug.similaridade).toFixed(1)}% similar</span>
+                            </div>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-sm btn-outline-primary btn-indexar-reverso" 
+                                    data-alias-id="${sug.id}"
+                                    data-alias-nome="${sug.nome}"
+                                    data-ref-id="${estadoReverso.referenciaSelecionada.id}">
+                                Indexar
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary btn-copiar-referencia" 
+                                    data-alias-id="${sug.id}">
+                                Copiar para Referência
+                            </button>
+                        </div>
+                    </div>
+                `;
+                    container.appendChild(card);
+                });
+            };
+
+            const indexarProduto = async (aliasId, aliasNome, produtoReferenciaID) => {
+                try {
+                    const response = await fetch(API_SCRAPING_URL, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            alias: aliasNome,
+                            produtoReferenciaID: produtoReferenciaID
+                        })
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro na API: ${response.statusText}`);
+                    }
+                    alert(`Produto "${aliasNome}" indexado com sucesso!`);
+
+                    buscarSugestoesScraping(estadoReverso.referenciaSelecionada.id);
+
+                } catch (error) {
+                    console.error("Erro ao indexar produto:", error);
+                    alert("Falha ao indexar o produto.");
+                }
+            };
+
+            const copiarParaReferencia = async (aliasId) => {
+                if (!confirm("Deseja realmente copiar este produto como uma nova referência?")) {
+                    return;
+                }
+
+                try {
+                    const produtoScraping = estadoReverso.sugestoes.find(sug => sug.id === aliasId);
+                    if (!produtoScraping) {
+                        throw new Error("Dados do produto de scraping não encontrados na lista.");
+                    }
+
+                    const novoProdutoReferencia = {
+                        nome: produtoScraping.nome,
+                        urlImg: produtoScraping.urlImg,
+                        marca: produtoScraping.estabelecimento || 'Marca não informada',
+                        descricao: 'Produto copiado do scraping.',
+                        unidadeMedida: 'un',
+                        valorMedida: 1.0,
+                        codigoBarra: '0000000000000'
+                    };
+
+                    const responseReferencia = await fetch(API_REFERENCIAS_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(novoProdutoReferencia)
+                    });
+
+                    if (!responseReferencia.ok) {
+                        throw new Error(`Erro na API ao criar referência: ${responseReferencia.statusText}`);
+                    }
+                    const novaReferencia = await responseReferencia.json();
+
+                    alert(`Produto "${novaReferencia.nome}" criado como uma nova referência com sucesso!`);
+
+                    carregarReferencias();
+
+                } catch (error) {
+                    console.error("Erro ao copiar produto:", error);
+                    alert(`Falha ao copiar o produto: ${error.message}`);
+                }
+            };
+
+            const salvarProduto = async (event) => {
+                event.preventDefault();
+                const id = document.getElementById('produto-id').value;
+                const produtoData = {
+                    nome: document.getElementById('produto-nome').value,
+                    urlImg: document.getElementById('produto-urlImg').value,
+                    marca: document.getElementById('produto-marca').value,
+                    codigoBarra: document.getElementById('produto-ean').value, // CORREÇÃO AQUI
+                    descricao: document.getElementById('produto-descricao').value,
+                    unidadeMedida: document.getElementById('produto-unidadeMedida').value,
+                    valorMedida: parseFloat(document.getElementById('produto-valorMedida').value)
+                };
+
+                const method = id ? 'PUT' : 'POST';
+                const url = id ? `${API_REFERENCIAS_URL}/${id}` : API_REFERENCIAS_URL;
+
+                try {
+                    const response = await fetch(url, {
+                        method: method,
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(produtoData)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Erro ao salvar produto: ${response.statusText}`);
+                    }
+
+                    await response.json();
+                    alert(`Produto salvo com sucesso!`);
+
+                    produtoModal.hide();
+                    carregarReferencias();
+
+                } catch (error) {
+                    console.error("Erro ao salvar produto:", error);
+                    alert("Falha ao salvar o produto.");
+                }
+            };
+
+            const excluirProduto = async (id) => {
+                if (!confirm("Tem certeza que deseja excluir este produto?")) {
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`${API_REFERENCIAS_URL}/${id}`, {
+                        method: 'DELETE'
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro ao excluir produto: ${response.statusText}`);
+                    }
+                    alert("Produto excluído com sucesso!");
+                    carregarReferencias();
+                    if (estadoReverso.referenciaSelecionada && estadoReverso.referenciaSelecionada.id == id) {
+                        placeholderReverso.classList.remove('d-none');
+                        conteudoReverso.classList.add('d-none');
+                        estadoReverso.referenciaSelecionada = null;
+                    }
+                } catch (error) {
+                    console.error("Erro ao excluir produto:", error);
+                    alert("Falha ao excluir o produto.");
+                }
+            };
+
+            const abrirModal = (produto) => {
+                if (produto) {
+                    produtoModalLabel.textContent = 'Editar Produto';
+                    document.getElementById('produto-id').value = produto.id;
+                    document.getElementById('produto-nome').value = produto.nome || '';
+                    document.getElementById('produto-urlImg').value = produto.urlImg || '';
+                    document.getElementById('produto-marca').value = produto.marca || '';
+                    document.getElementById('produto-ean').value = produto.ean || '';
+                    document.getElementById('produto-descricao').value = produto.descricao || '';
+                    document.getElementById('produto-unidadeMedida').value = produto.unidadeMedida || '';
+                    document.getElementById('produto-valorMedida').value = produto.valorMedida || '';
+                } else {
+                    produtoModalLabel.textContent = 'Criar Novo Produto';
+                    produtoForm.reset();
+                    document.getElementById('produto-id').value = '';
+                }
+                produtoModal.show();
+            };
+
+            const buscarSugestoesScraping = async (referenciaId) => {
+                const sugestoesContainer = document.getElementById('sugestoes-scraping-container');
+                sugestoesContainer.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>';
+
+                try {
+                    const res = await fetch(`${API_SCRAPING_URL}/sugerir/${referenciaId}`);
+                    if (!res.ok) {
+                        throw new Error('Falha ao buscar sugestões. Verifique o endpoint da API.');
+                    }
+                    const sugestoes = await res.json();
+                    estadoReverso.sugestoes = sugestoes;
+                    renderizarSugestoesScraping(sugestoes);
+                } catch (err) {
+                    console.error("Erro ao buscar sugestões de scraping:", err);
+                    sugestoesContainer.innerHTML = `<p class="text-danger">${err.message}</p>`;
+                }
+            };
+
+            const filtrarSugestoes = (termo) => {
+                const termoLowerCase = termo.toLowerCase();
+                const sugestoesFiltradas = estadoReverso.sugestoes.filter(sug =>
+                    sug.nome.toLowerCase().includes(termoLowerCase)
+                );
+                renderizarSugestoesScraping(sugestoesFiltradas);
+            };
+
+            const filtrarReferencias = (termo) => {
+                const termoLowerCase = termo.toLowerCase();
+                const referenciasFiltradas = estadoReverso.referenciasCompletas.filter(ref =>
+                    ref.nome.toLowerCase().includes(termoLowerCase)
+                );
+                renderizarListaReferencias(referenciasFiltradas);
+            };
+
+            const mostrarDetalhesReferencia = (referencia) => {
+                estadoReverso.referenciaSelecionada = referencia;
+
+                document.getElementById('referencia-selecionada-img').src = referencia.urlImg || 'https://via.placeholder.com/80';
+                document.getElementById('referencia-selecionada-nome').textContent = referencia.nome || 'Nome não disponível';
+                document.getElementById('referencia-selecionada-ean').textContent = `EAN: ${referencia.ean || 'N/D'}`;
+                document.getElementById('referencia-selecionada-marca').textContent = `Marca: ${referencia.marca || 'N/D'}`;
+
+                placeholderReverso.classList.add('d-none');
+                conteudoReverso.classList.remove('d-none');
+
+                pesquisaSugestoesInput.value = '';
+                buscarSugestoesScraping(referencia.id);
+            };
+
+            document.getElementById('btn-novo-produto').addEventListener('click', () => {
+                abrirModal(null);
+            });
+
+            produtoForm.addEventListener('submit', salvarProduto);
+
+            listaReferenciasContainer.addEventListener('click', (e) => {
+                if (e.target.closest('.btn-editar')) {
+                    const id = parseInt(e.target.closest('.btn-editar').dataset.id, 10);
+                    const produto = estadoReverso.referenciasCompletas.find(p => p.id === id);
+                    if (produto) {
+                        abrirModal(produto);
+                    }
+                    return;
+                }
+
+                if (e.target.closest('.btn-excluir')) {
+                    const id = parseInt(e.target.closest('.btn-excluir').dataset.id, 10);
+                    excluirProduto(id);
+                    return;
+                }
+
+                const item = e.target.closest('.product-list-item .item-content');
+                if (!item) return;
+
+                document.querySelectorAll('.product-list-item.active').forEach(el => el.classList.remove('active'));
+                item.closest('.product-list-item').classList.add('active');
+
+                const referenciaId = parseInt(item.closest('.product-list-item').dataset.id, 10);
+                const referenciaSelecionada = estadoReverso.referenciasCompletas.find(p => p.id === referenciaId);
+
+                if (referenciaSelecionada) {
+                    mostrarDetalhesReferencia(referenciaSelecionada);
+                }
+            });
+
+            pesquisaReferenciaInput.addEventListener('keyup', (e) => {
+                clearTimeout(debounceTimer);
+                const termo = e.target.value;
+                debounceTimer = setTimeout(() => {
+                    filtrarReferencias(termo);
+                }, 300);
+            });
+
+            pesquisaSugestoesInput.addEventListener('keyup', (e) => {
+                clearTimeout(debounceTimer);
+                const termo = e.target.value;
+                debounceTimer = setTimeout(() => {
+                    filtrarSugestoes(termo);
+                }, 300);
+            });
+
+            document.getElementById('painel-trabalho-reverso').addEventListener('click', (e) => {
+                if (e.target.classList.contains('btn-indexar-reverso')) {
+                    const aliasId = parseInt(e.target.dataset.aliasId, 10);
+                    const aliasNome = e.target.dataset.aliasNome;
+                    const refId = parseInt(e.target.dataset.refId, 10);
+                    if (aliasId && refId) {
+                        indexarProduto(aliasId, aliasNome, refId);
+                    }
+                }
+                if (e.target.classList.contains('btn-copiar-referencia')) {
+                    const aliasId = parseInt(e.target.dataset.aliasId, 10);
+                    if (aliasId) {
+                        copiarParaReferencia(aliasId);
+                    }
+                }
+            });
+
+            const iniciarPagina = async () => {
+                const pathParts = window.location.pathname.split('/');
+                const idFromUrl = pathParts.pop() || pathParts.pop();
+                const referenciaId = !isNaN(parseInt(idFromUrl, 10)) ? parseInt(idFromUrl, 10) : null;
+
+                await carregarReferencias();
+
+                if (referenciaId) {
+                    const referencia = estadoReverso.referenciasCompletas.find(ref => ref.id === referenciaId);
+                    if (referencia) {
+                        mostrarDetalhesReferencia(referencia);
+                    } else {
+                        console.error("Erro: Produto de referência da URL não encontrado na lista carregada.");
+                        conteudoReverso.innerHTML = `<div class="alert alert-danger">Produto de referência da URL não encontrado na lista carregada.</div>`;
+                        conteudoReverso.classList.remove('d-none');
+                        placeholderReverso.classList.add('d-none');
+                    }
+                }
+            };
+
+            iniciarPagina();
+        });
+    </script>
+</body>
+
+</html>

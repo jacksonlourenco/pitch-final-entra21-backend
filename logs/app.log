@@ -1,0 +1,493 @@
+2025-09-09 06:44:28 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.8 with PID 2580 (C:\Users\caioa\OneDrive\Área de Trabalho\pitch-final-entra21-backend\project\target\classes started by caioa in C:\Users\caioa\OneDrive\Área de Trabalho\pitch-final-entra21-backend)
+2025-09-09 06:44:28 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-09 06:44:28 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-09 06:44:28 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-09 06:44:29 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-09 06:44:29 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 164 ms. Found 9 JPA repository interfaces.
+2025-09-09 06:44:30 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-09 06:44:30 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-09 06:44:30 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-09-09 06:44:31 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-09 06:44:31 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2567 ms
+2025-09-09 06:44:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-09 06:44:31 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-09-09 06:44:32 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@410772fa
+2025-09-09 06:44:32 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-09 06:44:32 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-09-09 06:44:32 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.121s)
+2025-09-09 06:44:32 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-09-09 06:44:32 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-09-09 06:44:33 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-09 06:44:33 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-09-09 06:44:33 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-09 06:44:33 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-09 06:44:33 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-09 06:44:33 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-09 06:44:33 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-09 06:44:35 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-09 06:44:35 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-09 06:44:36 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-09 06:44:48 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name autenticacaoService
+2025-09-09 06:44:48 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-09 06:44:48 - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, SecurityFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-09-09 06:44:49 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-09-09 06:44:49 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-09 06:44:49 - c.c.project.ProjectApplication - Started ProjectApplication in 22.008 seconds (process running for 30.717)
+2025-09-09 06:45:34 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-09 06:45:34 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-09 06:45:34 - o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Securing GET /admin/index.html
+2025-09-09 06:45:34 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:34 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:34 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:45:34 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:34 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:34 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:34 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Securing GET /front
+2025-09-09 06:45:47 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Secured GET /front
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:47 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:45:47 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:47 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:47 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:47 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Securing GET /front/index
+2025-09-09 06:45:55 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Secured GET /front/index
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:55 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:45:55 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:45:55 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:45:55 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:45:55 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/index.html
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/index.html
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/pages/homepage.css
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/pages/homepage.css
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/images/caio.jpg
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/images/douglas.jpg
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/images/caio.jpg
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/images/douglas.jpg
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/pages/homepage.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/images/jackson.jpg
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/images/jackson.jpg
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/pages/homepage.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/header.js
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/header.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/footer.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/loginAndRegister.js
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/footer.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/loginAndRegister.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerLinkActive.js
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerLinkActive.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/config.js
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/config.js
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/components/header.html
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/components/header.html
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/components/footer.html
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/components/footer.html
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /styles/components/header.css
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /front/images/logo.webp
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /front/images/logo.webp
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:46:16 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:46:16 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:46:16 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:27 - o.s.security.web.FilterChainProxy - Securing POST /login
+2025-09-09 06:47:27 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:27 - o.s.security.web.FilterChainProxy - Secured POST /login
+2025-09-09 06:47:27 - o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/pages/catalogo-produtos.html
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/pages/catalogo-produtos.html
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/pages/catalogo-produtos.css
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/pages/catalogo-produtos.css
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/pages/catalogo-produtos.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/pages/catalogo-produtos.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/populeProdutos.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/populeProdutos.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/config.js
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/config.js
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/components/headerLogado.html
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/components/headerLogado.html
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/components/header.css
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/components/header.css
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/components/footerLogado.html
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/components/footerLogado.html
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /front/images/logo.webp
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /user
+2025-09-09 06:47:28 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Secured GET /front/images/logo.webp
+2025-09-09 06:47:28 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/listar?page=0&size=1000
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /user
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/listar?page=0&size=1000
+2025-09-09 06:47:29 - o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/2?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/2?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/3?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/4?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/6?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/3?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/4?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/5?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/6?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/7?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/5?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/7?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/12?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/12?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/11?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/8?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/8?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/9?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/11?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/9?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/14?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/13?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/14?page=0&size=10
+2025-09-09 06:47:29 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/13?page=0&size=10
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/pages/detalhes-produto.html?id=5
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/pages/detalhes-produto.html?id=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/pages/detalhes-produtos.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/pages/detalhes-produto.css
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/pages/detalhes-produto.css
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/pages/detalhes-produtos.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/loadProductPage.js
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/loadProductPage.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/config.js
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/config.js
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/components/headerLogado.html
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/components/headerLogado.html
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/components/header.css
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/components/header.css
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/components/footerLogado.html
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/components/footerLogado.html
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/images/logo.webp
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/images/logo.webp
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /user
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /user
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/5?page=0
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/5?page=0
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/listar?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/listar?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/2?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/3?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/2?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/4?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/images/bistek-logo.png
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/images/bistek-logo.png
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/4?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/3?page=0&size=5
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/images/cooper-logo.png
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/images/cooper-logo.png
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Securing GET /front/images/koch-logo.png
+2025-09-09 06:47:32 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:32 - o.s.security.web.FilterChainProxy - Secured GET /front/images/koch-logo.png
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/5
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/5
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Securing GET /listas
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Secured GET /listas
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Securing GET /listas/1
+2025-09-09 06:47:36 - o.s.security.web.FilterChainProxy - Secured GET /listas/1
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Securing GET /listas/1
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Secured GET /listas/1
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/5
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/11
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/5
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/11
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/20
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/13
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/20
+2025-09-09 06:47:37 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/13
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/pages/comparacao.html?listId=1
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/pages/comparacao.html?listId=1
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/pages/comparacao.css
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/pages/comparacao.css
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/pages/comparacao.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/pages/comparacao.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerUser.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerLogado.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/comparacaoSupemercado.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/footerLogado.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/comparacaoSupemercado.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/lists-modal.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/config.js
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/config.js
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/components/headerLogado.html
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/components/headerLogado.html
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/components/header.css
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/components/footerLogado.html
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/components/header.css
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/components/footerLogado.html
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /front/images/logo.webp
+2025-09-09 06:47:39 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /front/images/logo.webp
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /user
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /listas/1
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /listas/1
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /user
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/5
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/5
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/11
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/20
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/11
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/20
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/5
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/scraping/melhores-ofertas/13
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/5
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/11
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/13
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/11
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/13
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/scraping/melhores-ofertas/13
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Securing GET /produtos/referencias/20
+2025-09-09 06:47:39 - o.s.security.web.FilterChainProxy - Secured GET /produtos/referencias/20
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/index.html
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/index.html
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/styles/pages/homepage.css
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/images/caio.jpg
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/pages/homepage.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/images/caio.jpg
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/pages/homepage.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/styles/pages/homepage.css
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/images/douglas.jpg
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/images/douglas.jpg
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/images/jackson.jpg
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/images/jackson.jpg
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/header.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/header.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/loginAndRegister.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/loginAndRegister.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/footer.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/footer.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/components/headerLinkActive.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/components/headerLinkActive.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/scripts/config.js
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/scripts/config.js
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/videos/market-room-loop.mp4
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/components/header.html
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/components/header.html
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /styles/components/header.css
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/components/footer.html
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/components/footer.html
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /front/images/logo.webp
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /front/images/logo.webp
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:48 - o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Securing GET /error
+2025-09-09 06:47:48 - o.s.security.web.FilterChainProxy - Secured GET /error
+2025-09-09 06:47:48 - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-09 06:47:53 - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-09 06:47:53 - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-09 06:47:53 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-09 06:47:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-09 06:47:53 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-09 06:52:57 - c.c.project.ProjectApplication - Starting ProjectApplication using Java 21.0.8 with PID 25388 (C:\Users\caioa\OneDrive\Área de Trabalho\pitch-final-entra21-backend\project\target\classes started by caioa in C:\Users\caioa\OneDrive\Área de Trabalho\pitch-final-entra21-backend)
+2025-09-09 06:52:57 - c.c.project.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-09 06:52:58 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-09 06:52:58 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-09 06:52:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-09 06:52:59 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 182 ms. Found 9 JPA repository interfaces.
+2025-09-09 06:53:00 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-09 06:53:00 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-09 06:53:00 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-09-09 06:53:00 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-09 06:53:00 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2592 ms
+2025-09-09 06:53:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-09 06:53:01 - i.o.api.GlobalOpenTelemetry - AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+2025-09-09 06:53:01 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28347183
+2025-09-09 06:53:01 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-09 06:53:01 - org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/checkbuy?createDatabaseIfNotExist=true (MySQL 8.0)
+2025-09-09 06:53:01 - o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.051s)
+2025-09-09 06:53:01 - o.f.core.internal.command.DbMigrate - Current version of schema `checkbuy`: 4
+2025-09-09 06:53:01 - o.f.core.internal.command.DbMigrate - Schema `checkbuy` is up to date. No migration necessary.
+2025-09-09 06:53:01 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-09 06:53:02 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-09-09 06:53:02 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-09 06:53:02 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-09 06:53:02 - org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-09 06:53:02 - org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-09 06:53:02 - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-09 06:53:03 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-09 06:53:03 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-09 06:53:04 - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-09 06:53:14 - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name autenticacaoService
+2025-09-09 06:53:14 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-09 06:53:15 - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, SecurityFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-09-09 06:53:15 - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-09-09 06:53:16 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-09 06:53:16 - c.c.project.ProjectApplication - Started ProjectApplication in 18.911 seconds (process running for 19.703)

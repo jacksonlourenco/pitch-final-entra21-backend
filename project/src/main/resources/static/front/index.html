@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CheckBuy</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles/pages/homepage.css" />
+</head>
+
+<body>
+
+  <!-- Header Global -->
+  <div id="header"></div>
+
+  <!-- Início -->
+  <section id="inicio" class="hero-video-bg pt-5 ">
+    <video autoplay muted loop playsinline>
+      <source src="videos\market-room-loop.mp4" type="video/webm" />
+      Seu navegador não suporta vídeo.
+    </video>
+    <div class="container text-center text-white">
+      <h1 class="display-4 fw-bold">Bem-vindo à CheckBuy!</h1>
+      <p class="lead">Compare preços, economize tempo e dinheiro.</p>
+      <!-- Adicionar rota depois -->
+      <a class="btn btn-success btn-lg mt-3">Começar agora</a>
+    </div>
+  </section>
+
+  <!-- Ofertas -->
+  <section id="ofertas" class="section bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Ofertas da Semana</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <img src="https://www.larbompastor.com.br/wp-content/uploads/sites/17/2020/05/koch-super-mercado.png"
+              class="card-img-top" alt="Ofertas do Supermercado KOCH">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Promoções Koch</h5>
+              <p class="card-text text-muted">As melhores ofertas em carnes e produtos de limpeza você encontra aqui.
+              </p>
+              <a href="#" class="btn btn-outline-success mt-auto">Ver Ofertas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFAj5lnuxxopeOY7upmfIiloi7JEbs9_S8zw&s"
+              class="card-img-top" alt="Ofertas da Cooper">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Folheto Cooper</h5>
+              <p class="card-text text-muted">Confira os descontos especiais em nossa padaria e hortifruti.</p>
+              <a href="#" class="btn btn-outline-success mt-auto">Ver Ofertas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <img src="https://institucional.bistek.com.br/img/icons/facebook.jpg" class="card-img-top"
+              alt="Ofertas do Supermercado Bistek">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Economia Bistek</h5>
+              <p class="card-text text-muted">Grande variedade de produtos com preços que cabem no seu bolso.</p>
+              <a href="#" class="btn btn-outline-success mt-auto">Ver Ofertas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section id="funcionalidades" class="section py-5" style="background-color: #d0fdd7">
+    <div class="container text-center">
+      <h2 class="mb-3">Funcionalidades</h2>
+      <p class="mb-5">
+        CheckBuy oferece as melhores ferramentas para ajudar você a economizar
+        em suas compras.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-list-check fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">Listas de Compras</h5>
+              <p class="card-text text-muted">
+                Crie e gerencie suas listas de compras de forma simples e
+                rápida. Adicione produtos, quantidades e organize por
+                categorias.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-tag fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">Encontre o melhor preço</h5>
+              <p class="card-text text-muted">
+                Compare preços entre diferentes mercados e encontre onde sua
+                lista de compras sai mais barata, economizando tempo e
+                dinheiro.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-geo-alt fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">Rota de economia</h5>
+              <p class="card-text text-muted">
+                Encontre os mercados mais próximos de você em Blumenau, com
+                informações sobre horários de funcionamento e localização.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-bell fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">
+                Alertas de promoções
+                <span class="badge bg-success-subtle text-success rounded-pill">Em breve</span>
+              </h5>
+              <p class="card-text text-muted">
+                Receba notificações sobre promoções dos produtos que você mais
+                compra, garantindo que nunca perca uma oportunidade de
+                economia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-graph-up fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">
+                Histórico de economia
+                <span class="badge bg-success-subtle text-success rounded-pill">Em breve</span>
+              </h5>
+              <p class="card-text text-muted">
+                Acompanhe quanto você economizou ao longo do tempo usando o
+                aplicativo, com gráficos e estatísticas detalhadas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="card h-100 shadow-sm border-0 card-hover">
+            <div class="card-body">
+              <div class="icon-container mb-3 mx-auto">
+                <i class="bi bi-people fs-2 text-success"></i>
+              </div>
+              <h5 class="card-title">
+                Comunidade <span class="badge bg-success-subtle text-success rounded-pill">Em breve</span>
+              </h5>
+              <p class="card-text text-muted">
+                Compartilhe dicas de economia com outros usuários e participe
+                de uma comunidade local focada em economizar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre-nos" class="section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-4">Sobre a CheckBuy</h2>
+          <p class="lead text-muted mb-5">
+            A CheckBuy nasceu em Blumenau com a vontade de transformar a rotina de milhões de
+            consumidores. Com uma plataforma simples e eficiente, conectamos o usuário às
+            informações mais atualizadas do mercado, permitindo decisões
+            inteligentes e conscientes.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6 py-5">
+          <div class="card text-center border-0 shadow-sm card-hover team-card">
+            <img src="images/caio.jpg" class="team-avatar rounded-circle shadow-sm" alt="Foto de Caio Amaro">
+            <div class="card-body">
+              <h5 class="card-title">Caio Amaro</h5>
+              <p class="text-muted mb-3">Desenvolvedor Back-end</p>
+              <div class="social-icons">
+                <a href="https://github.com/CaioAmaro" target="_blank" class="mx-2"><i
+                    class="bi bi-github fs-4"></i></a>
+                <a href="https://www.linkedin.com/in/caio-amaro-146775190/" target="_blank" class="mx-2"><i
+                    class="bi bi-linkedin fs-4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 py-5">
+          <div class="card text-center border-0 shadow-sm card-hover team-card">
+            <img src="images/douglas.jpg" class="team-avatar rounded-circle shadow-sm"
+              alt="Foto de Eliton Douglas">
+            <div class="card-body">
+              <h5 class="card-title">Eliton Douglas S. P.</h5>
+              <p class="text-muted mb-3">Gerente de Projeto & UI/UX</p>
+              <div class="social-icons">
+                <a href="https://github.com/dougelit" target="_blank" class="mx-2"><i class="bi bi-github fs-4"></i></a>
+                <a href="https://www.linkedin.com/in/eliton-douglas-silva-pereira-4a4209349/" target="_blank"
+                  class="mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 py-5">
+          <div class="card text-center border-0 shadow-sm card-hover team-card">
+            <img src="images/jackson.jpg" class="team-avatar rounded-circle shadow-sm"
+              alt="Foto de Jackson A. Lourenço">
+            <div class="card-body">
+              <h5 class="card-title">Jackson A. Lourenço</h5>
+              <p class="text-muted mb-3">Desenvolvedor Front-end</p>
+              <div class="social-icons">
+                <a href="https://github.com/jacksonlourenco" target="_blank" class="mx-2"><i
+                    class="bi bi-github fs-4"></i></a>
+                <a href="https://www.linkedin.com/in/jackson-andre-lourenco-40743b231/" target="_blank" class="mx-2"><i
+                    class="bi bi-linkedin fs-4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script type="module" src="scripts\pages\homepage.js"></script>
+</body>
+
+</html>

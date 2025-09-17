@@ -3,4 +3,4 @@ Backend for CheckBuy
 
 
     #Utilizem javadoc para documentar métodos:
-        - ( /** ) <- ativa o Javadoc.
+        - ( /** ) <- ativa o Javadoc.413123
